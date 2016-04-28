@@ -1,0 +1,9 @@
+compiler.descriptorFilePath=/usr/local/Cellar/protoc-3.0.0-beta-2-osx-x86_64/google/protobuf/descriptor.proto
+compiler.protocFilePath=/usr/local/Cellar/protobuf241/2.4.1/bin/protoc
+compiler.pythonCodeGenerationEnabled=true
+compiler.useProtocInCustomPath=true
+compiler.useProtocInSystemPath=false
+eclipse.preferences.version=1
+paths.directoryPaths=${workspace_loc\:/common/src/conf},${workspace_loc\:/${project}/src/conf}
+paths.filesInMultipleDirectories=true
+paths.filesInOneDirectoryOnly=false

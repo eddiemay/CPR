@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+package cpr;
+
+import "common_ui.proto";
+
+option java_package = "com.digitald4.cpr.ui.proto";
+option java_outer_classname = "CPRUIProtos";
+
+message ListSessionsRequest {
+	optional common.DateRangeType date_range = 1;
+	optional int64 ref_date = 2;
+	optional int32 tranning_id = 3;
+}
+
+message TrainningUI {
+	required int32 id = 1;
+	required string name = 2;
+	required string description = 3;
+}
+
+message TrainningSessionUI {
+	optional int32 id = 1;
+	optional int32 trainning_id = 2;
+	optional int64 start_time_millis = 3;
+	optional int64 duration_millis = 4;
+	optional double cost = 5;
+	optional common.GPSAddress location = 6;
+}

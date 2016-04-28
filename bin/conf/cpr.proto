@@ -1,0 +1,59 @@
+syntax = "proto2";
+
+package cpr;
+
+import "common_ui.proto";
+
+option java_package = "com.digitald4.cpr.proto";
+option java_outer_classname = "CPRProtos";
+
+message Trainning {
+  optional int32 id = 1;
+  optional string name = 2;
+  optional string description = 3;
+  optional int64 duration_millis = 4;
+  optional double cost = 5;
+  optional common.GPSAddress location = 6;
+}
+
+message TrainningSession {
+	optional int32 id = 1;
+	optional int32 trainning_id = 2;
+	optional int64 start_time_millis = 3;
+	optional int64 duration_millis = 4;
+	optional double cost = 5;
+	optional common.GPSAddress location = 6;
+}
+
+message Reservation {
+	optional int32 id = 1;
+	optional int32 session_id = 2;
+	optional string contact_email = 3;
+
+	enum PaymentStatus {
+		UNSPECIFIED = 0;
+		NOT_PAID = 1;
+		PAYMENT_PENDING = 2;
+		PARTIALLY_PAID = 3;
+		PAID = 4;
+		PAYMENT_VERIFIED = 5;
+	}
+	optional PaymentStatus payment_status = 4;
+
+	optional string payment_confirmation_code = 5;
+
+	message Student {
+		optional int32 id = 1;
+		optional string name = 2;
+		optional string email = 3;
+
+		enum ClassResult {
+			UNSPECIFIED = 0;
+			UNATTENDED = 1;
+			PASSED = 2;
+			FAILED = 3;
+		}
+		optional ClassResult result = 4;
+	}
+	repeated Student student = 6;
+}
