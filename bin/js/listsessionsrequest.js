@@ -58,7 +58,7 @@ proto.cpr.ListSessionsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     dateRange: jspb.Message.getField(msg, 1),
     refDate: jspb.Message.getField(msg, 2),
-    tranningId: jspb.Message.getField(msg, 3)
+    trainningId: jspb.Message.getField(msg, 3)
   };
 
   if (includeInstance) {
@@ -79,11 +79,11 @@ proto.cpr.ListSessionsRequest.prototype.cloneMessage = function() {
 
 
 /**
- * optional common.DateRangeType date_range = 1;
- * @return {proto.common.DateRangeType}
+ * required common.DateRangeType date_range = 1;
+ * @return {!proto.common.DateRangeType}
  */
 proto.cpr.ListSessionsRequest.prototype.getDateRange = function() {
-  return /** @type {proto.common.DateRangeType} */ (jspb.Message.getField(this, 1));
+  return /** @type {!proto.common.DateRangeType} */ (jspb.Message.getField(this, 1));
 };
 
 
@@ -99,15 +99,15 @@ proto.cpr.ListSessionsRequest.prototype.clearDateRange = function() {
 
 
 /**
- * optional int64 ref_date = 2;
- * @return {number?}
+ * required int64 ref_date = 2;
+ * @return {number}
  */
 proto.cpr.ListSessionsRequest.prototype.getRefDate = function() {
-  return /** @type {number?} */ (jspb.Message.getField(this, 2));
+  return /** @type {number} */ (jspb.Message.getField(this, 2));
 };
 
 
-/** @param {number?|undefined} value  */
+/** @param {number|undefined} value  */
 proto.cpr.ListSessionsRequest.prototype.setRefDate = function(value) {
   jspb.Message.setField(this, 2, value);
 };
@@ -119,21 +119,21 @@ proto.cpr.ListSessionsRequest.prototype.clearRefDate = function() {
 
 
 /**
- * optional int32 tranning_id = 3;
+ * optional int32 trainning_id = 3;
  * @return {number?}
  */
-proto.cpr.ListSessionsRequest.prototype.getTranningId = function() {
+proto.cpr.ListSessionsRequest.prototype.getTrainningId = function() {
   return /** @type {number?} */ (jspb.Message.getField(this, 3));
 };
 
 
 /** @param {number?|undefined} value  */
-proto.cpr.ListSessionsRequest.prototype.setTranningId = function(value) {
+proto.cpr.ListSessionsRequest.prototype.setTrainningId = function(value) {
   jspb.Message.setField(this, 3, value);
 };
 
 
-proto.cpr.ListSessionsRequest.prototype.clearTranningId = function() {
+proto.cpr.ListSessionsRequest.prototype.clearTrainningId = function() {
   jspb.Message.setField(this, 3, undefined);
 };
 

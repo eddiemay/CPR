@@ -50,13 +50,13 @@ public final class CPRProtos {
         getDescriptionBytes();
 
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    boolean hasDurationMillis();
+    boolean hasDurationMins();
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    long getDurationMillis();
+    int getDurationMins();
 
     /**
      * <code>optional double cost = 5;</code>
@@ -95,7 +95,7 @@ public final class CPRProtos {
       id_ = 0;
       name_ = "";
       description_ = "";
-      durationMillis_ = 0L;
+      durationMins_ = 0;
       cost_ = 0D;
     }
 
@@ -145,7 +145,7 @@ public final class CPRProtos {
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              durationMillis_ = input.readInt64();
+              durationMins_ = input.readInt32();
               break;
             }
             case 41: {
@@ -291,19 +291,19 @@ public final class CPRProtos {
       }
     }
 
-    public static final int DURATION_MILLIS_FIELD_NUMBER = 4;
-    private long durationMillis_;
+    public static final int DURATION_MINS_FIELD_NUMBER = 4;
+    private int durationMins_;
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    public boolean hasDurationMillis() {
+    public boolean hasDurationMins() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    public long getDurationMillis() {
-      return durationMillis_;
+    public int getDurationMins() {
+      return durationMins_;
     }
 
     public static final int COST_FIELD_NUMBER = 5;
@@ -364,7 +364,7 @@ public final class CPRProtos {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, description_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt64(4, durationMillis_);
+        output.writeInt32(4, durationMins_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeDouble(5, cost_);
@@ -392,7 +392,7 @@ public final class CPRProtos {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, durationMillis_);
+          .computeInt32Size(4, durationMins_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
@@ -521,7 +521,7 @@ public final class CPRProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         description_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        durationMillis_ = 0L;
+        durationMins_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
         cost_ = 0D;
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -570,7 +570,7 @@ public final class CPRProtos {
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.durationMillis_ = durationMillis_;
+        result.durationMins_ = durationMins_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
@@ -612,8 +612,8 @@ public final class CPRProtos {
           description_ = other.description_;
           onChanged();
         }
-        if (other.hasDurationMillis()) {
-          setDurationMillis(other.getDurationMillis());
+        if (other.hasDurationMins()) {
+          setDurationMins(other.getDurationMins());
         }
         if (other.hasCost()) {
           setCost(other.getCost());
@@ -833,34 +833,34 @@ public final class CPRProtos {
         return this;
       }
 
-      private long durationMillis_ ;
+      private int durationMins_ ;
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public boolean hasDurationMillis() {
+      public boolean hasDurationMins() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public long getDurationMillis() {
-        return durationMillis_;
+      public int getDurationMins() {
+        return durationMins_;
       }
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public Builder setDurationMillis(long value) {
+      public Builder setDurationMins(int value) {
         bitField0_ |= 0x00000008;
-        durationMillis_ = value;
+        durationMins_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public Builder clearDurationMillis() {
+      public Builder clearDurationMins() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        durationMillis_ = 0L;
+        durationMins_ = 0;
         onChanged();
         return this;
       }
@@ -1085,22 +1085,22 @@ public final class CPRProtos {
     int getTrainningId();
 
     /**
-     * <code>optional int64 start_time_millis = 3;</code>
+     * <code>optional int64 start_time = 3;</code>
      */
-    boolean hasStartTimeMillis();
+    boolean hasStartTime();
     /**
-     * <code>optional int64 start_time_millis = 3;</code>
+     * <code>optional int64 start_time = 3;</code>
      */
-    long getStartTimeMillis();
+    long getStartTime();
 
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    boolean hasDurationMillis();
+    boolean hasDurationMins();
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    long getDurationMillis();
+    int getDurationMins();
 
     /**
      * <code>optional double cost = 5;</code>
@@ -1138,8 +1138,8 @@ public final class CPRProtos {
     private TrainningSession() {
       id_ = 0;
       trainningId_ = 0;
-      startTimeMillis_ = 0L;
-      durationMillis_ = 0L;
+      startTime_ = 0L;
+      durationMins_ = 0;
       cost_ = 0D;
     }
 
@@ -1182,12 +1182,12 @@ public final class CPRProtos {
             }
             case 24: {
               bitField0_ |= 0x00000004;
-              startTimeMillis_ = input.readInt64();
+              startTime_ = input.readInt64();
               break;
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              durationMillis_ = input.readInt64();
+              durationMins_ = input.readInt32();
               break;
             }
             case 41: {
@@ -1264,34 +1264,34 @@ public final class CPRProtos {
       return trainningId_;
     }
 
-    public static final int START_TIME_MILLIS_FIELD_NUMBER = 3;
-    private long startTimeMillis_;
+    public static final int START_TIME_FIELD_NUMBER = 3;
+    private long startTime_;
     /**
-     * <code>optional int64 start_time_millis = 3;</code>
+     * <code>optional int64 start_time = 3;</code>
      */
-    public boolean hasStartTimeMillis() {
+    public boolean hasStartTime() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional int64 start_time_millis = 3;</code>
+     * <code>optional int64 start_time = 3;</code>
      */
-    public long getStartTimeMillis() {
-      return startTimeMillis_;
+    public long getStartTime() {
+      return startTime_;
     }
 
-    public static final int DURATION_MILLIS_FIELD_NUMBER = 4;
-    private long durationMillis_;
+    public static final int DURATION_MINS_FIELD_NUMBER = 4;
+    private int durationMins_;
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    public boolean hasDurationMillis() {
+    public boolean hasDurationMins() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    public long getDurationMillis() {
-      return durationMillis_;
+    public int getDurationMins() {
+      return durationMins_;
     }
 
     public static final int COST_FIELD_NUMBER = 5;
@@ -1349,10 +1349,10 @@ public final class CPRProtos {
         output.writeInt32(2, trainningId_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt64(3, startTimeMillis_);
+        output.writeInt64(3, startTime_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt64(4, durationMillis_);
+        output.writeInt32(4, durationMins_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeDouble(5, cost_);
@@ -1378,11 +1378,11 @@ public final class CPRProtos {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, startTimeMillis_);
+          .computeInt64Size(3, startTime_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, durationMillis_);
+          .computeInt32Size(4, durationMins_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1509,9 +1509,9 @@ public final class CPRProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         trainningId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        startTimeMillis_ = 0L;
+        startTime_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
-        durationMillis_ = 0L;
+        durationMins_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
         cost_ = 0D;
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -1556,11 +1556,11 @@ public final class CPRProtos {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.startTimeMillis_ = startTimeMillis_;
+        result.startTime_ = startTime_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.durationMillis_ = durationMillis_;
+        result.durationMins_ = durationMins_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
@@ -1595,11 +1595,11 @@ public final class CPRProtos {
         if (other.hasTrainningId()) {
           setTrainningId(other.getTrainningId());
         }
-        if (other.hasStartTimeMillis()) {
-          setStartTimeMillis(other.getStartTimeMillis());
+        if (other.hasStartTime()) {
+          setStartTime(other.getStartTime());
         }
-        if (other.hasDurationMillis()) {
-          setDurationMillis(other.getDurationMillis());
+        if (other.hasDurationMins()) {
+          setDurationMins(other.getDurationMins());
         }
         if (other.hasCost()) {
           setCost(other.getCost());
@@ -1699,66 +1699,66 @@ public final class CPRProtos {
         return this;
       }
 
-      private long startTimeMillis_ ;
+      private long startTime_ ;
       /**
-       * <code>optional int64 start_time_millis = 3;</code>
+       * <code>optional int64 start_time = 3;</code>
        */
-      public boolean hasStartTimeMillis() {
+      public boolean hasStartTime() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional int64 start_time_millis = 3;</code>
+       * <code>optional int64 start_time = 3;</code>
        */
-      public long getStartTimeMillis() {
-        return startTimeMillis_;
+      public long getStartTime() {
+        return startTime_;
       }
       /**
-       * <code>optional int64 start_time_millis = 3;</code>
+       * <code>optional int64 start_time = 3;</code>
        */
-      public Builder setStartTimeMillis(long value) {
+      public Builder setStartTime(long value) {
         bitField0_ |= 0x00000004;
-        startTimeMillis_ = value;
+        startTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int64 start_time_millis = 3;</code>
+       * <code>optional int64 start_time = 3;</code>
        */
-      public Builder clearStartTimeMillis() {
+      public Builder clearStartTime() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        startTimeMillis_ = 0L;
+        startTime_ = 0L;
         onChanged();
         return this;
       }
 
-      private long durationMillis_ ;
+      private int durationMins_ ;
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public boolean hasDurationMillis() {
+      public boolean hasDurationMins() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public long getDurationMillis() {
-        return durationMillis_;
+      public int getDurationMins() {
+        return durationMins_;
       }
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public Builder setDurationMillis(long value) {
+      public Builder setDurationMins(int value) {
         bitField0_ |= 0x00000008;
-        durationMillis_ = value;
+        durationMins_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public Builder clearDurationMillis() {
+      public Builder clearDurationMins() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        durationMillis_ = 0L;
+        durationMins_ = 0;
         onChanged();
         return this;
       }
@@ -1997,48 +1997,62 @@ public final class CPRProtos {
         getContactEmailBytes();
 
     /**
-     * <code>optional .cpr.Reservation.PaymentStatus payment_status = 4;</code>
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    boolean hasConfirmationCode();
+    /**
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    java.lang.String getConfirmationCode();
+    /**
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getConfirmationCodeBytes();
+
+    /**
+     * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
      */
     boolean hasPaymentStatus();
     /**
-     * <code>optional .cpr.Reservation.PaymentStatus payment_status = 4;</code>
+     * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
      */
-    com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus getPaymentStatus();
+    com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus getPaymentStatus();
 
     /**
-     * <code>optional string payment_confirmation_code = 5;</code>
+     * <code>optional string payment_confirmation_code = 6;</code>
      */
     boolean hasPaymentConfirmationCode();
     /**
-     * <code>optional string payment_confirmation_code = 5;</code>
+     * <code>optional string payment_confirmation_code = 6;</code>
      */
     java.lang.String getPaymentConfirmationCode();
     /**
-     * <code>optional string payment_confirmation_code = 5;</code>
+     * <code>optional string payment_confirmation_code = 6;</code>
      */
     com.google.protobuf.ByteString
         getPaymentConfirmationCodeBytes();
 
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     java.util.List<com.digitald4.cpr.proto.CPRProtos.Reservation.Student> 
         getStudentList();
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     com.digitald4.cpr.proto.CPRProtos.Reservation.Student getStudent(int index);
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     int getStudentCount();
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     java.util.List<? extends com.digitald4.cpr.proto.CPRProtos.Reservation.StudentOrBuilder> 
         getStudentOrBuilderList();
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     com.digitald4.cpr.proto.CPRProtos.Reservation.StudentOrBuilder getStudentOrBuilder(
         int index);
@@ -2058,6 +2072,7 @@ public final class CPRProtos {
       id_ = 0;
       sessionId_ = 0;
       contactEmail_ = "";
+      confirmationCode_ = "";
       paymentStatus_ = 0;
       paymentConfirmationCode_ = "";
       student_ = java.util.Collections.emptyList();
@@ -2106,27 +2121,33 @@ public final class CPRProtos {
               contactEmail_ = bs;
               break;
             }
-            case 32: {
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              confirmationCode_ = bs;
+              break;
+            }
+            case 40: {
               int rawValue = input.readEnum();
-              com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus value = com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus.valueOf(rawValue);
+              com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus value = com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.valueOf(rawValue);
               if (value == null) {
-                unknownFields.mergeVarintField(4, rawValue);
+                unknownFields.mergeVarintField(5, rawValue);
               } else {
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000010;
                 paymentStatus_ = rawValue;
               }
               break;
             }
-            case 42: {
+            case 50: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               paymentConfirmationCode_ = bs;
               break;
             }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 student_ = new java.util.ArrayList<com.digitald4.cpr.proto.CPRProtos.Reservation.Student>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000040;
               }
               student_.add(input.readMessage(com.digitald4.cpr.proto.CPRProtos.Reservation.Student.parser(), extensionRegistry));
               break;
@@ -2140,7 +2161,7 @@ public final class CPRProtos {
             new com.google.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this));
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
           student_ = java.util.Collections.unmodifiableList(student_);
         }
         this.unknownFields = unknownFields.build();
@@ -2159,126 +2180,6 @@ public final class CPRProtos {
               com.digitald4.cpr.proto.CPRProtos.Reservation.class, com.digitald4.cpr.proto.CPRProtos.Reservation.Builder.class);
     }
 
-    /**
-     * Protobuf enum {@code cpr.Reservation.PaymentStatus}
-     */
-    public enum PaymentStatus
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>UNSPECIFIED = 0;</code>
-       */
-      UNSPECIFIED(0, 0),
-      /**
-       * <code>NOT_PAID = 1;</code>
-       */
-      NOT_PAID(1, 1),
-      /**
-       * <code>PAYMENT_PENDING = 2;</code>
-       */
-      PAYMENT_PENDING(2, 2),
-      /**
-       * <code>PARTIALLY_PAID = 3;</code>
-       */
-      PARTIALLY_PAID(3, 3),
-      /**
-       * <code>PAID = 4;</code>
-       */
-      PAID(4, 4),
-      /**
-       * <code>PAYMENT_VERIFIED = 5;</code>
-       */
-      PAYMENT_VERIFIED(5, 5),
-      ;
-
-      /**
-       * <code>UNSPECIFIED = 0;</code>
-       */
-      public static final int UNSPECIFIED_VALUE = 0;
-      /**
-       * <code>NOT_PAID = 1;</code>
-       */
-      public static final int NOT_PAID_VALUE = 1;
-      /**
-       * <code>PAYMENT_PENDING = 2;</code>
-       */
-      public static final int PAYMENT_PENDING_VALUE = 2;
-      /**
-       * <code>PARTIALLY_PAID = 3;</code>
-       */
-      public static final int PARTIALLY_PAID_VALUE = 3;
-      /**
-       * <code>PAID = 4;</code>
-       */
-      public static final int PAID_VALUE = 4;
-      /**
-       * <code>PAYMENT_VERIFIED = 5;</code>
-       */
-      public static final int PAYMENT_VERIFIED_VALUE = 5;
-
-
-      public final int getNumber() {
-        return value;
-      }
-
-      public static PaymentStatus valueOf(int value) {
-        switch (value) {
-          case 0: return UNSPECIFIED;
-          case 1: return NOT_PAID;
-          case 2: return PAYMENT_PENDING;
-          case 3: return PARTIALLY_PAID;
-          case 4: return PAID;
-          case 5: return PAYMENT_VERIFIED;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<PaymentStatus>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          PaymentStatus> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<PaymentStatus>() {
-              public PaymentStatus findValueByNumber(int number) {
-                return PaymentStatus.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.digitald4.cpr.proto.CPRProtos.Reservation.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final PaymentStatus[] VALUES = values();
-
-      public static PaymentStatus valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int index;
-      private final int value;
-
-      private PaymentStatus(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:cpr.Reservation.PaymentStatus)
-    }
-
     public interface StudentOrBuilder extends
         // @@protoc_insertion_point(interface_extends:cpr.Reservation.Student)
         com.google.protobuf.MessageOrBuilder {
@@ -2293,41 +2194,50 @@ public final class CPRProtos {
       int getId();
 
       /**
-       * <code>optional string name = 2;</code>
+       * <code>optional int32 reservation_id = 2;</code>
+       */
+      boolean hasReservationId();
+      /**
+       * <code>optional int32 reservation_id = 2;</code>
+       */
+      int getReservationId();
+
+      /**
+       * <code>optional string name = 3;</code>
        */
       boolean hasName();
       /**
-       * <code>optional string name = 2;</code>
+       * <code>optional string name = 3;</code>
        */
       java.lang.String getName();
       /**
-       * <code>optional string name = 2;</code>
+       * <code>optional string name = 3;</code>
        */
       com.google.protobuf.ByteString
           getNameBytes();
 
       /**
-       * <code>optional string email = 3;</code>
+       * <code>optional string email = 4;</code>
        */
       boolean hasEmail();
       /**
-       * <code>optional string email = 3;</code>
+       * <code>optional string email = 4;</code>
        */
       java.lang.String getEmail();
       /**
-       * <code>optional string email = 3;</code>
+       * <code>optional string email = 4;</code>
        */
       com.google.protobuf.ByteString
           getEmailBytes();
 
       /**
-       * <code>optional .cpr.Reservation.Student.ClassResult result = 4;</code>
+       * <code>optional .cpr.ClassResult result = 5;</code>
        */
       boolean hasResult();
       /**
-       * <code>optional .cpr.Reservation.Student.ClassResult result = 4;</code>
+       * <code>optional .cpr.ClassResult result = 5;</code>
        */
-      com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult getResult();
+      com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult getResult();
     }
     /**
      * Protobuf type {@code cpr.Reservation.Student}
@@ -2342,6 +2252,7 @@ public final class CPRProtos {
       }
       private Student() {
         id_ = 0;
+        reservationId_ = 0;
         name_ = "";
         email_ = "";
         result_ = 0;
@@ -2379,25 +2290,30 @@ public final class CPRProtos {
                 id_ = input.readInt32();
                 break;
               }
-              case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+              case 16: {
                 bitField0_ |= 0x00000002;
-                name_ = bs;
+                reservationId_ = input.readInt32();
                 break;
               }
               case 26: {
                 com.google.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000004;
+                name_ = bs;
+                break;
+              }
+              case 34: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000008;
                 email_ = bs;
                 break;
               }
-              case 32: {
+              case 40: {
                 int rawValue = input.readEnum();
-                com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult value = com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult.valueOf(rawValue);
+                com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult value = com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.valueOf(rawValue);
                 if (value == null) {
-                  unknownFields.mergeVarintField(4, rawValue);
+                  unknownFields.mergeVarintField(5, rawValue);
                 } else {
-                  bitField0_ |= 0x00000008;
+                  bitField0_ |= 0x00000010;
                   result_ = rawValue;
                 }
                 break;
@@ -2427,108 +2343,6 @@ public final class CPRProtos {
                 com.digitald4.cpr.proto.CPRProtos.Reservation.Student.class, com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder.class);
       }
 
-      /**
-       * Protobuf enum {@code cpr.Reservation.Student.ClassResult}
-       */
-      public enum ClassResult
-          implements com.google.protobuf.ProtocolMessageEnum {
-        /**
-         * <code>UNSPECIFIED = 0;</code>
-         */
-        UNSPECIFIED(0, 0),
-        /**
-         * <code>UNATTENDED = 1;</code>
-         */
-        UNATTENDED(1, 1),
-        /**
-         * <code>PASSED = 2;</code>
-         */
-        PASSED(2, 2),
-        /**
-         * <code>FAILED = 3;</code>
-         */
-        FAILED(3, 3),
-        ;
-
-        /**
-         * <code>UNSPECIFIED = 0;</code>
-         */
-        public static final int UNSPECIFIED_VALUE = 0;
-        /**
-         * <code>UNATTENDED = 1;</code>
-         */
-        public static final int UNATTENDED_VALUE = 1;
-        /**
-         * <code>PASSED = 2;</code>
-         */
-        public static final int PASSED_VALUE = 2;
-        /**
-         * <code>FAILED = 3;</code>
-         */
-        public static final int FAILED_VALUE = 3;
-
-
-        public final int getNumber() {
-          return value;
-        }
-
-        public static ClassResult valueOf(int value) {
-          switch (value) {
-            case 0: return UNSPECIFIED;
-            case 1: return UNATTENDED;
-            case 2: return PASSED;
-            case 3: return FAILED;
-            default: return null;
-          }
-        }
-
-        public static com.google.protobuf.Internal.EnumLiteMap<ClassResult>
-            internalGetValueMap() {
-          return internalValueMap;
-        }
-        private static final com.google.protobuf.Internal.EnumLiteMap<
-            ClassResult> internalValueMap =
-              new com.google.protobuf.Internal.EnumLiteMap<ClassResult>() {
-                public ClassResult findValueByNumber(int number) {
-                  return ClassResult.valueOf(number);
-                }
-              };
-
-        public final com.google.protobuf.Descriptors.EnumValueDescriptor
-            getValueDescriptor() {
-          return getDescriptor().getValues().get(index);
-        }
-        public final com.google.protobuf.Descriptors.EnumDescriptor
-            getDescriptorForType() {
-          return getDescriptor();
-        }
-        public static final com.google.protobuf.Descriptors.EnumDescriptor
-            getDescriptor() {
-          return com.digitald4.cpr.proto.CPRProtos.Reservation.Student.getDescriptor().getEnumTypes().get(0);
-        }
-
-        private static final ClassResult[] VALUES = values();
-
-        public static ClassResult valueOf(
-            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-          if (desc.getType() != getDescriptor()) {
-            throw new java.lang.IllegalArgumentException(
-              "EnumValueDescriptor is not for this type.");
-          }
-          return VALUES[desc.getIndex()];
-        }
-
-        private final int index;
-        private final int value;
-
-        private ClassResult(int index, int value) {
-          this.index = index;
-          this.value = value;
-        }
-
-        // @@protoc_insertion_point(enum_scope:cpr.Reservation.Student.ClassResult)
-      }
-
       private int bitField0_;
       public static final int ID_FIELD_NUMBER = 1;
       private int id_;
@@ -2545,16 +2359,31 @@ public final class CPRProtos {
         return id_;
       }
 
-      public static final int NAME_FIELD_NUMBER = 2;
-      private volatile java.lang.Object name_;
+      public static final int RESERVATION_ID_FIELD_NUMBER = 2;
+      private int reservationId_;
       /**
-       * <code>optional string name = 2;</code>
+       * <code>optional int32 reservation_id = 2;</code>
        */
-      public boolean hasName() {
+      public boolean hasReservationId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional string name = 2;</code>
+       * <code>optional int32 reservation_id = 2;</code>
+       */
+      public int getReservationId() {
+        return reservationId_;
+      }
+
+      public static final int NAME_FIELD_NUMBER = 3;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>optional string name = 3;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string name = 3;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2571,7 +2400,7 @@ public final class CPRProtos {
         }
       }
       /**
-       * <code>optional string name = 2;</code>
+       * <code>optional string name = 3;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2587,16 +2416,16 @@ public final class CPRProtos {
         }
       }
 
-      public static final int EMAIL_FIELD_NUMBER = 3;
+      public static final int EMAIL_FIELD_NUMBER = 4;
       private volatile java.lang.Object email_;
       /**
-       * <code>optional string email = 3;</code>
+       * <code>optional string email = 4;</code>
        */
       public boolean hasEmail() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional string email = 3;</code>
+       * <code>optional string email = 4;</code>
        */
       public java.lang.String getEmail() {
         java.lang.Object ref = email_;
@@ -2613,7 +2442,7 @@ public final class CPRProtos {
         }
       }
       /**
-       * <code>optional string email = 3;</code>
+       * <code>optional string email = 4;</code>
        */
       public com.google.protobuf.ByteString
           getEmailBytes() {
@@ -2629,20 +2458,20 @@ public final class CPRProtos {
         }
       }
 
-      public static final int RESULT_FIELD_NUMBER = 4;
+      public static final int RESULT_FIELD_NUMBER = 5;
       private int result_;
       /**
-       * <code>optional .cpr.Reservation.Student.ClassResult result = 4;</code>
+       * <code>optional .cpr.ClassResult result = 5;</code>
        */
       public boolean hasResult() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional .cpr.Reservation.Student.ClassResult result = 4;</code>
+       * <code>optional .cpr.ClassResult result = 5;</code>
        */
-      public com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult getResult() {
-        com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult result = com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult.valueOf(result_);
-        return result == null ? com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult.UNSPECIFIED : result;
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult getResult() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult result = com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.valueOf(result_);
+        return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.CR_UNSPECIFIED : result;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -2661,13 +2490,16 @@ public final class CPRProtos {
           output.writeInt32(1, id_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
+          output.writeInt32(2, reservationId_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 3, email_);
+          com.google.protobuf.GeneratedMessage.writeString(output, 3, name_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          output.writeEnum(4, result_);
+          com.google.protobuf.GeneratedMessage.writeString(output, 4, email_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeEnum(5, result_);
         }
         unknownFields.writeTo(output);
       }
@@ -2682,14 +2514,18 @@ public final class CPRProtos {
             .computeInt32Size(1, id_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, reservationId_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(3, email_);
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(3, name_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(4, email_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(4, result_);
+            .computeEnumSize(5, result_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -2805,12 +2641,14 @@ public final class CPRProtos {
           super.clear();
           id_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
-          name_ = "";
+          reservationId_ = 0;
           bitField0_ = (bitField0_ & ~0x00000002);
-          email_ = "";
+          name_ = "";
           bitField0_ = (bitField0_ & ~0x00000004);
-          result_ = 0;
+          email_ = "";
           bitField0_ = (bitField0_ & ~0x00000008);
+          result_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000010);
           return this;
         }
 
@@ -2842,13 +2680,17 @@ public final class CPRProtos {
           if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
             to_bitField0_ |= 0x00000002;
           }
-          result.name_ = name_;
+          result.reservationId_ = reservationId_;
           if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
             to_bitField0_ |= 0x00000004;
           }
-          result.email_ = email_;
+          result.name_ = name_;
           if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
             to_bitField0_ |= 0x00000008;
+          }
+          result.email_ = email_;
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
           }
           result.result_ = result_;
           result.bitField0_ = to_bitField0_;
@@ -2870,13 +2712,16 @@ public final class CPRProtos {
           if (other.hasId()) {
             setId(other.getId());
           }
+          if (other.hasReservationId()) {
+            setReservationId(other.getReservationId());
+          }
           if (other.hasName()) {
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000004;
             name_ = other.name_;
             onChanged();
           }
           if (other.hasEmail()) {
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000008;
             email_ = other.email_;
             onChanged();
           }
@@ -2943,15 +2788,47 @@ public final class CPRProtos {
           return this;
         }
 
-        private java.lang.Object name_ = "";
+        private int reservationId_ ;
         /**
-         * <code>optional string name = 2;</code>
+         * <code>optional int32 reservation_id = 2;</code>
          */
-        public boolean hasName() {
+        public boolean hasReservationId() {
           return ((bitField0_ & 0x00000002) == 0x00000002);
         }
         /**
-         * <code>optional string name = 2;</code>
+         * <code>optional int32 reservation_id = 2;</code>
+         */
+        public int getReservationId() {
+          return reservationId_;
+        }
+        /**
+         * <code>optional int32 reservation_id = 2;</code>
+         */
+        public Builder setReservationId(int value) {
+          bitField0_ |= 0x00000002;
+          reservationId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 reservation_id = 2;</code>
+         */
+        public Builder clearReservationId() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          reservationId_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>optional string name = 3;</code>
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional string name = 3;</code>
          */
         public java.lang.String getName() {
           java.lang.Object ref = name_;
@@ -2968,7 +2845,7 @@ public final class CPRProtos {
           }
         }
         /**
-         * <code>optional string name = 2;</code>
+         * <code>optional string name = 3;</code>
          */
         public com.google.protobuf.ByteString
             getNameBytes() {
@@ -2984,36 +2861,36 @@ public final class CPRProtos {
           }
         }
         /**
-         * <code>optional string name = 2;</code>
+         * <code>optional string name = 3;</code>
          */
         public Builder setName(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
           name_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string name = 2;</code>
+         * <code>optional string name = 3;</code>
          */
         public Builder clearName() {
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           name_ = getDefaultInstance().getName();
           onChanged();
           return this;
         }
         /**
-         * <code>optional string name = 2;</code>
+         * <code>optional string name = 3;</code>
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000002;
+  bitField0_ |= 0x00000004;
           name_ = value;
           onChanged();
           return this;
@@ -3021,13 +2898,13 @@ public final class CPRProtos {
 
         private java.lang.Object email_ = "";
         /**
-         * <code>optional string email = 3;</code>
+         * <code>optional string email = 4;</code>
          */
         public boolean hasEmail() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
+          return ((bitField0_ & 0x00000008) == 0x00000008);
         }
         /**
-         * <code>optional string email = 3;</code>
+         * <code>optional string email = 4;</code>
          */
         public java.lang.String getEmail() {
           java.lang.Object ref = email_;
@@ -3044,7 +2921,7 @@ public final class CPRProtos {
           }
         }
         /**
-         * <code>optional string email = 3;</code>
+         * <code>optional string email = 4;</code>
          */
         public com.google.protobuf.ByteString
             getEmailBytes() {
@@ -3060,36 +2937,36 @@ public final class CPRProtos {
           }
         }
         /**
-         * <code>optional string email = 3;</code>
+         * <code>optional string email = 4;</code>
          */
         public Builder setEmail(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000008;
           email_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string email = 3;</code>
+         * <code>optional string email = 4;</code>
          */
         public Builder clearEmail() {
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           email_ = getDefaultInstance().getEmail();
           onChanged();
           return this;
         }
         /**
-         * <code>optional string email = 3;</code>
+         * <code>optional string email = 4;</code>
          */
         public Builder setEmailBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000008;
           email_ = value;
           onChanged();
           return this;
@@ -3097,35 +2974,35 @@ public final class CPRProtos {
 
         private int result_ = 0;
         /**
-         * <code>optional .cpr.Reservation.Student.ClassResult result = 4;</code>
+         * <code>optional .cpr.ClassResult result = 5;</code>
          */
         public boolean hasResult() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
+          return ((bitField0_ & 0x00000010) == 0x00000010);
         }
         /**
-         * <code>optional .cpr.Reservation.Student.ClassResult result = 4;</code>
+         * <code>optional .cpr.ClassResult result = 5;</code>
          */
-        public com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult getResult() {
-          com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult result = com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult.valueOf(result_);
-          return result == null ? com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult.UNSPECIFIED : result;
+        public com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult getResult() {
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult result = com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.valueOf(result_);
+          return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.CR_UNSPECIFIED : result;
         }
         /**
-         * <code>optional .cpr.Reservation.Student.ClassResult result = 4;</code>
+         * <code>optional .cpr.ClassResult result = 5;</code>
          */
-        public Builder setResult(com.digitald4.cpr.proto.CPRProtos.Reservation.Student.ClassResult value) {
+        public Builder setResult(com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult value) {
           if (value == null) {
             throw new NullPointerException();
           }
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
           result_ = value.getNumber();
           onChanged();
           return this;
         }
         /**
-         * <code>optional .cpr.Reservation.Student.ClassResult result = 4;</code>
+         * <code>optional .cpr.ClassResult result = 5;</code>
          */
         public Builder clearResult() {
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           result_ = 0;
           onChanged();
           return this;
@@ -3251,32 +3128,74 @@ public final class CPRProtos {
       }
     }
 
-    public static final int PAYMENT_STATUS_FIELD_NUMBER = 4;
-    private int paymentStatus_;
+    public static final int CONFIRMATION_CODE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object confirmationCode_;
     /**
-     * <code>optional .cpr.Reservation.PaymentStatus payment_status = 4;</code>
+     * <code>optional string confirmation_code = 4;</code>
      */
-    public boolean hasPaymentStatus() {
+    public boolean hasConfirmationCode() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional .cpr.Reservation.PaymentStatus payment_status = 4;</code>
+     * <code>optional string confirmation_code = 4;</code>
      */
-    public com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus getPaymentStatus() {
-      com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus result = com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus.valueOf(paymentStatus_);
-      return result == null ? com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus.UNSPECIFIED : result;
+    public java.lang.String getConfirmationCode() {
+      java.lang.Object ref = confirmationCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          confirmationCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getConfirmationCodeBytes() {
+      java.lang.Object ref = confirmationCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        confirmationCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int PAYMENT_CONFIRMATION_CODE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object paymentConfirmationCode_;
+    public static final int PAYMENT_STATUS_FIELD_NUMBER = 5;
+    private int paymentStatus_;
     /**
-     * <code>optional string payment_confirmation_code = 5;</code>
+     * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
      */
-    public boolean hasPaymentConfirmationCode() {
+    public boolean hasPaymentStatus() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional string payment_confirmation_code = 5;</code>
+     * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+     */
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus getPaymentStatus() {
+      com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus result = com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.valueOf(paymentStatus_);
+      return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.PS_UNSPECIFIED : result;
+    }
+
+    public static final int PAYMENT_CONFIRMATION_CODE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object paymentConfirmationCode_;
+    /**
+     * <code>optional string payment_confirmation_code = 6;</code>
+     */
+    public boolean hasPaymentConfirmationCode() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string payment_confirmation_code = 6;</code>
      */
     public java.lang.String getPaymentConfirmationCode() {
       java.lang.Object ref = paymentConfirmationCode_;
@@ -3293,7 +3212,7 @@ public final class CPRProtos {
       }
     }
     /**
-     * <code>optional string payment_confirmation_code = 5;</code>
+     * <code>optional string payment_confirmation_code = 6;</code>
      */
     public com.google.protobuf.ByteString
         getPaymentConfirmationCodeBytes() {
@@ -3309,35 +3228,35 @@ public final class CPRProtos {
       }
     }
 
-    public static final int STUDENT_FIELD_NUMBER = 6;
+    public static final int STUDENT_FIELD_NUMBER = 7;
     private java.util.List<com.digitald4.cpr.proto.CPRProtos.Reservation.Student> student_;
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     public java.util.List<com.digitald4.cpr.proto.CPRProtos.Reservation.Student> getStudentList() {
       return student_;
     }
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     public java.util.List<? extends com.digitald4.cpr.proto.CPRProtos.Reservation.StudentOrBuilder> 
         getStudentOrBuilderList() {
       return student_;
     }
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     public int getStudentCount() {
       return student_.size();
     }
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     public com.digitald4.cpr.proto.CPRProtos.Reservation.Student getStudent(int index) {
       return student_.get(index);
     }
     /**
-     * <code>repeated .cpr.Reservation.Student student = 6;</code>
+     * <code>repeated .cpr.Reservation.Student student = 7;</code>
      */
     public com.digitald4.cpr.proto.CPRProtos.Reservation.StudentOrBuilder getStudentOrBuilder(
         int index) {
@@ -3366,13 +3285,16 @@ public final class CPRProtos {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, contactEmail_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeEnum(4, paymentStatus_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, confirmationCode_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 5, paymentConfirmationCode_);
+        output.writeEnum(5, paymentStatus_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, paymentConfirmationCode_);
       }
       for (int i = 0; i < student_.size(); i++) {
-        output.writeMessage(6, student_.get(i));
+        output.writeMessage(7, student_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -3394,15 +3316,18 @@ public final class CPRProtos {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, contactEmail_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, paymentStatus_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, confirmationCode_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, paymentConfirmationCode_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, paymentStatus_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, paymentConfirmationCode_);
       }
       for (int i = 0; i < student_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, student_.get(i));
+          .computeMessageSize(7, student_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3523,13 +3448,15 @@ public final class CPRProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         contactEmail_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        paymentStatus_ = 0;
+        confirmationCode_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
-        paymentConfirmationCode_ = "";
+        paymentStatus_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
+        paymentConfirmationCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (studentBuilder_ == null) {
           student_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           studentBuilder_.clear();
         }
@@ -3572,15 +3499,19 @@ public final class CPRProtos {
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.paymentStatus_ = paymentStatus_;
+        result.confirmationCode_ = confirmationCode_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
+        result.paymentStatus_ = paymentStatus_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
         result.paymentConfirmationCode_ = paymentConfirmationCode_;
         if (studentBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
             student_ = java.util.Collections.unmodifiableList(student_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.student_ = student_;
         } else {
@@ -3613,11 +3544,16 @@ public final class CPRProtos {
           contactEmail_ = other.contactEmail_;
           onChanged();
         }
+        if (other.hasConfirmationCode()) {
+          bitField0_ |= 0x00000008;
+          confirmationCode_ = other.confirmationCode_;
+          onChanged();
+        }
         if (other.hasPaymentStatus()) {
           setPaymentStatus(other.getPaymentStatus());
         }
         if (other.hasPaymentConfirmationCode()) {
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
           paymentConfirmationCode_ = other.paymentConfirmationCode_;
           onChanged();
         }
@@ -3625,7 +3561,7 @@ public final class CPRProtos {
           if (!other.student_.isEmpty()) {
             if (student_.isEmpty()) {
               student_ = other.student_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureStudentIsMutable();
               student_.addAll(other.student_);
@@ -3638,7 +3574,7 @@ public final class CPRProtos {
               studentBuilder_.dispose();
               studentBuilder_ = null;
               student_ = other.student_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
               studentBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getStudentFieldBuilder() : null;
@@ -3815,37 +3751,113 @@ public final class CPRProtos {
         return this;
       }
 
-      private int paymentStatus_ = 0;
+      private java.lang.Object confirmationCode_ = "";
       /**
-       * <code>optional .cpr.Reservation.PaymentStatus payment_status = 4;</code>
+       * <code>optional string confirmation_code = 4;</code>
        */
-      public boolean hasPaymentStatus() {
+      public boolean hasConfirmationCode() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional .cpr.Reservation.PaymentStatus payment_status = 4;</code>
+       * <code>optional string confirmation_code = 4;</code>
        */
-      public com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus getPaymentStatus() {
-        com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus result = com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus.valueOf(paymentStatus_);
-        return result == null ? com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus.UNSPECIFIED : result;
+      public java.lang.String getConfirmationCode() {
+        java.lang.Object ref = confirmationCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            confirmationCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>optional .cpr.Reservation.PaymentStatus payment_status = 4;</code>
+       * <code>optional string confirmation_code = 4;</code>
        */
-      public Builder setPaymentStatus(com.digitald4.cpr.proto.CPRProtos.Reservation.PaymentStatus value) {
+      public com.google.protobuf.ByteString
+          getConfirmationCodeBytes() {
+        java.lang.Object ref = confirmationCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          confirmationCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string confirmation_code = 4;</code>
+       */
+      public Builder setConfirmationCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        confirmationCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string confirmation_code = 4;</code>
+       */
+      public Builder clearConfirmationCode() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        confirmationCode_ = getDefaultInstance().getConfirmationCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string confirmation_code = 4;</code>
+       */
+      public Builder setConfirmationCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        confirmationCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int paymentStatus_ = 0;
+      /**
+       * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+       */
+      public boolean hasPaymentStatus() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus getPaymentStatus() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus result = com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.valueOf(paymentStatus_);
+        return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.PS_UNSPECIFIED : result;
+      }
+      /**
+       * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+       */
+      public Builder setPaymentStatus(com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         paymentStatus_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>optional .cpr.Reservation.PaymentStatus payment_status = 4;</code>
+       * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
        */
       public Builder clearPaymentStatus() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         paymentStatus_ = 0;
         onChanged();
         return this;
@@ -3853,13 +3865,13 @@ public final class CPRProtos {
 
       private java.lang.Object paymentConfirmationCode_ = "";
       /**
-       * <code>optional string payment_confirmation_code = 5;</code>
+       * <code>optional string payment_confirmation_code = 6;</code>
        */
       public boolean hasPaymentConfirmationCode() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional string payment_confirmation_code = 5;</code>
+       * <code>optional string payment_confirmation_code = 6;</code>
        */
       public java.lang.String getPaymentConfirmationCode() {
         java.lang.Object ref = paymentConfirmationCode_;
@@ -3876,7 +3888,7 @@ public final class CPRProtos {
         }
       }
       /**
-       * <code>optional string payment_confirmation_code = 5;</code>
+       * <code>optional string payment_confirmation_code = 6;</code>
        */
       public com.google.protobuf.ByteString
           getPaymentConfirmationCodeBytes() {
@@ -3892,36 +3904,36 @@ public final class CPRProtos {
         }
       }
       /**
-       * <code>optional string payment_confirmation_code = 5;</code>
+       * <code>optional string payment_confirmation_code = 6;</code>
        */
       public Builder setPaymentConfirmationCode(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000020;
         paymentConfirmationCode_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string payment_confirmation_code = 5;</code>
+       * <code>optional string payment_confirmation_code = 6;</code>
        */
       public Builder clearPaymentConfirmationCode() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         paymentConfirmationCode_ = getDefaultInstance().getPaymentConfirmationCode();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string payment_confirmation_code = 5;</code>
+       * <code>optional string payment_confirmation_code = 6;</code>
        */
       public Builder setPaymentConfirmationCodeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000020;
         paymentConfirmationCode_ = value;
         onChanged();
         return this;
@@ -3930,9 +3942,9 @@ public final class CPRProtos {
       private java.util.List<com.digitald4.cpr.proto.CPRProtos.Reservation.Student> student_ =
         java.util.Collections.emptyList();
       private void ensureStudentIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
           student_ = new java.util.ArrayList<com.digitald4.cpr.proto.CPRProtos.Reservation.Student>(student_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -3940,7 +3952,7 @@ public final class CPRProtos {
           com.digitald4.cpr.proto.CPRProtos.Reservation.Student, com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder, com.digitald4.cpr.proto.CPRProtos.Reservation.StudentOrBuilder> studentBuilder_;
 
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public java.util.List<com.digitald4.cpr.proto.CPRProtos.Reservation.Student> getStudentList() {
         if (studentBuilder_ == null) {
@@ -3950,7 +3962,7 @@ public final class CPRProtos {
         }
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public int getStudentCount() {
         if (studentBuilder_ == null) {
@@ -3960,7 +3972,7 @@ public final class CPRProtos {
         }
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public com.digitald4.cpr.proto.CPRProtos.Reservation.Student getStudent(int index) {
         if (studentBuilder_ == null) {
@@ -3970,7 +3982,7 @@ public final class CPRProtos {
         }
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public Builder setStudent(
           int index, com.digitald4.cpr.proto.CPRProtos.Reservation.Student value) {
@@ -3987,7 +3999,7 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public Builder setStudent(
           int index, com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder builderForValue) {
@@ -4001,7 +4013,7 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public Builder addStudent(com.digitald4.cpr.proto.CPRProtos.Reservation.Student value) {
         if (studentBuilder_ == null) {
@@ -4017,7 +4029,7 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public Builder addStudent(
           int index, com.digitald4.cpr.proto.CPRProtos.Reservation.Student value) {
@@ -4034,7 +4046,7 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public Builder addStudent(
           com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder builderForValue) {
@@ -4048,7 +4060,7 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public Builder addStudent(
           int index, com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder builderForValue) {
@@ -4062,7 +4074,7 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public Builder addAllStudent(
           java.lang.Iterable<? extends com.digitald4.cpr.proto.CPRProtos.Reservation.Student> values) {
@@ -4077,12 +4089,12 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public Builder clearStudent() {
         if (studentBuilder_ == null) {
           student_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           studentBuilder_.clear();
@@ -4090,7 +4102,7 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public Builder removeStudent(int index) {
         if (studentBuilder_ == null) {
@@ -4103,14 +4115,14 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder getStudentBuilder(
           int index) {
         return getStudentFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public com.digitald4.cpr.proto.CPRProtos.Reservation.StudentOrBuilder getStudentOrBuilder(
           int index) {
@@ -4120,7 +4132,7 @@ public final class CPRProtos {
         }
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public java.util.List<? extends com.digitald4.cpr.proto.CPRProtos.Reservation.StudentOrBuilder> 
            getStudentOrBuilderList() {
@@ -4131,14 +4143,14 @@ public final class CPRProtos {
         }
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder addStudentBuilder() {
         return getStudentFieldBuilder().addBuilder(
             com.digitald4.cpr.proto.CPRProtos.Reservation.Student.getDefaultInstance());
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder addStudentBuilder(
           int index) {
@@ -4146,7 +4158,7 @@ public final class CPRProtos {
             index, com.digitald4.cpr.proto.CPRProtos.Reservation.Student.getDefaultInstance());
       }
       /**
-       * <code>repeated .cpr.Reservation.Student student = 6;</code>
+       * <code>repeated .cpr.Reservation.Student student = 7;</code>
        */
       public java.util.List<com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder> 
            getStudentBuilderList() {
@@ -4159,7 +4171,7 @@ public final class CPRProtos {
           studentBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.digitald4.cpr.proto.CPRProtos.Reservation.Student, com.digitald4.cpr.proto.CPRProtos.Reservation.Student.Builder, com.digitald4.cpr.proto.CPRProtos.Reservation.StudentOrBuilder>(
                   student_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
                   isClean());
           student_ = null;
@@ -4243,28 +4255,24 @@ public final class CPRProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\tcpr.proto\022\003cpr\032\017common_ui.proto\"\207\001\n\tTr" +
-      "ainning\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\023\n\013des" +
-      "cription\030\003 \001(\t\022\027\n\017duration_millis\030\004 \001(\003\022" +
-      "\014\n\004cost\030\005 \001(\001\022$\n\010location\030\006 \001(\0132\022.common" +
-      ".GPSAddress\"\234\001\n\020TrainningSession\022\n\n\002id\030\001" +
-      " \001(\005\022\024\n\014trainning_id\030\002 \001(\005\022\031\n\021start_time" +
-      "_millis\030\003 \001(\003\022\027\n\017duration_millis\030\004 \001(\003\022\014" +
-      "\n\004cost\030\005 \001(\001\022$\n\010location\030\006 \001(\0132\022.common." +
-      "GPSAddress\"\366\003\n\013Reservation\022\n\n\002id\030\001 \001(\005\022\022" +
-      "\n\nsession_id\030\002 \001(\005\022\025\n\rcontact_email\030\003 \001(",
-      "\t\0226\n\016payment_status\030\004 \001(\0162\036.cpr.Reservat" +
-      "ion.PaymentStatus\022!\n\031payment_confirmatio" +
-      "n_code\030\005 \001(\t\022)\n\007student\030\006 \003(\0132\030.cpr.Rese" +
-      "rvation.Student\032\260\001\n\007Student\022\n\n\002id\030\001 \001(\005\022" +
-      "\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\0224\n\006result\030\004" +
-      " \001(\0162$.cpr.Reservation.Student.ClassResu" +
-      "lt\"F\n\013ClassResult\022\017\n\013UNSPECIFIED\020\000\022\016\n\nUN" +
-      "ATTENDED\020\001\022\n\n\006PASSED\020\002\022\n\n\006FAILED\020\003\"w\n\rPa" +
-      "ymentStatus\022\017\n\013UNSPECIFIED\020\000\022\014\n\010NOT_PAID" +
-      "\020\001\022\023\n\017PAYMENT_PENDING\020\002\022\022\n\016PARTIALLY_PAI",
-      "D\020\003\022\010\n\004PAID\020\004\022\024\n\020PAYMENT_VERIFIED\020\005B$\n\027c" +
-      "om.digitald4.cpr.protoB\tCPRProtos"
+      "\n\tcpr.proto\022\003cpr\032\017common_ui.proto\032\014cpr_u" +
+      "i.proto\"\205\001\n\tTrainning\022\n\n\002id\030\001 \001(\005\022\014\n\004nam" +
+      "e\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\025\n\rduration" +
+      "_mins\030\004 \001(\005\022\014\n\004cost\030\005 \001(\001\022$\n\010location\030\006 " +
+      "\001(\0132\022.common.GPSAddress\"\223\001\n\020TrainningSes" +
+      "sion\022\n\n\002id\030\001 \001(\005\022\024\n\014trainning_id\030\002 \001(\005\022\022" +
+      "\n\nstart_time\030\003 \001(\003\022\025\n\rduration_mins\030\004 \001(" +
+      "\005\022\014\n\004cost\030\005 \001(\001\022$\n\010location\030\006 \001(\0132\022.comm" +
+      "on.GPSAddress\"\307\002\n\013Reservation\022\n\n\002id\030\001 \001(" +
+      "\005\022\022\n\nsession_id\030\002 \001(\005\022\025\n\rcontact_email\030\003",
+      " \001(\t\022\031\n\021confirmation_code\030\004 \001(\t\022*\n\016payme" +
+      "nt_status\030\005 \001(\0162\022.cpr.PaymentStatus\022!\n\031p" +
+      "ayment_confirmation_code\030\006 \001(\t\022)\n\007studen" +
+      "t\030\007 \003(\0132\030.cpr.Reservation.Student\032l\n\007Stu" +
+      "dent\022\n\n\002id\030\001 \001(\005\022\026\n\016reservation_id\030\002 \001(\005" +
+      "\022\014\n\004name\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022 \n\006result\030" +
+      "\005 \001(\0162\020.cpr.ClassResultB$\n\027com.digitald4" +
+      ".cpr.protoB\tCPRProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4278,32 +4286,34 @@ public final class CPRProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.digitald4.common.proto.DD4UIProtos.getDescriptor(),
+          com.digitald4.cpr.ui.proto.CPRUIProtos.getDescriptor(),
         }, assigner);
     internal_static_cpr_Trainning_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_cpr_Trainning_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cpr_Trainning_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "DurationMillis", "Cost", "Location", });
+        new java.lang.String[] { "Id", "Name", "Description", "DurationMins", "Cost", "Location", });
     internal_static_cpr_TrainningSession_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_cpr_TrainningSession_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cpr_TrainningSession_descriptor,
-        new java.lang.String[] { "Id", "TrainningId", "StartTimeMillis", "DurationMillis", "Cost", "Location", });
+        new java.lang.String[] { "Id", "TrainningId", "StartTime", "DurationMins", "Cost", "Location", });
     internal_static_cpr_Reservation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_cpr_Reservation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cpr_Reservation_descriptor,
-        new java.lang.String[] { "Id", "SessionId", "ContactEmail", "PaymentStatus", "PaymentConfirmationCode", "Student", });
+        new java.lang.String[] { "Id", "SessionId", "ContactEmail", "ConfirmationCode", "PaymentStatus", "PaymentConfirmationCode", "Student", });
     internal_static_cpr_Reservation_Student_descriptor =
       internal_static_cpr_Reservation_descriptor.getNestedTypes().get(0);
     internal_static_cpr_Reservation_Student_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cpr_Reservation_Student_descriptor,
-        new java.lang.String[] { "Id", "Name", "Email", "Result", });
+        new java.lang.String[] { "Id", "ReservationId", "Name", "Email", "Result", });
     com.digitald4.common.proto.DD4UIProtos.getDescriptor();
+    com.digitald4.cpr.ui.proto.CPRUIProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

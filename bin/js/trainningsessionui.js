@@ -9,6 +9,7 @@ goog.provide('proto.cpr.TrainningSessionUI');
 
 goog.require('jspb.Message');
 goog.require('proto.common.GPSAddress');
+goog.require('proto.cpr.TrainningUI');
 
 
 /**
@@ -58,10 +59,11 @@ proto.cpr.TrainningSessionUI.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getField(msg, 1),
     trainningId: jspb.Message.getField(msg, 2),
-    startTimeMillis: jspb.Message.getField(msg, 3),
-    durationMillis: jspb.Message.getField(msg, 4),
+    startTime: jspb.Message.getField(msg, 3),
+    durationMins: jspb.Message.getField(msg, 4),
     cost: jspb.Message.getField(msg, 5),
-    location: (f = msg.getLocation()) && proto.common.GPSAddress.toObject(includeInstance, f)
+    location: (f = msg.getLocation()) && proto.common.GPSAddress.toObject(includeInstance, f),
+    trainning: (f = msg.getTrainning()) && proto.cpr.TrainningUI.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -122,41 +124,41 @@ proto.cpr.TrainningSessionUI.prototype.clearTrainningId = function() {
 
 
 /**
- * optional int64 start_time_millis = 3;
+ * optional int64 start_time = 3;
  * @return {number?}
  */
-proto.cpr.TrainningSessionUI.prototype.getStartTimeMillis = function() {
+proto.cpr.TrainningSessionUI.prototype.getStartTime = function() {
   return /** @type {number?} */ (jspb.Message.getField(this, 3));
 };
 
 
 /** @param {number?|undefined} value  */
-proto.cpr.TrainningSessionUI.prototype.setStartTimeMillis = function(value) {
+proto.cpr.TrainningSessionUI.prototype.setStartTime = function(value) {
   jspb.Message.setField(this, 3, value);
 };
 
 
-proto.cpr.TrainningSessionUI.prototype.clearStartTimeMillis = function() {
+proto.cpr.TrainningSessionUI.prototype.clearStartTime = function() {
   jspb.Message.setField(this, 3, undefined);
 };
 
 
 /**
- * optional int64 duration_millis = 4;
+ * optional int32 duration_mins = 4;
  * @return {number?}
  */
-proto.cpr.TrainningSessionUI.prototype.getDurationMillis = function() {
+proto.cpr.TrainningSessionUI.prototype.getDurationMins = function() {
   return /** @type {number?} */ (jspb.Message.getField(this, 4));
 };
 
 
 /** @param {number?|undefined} value  */
-proto.cpr.TrainningSessionUI.prototype.setDurationMillis = function(value) {
+proto.cpr.TrainningSessionUI.prototype.setDurationMins = function(value) {
   jspb.Message.setField(this, 4, value);
 };
 
 
-proto.cpr.TrainningSessionUI.prototype.clearDurationMillis = function() {
+proto.cpr.TrainningSessionUI.prototype.clearDurationMins = function() {
   jspb.Message.setField(this, 4, undefined);
 };
 
@@ -199,6 +201,27 @@ proto.cpr.TrainningSessionUI.prototype.setLocation = function(value) {
 
 proto.cpr.TrainningSessionUI.prototype.clearLocation = function() {
   this.setLocation(undefined);
+};
+
+
+/**
+ * optional TrainningUI trainning = 7;
+ * @return {proto.cpr.TrainningUI}
+ */
+proto.cpr.TrainningSessionUI.prototype.getTrainning = function() {
+  return /** @type{proto.cpr.TrainningUI} */ (
+    jspb.Message.getWrapperField(this, proto.cpr.TrainningUI, 7));
+};
+
+
+/** @param {proto.cpr.TrainningUI|undefined} value  */
+proto.cpr.TrainningSessionUI.prototype.setTrainning = function(value) {
+  jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+proto.cpr.TrainningSessionUI.prototype.clearTrainning = function() {
+  this.setTrainning(undefined);
 };
 
 

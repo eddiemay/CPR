@@ -8,52 +8,254 @@ public final class CPRUIProtos {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface ListSessionsRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:cpr.ListSessionsRequest)
+  /**
+   * Protobuf enum {@code cpr.PaymentStatus}
+   */
+  public enum PaymentStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PS_UNSPECIFIED = 0;</code>
+     */
+    PS_UNSPECIFIED(0, 0),
+    /**
+     * <code>NOT_PAID = 1;</code>
+     */
+    NOT_PAID(1, 1),
+    /**
+     * <code>PAYMENT_PENDING = 2;</code>
+     */
+    PAYMENT_PENDING(2, 2),
+    /**
+     * <code>PARTIALLY_PAID = 3;</code>
+     */
+    PARTIALLY_PAID(3, 3),
+    /**
+     * <code>PAID = 4;</code>
+     */
+    PAID(4, 4),
+    /**
+     * <code>PAYMENT_VERIFIED = 5;</code>
+     */
+    PAYMENT_VERIFIED(5, 5),
+    ;
+
+    /**
+     * <code>PS_UNSPECIFIED = 0;</code>
+     */
+    public static final int PS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>NOT_PAID = 1;</code>
+     */
+    public static final int NOT_PAID_VALUE = 1;
+    /**
+     * <code>PAYMENT_PENDING = 2;</code>
+     */
+    public static final int PAYMENT_PENDING_VALUE = 2;
+    /**
+     * <code>PARTIALLY_PAID = 3;</code>
+     */
+    public static final int PARTIALLY_PAID_VALUE = 3;
+    /**
+     * <code>PAID = 4;</code>
+     */
+    public static final int PAID_VALUE = 4;
+    /**
+     * <code>PAYMENT_VERIFIED = 5;</code>
+     */
+    public static final int PAYMENT_VERIFIED_VALUE = 5;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    public static PaymentStatus valueOf(int value) {
+      switch (value) {
+        case 0: return PS_UNSPECIFIED;
+        case 1: return NOT_PAID;
+        case 2: return PAYMENT_PENDING;
+        case 3: return PARTIALLY_PAID;
+        case 4: return PAID;
+        case 5: return PAYMENT_VERIFIED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PaymentStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PaymentStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PaymentStatus>() {
+            public PaymentStatus findValueByNumber(int number) {
+              return PaymentStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PaymentStatus[] VALUES = values();
+
+    public static PaymentStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private PaymentStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:cpr.PaymentStatus)
+  }
+
+  /**
+   * Protobuf enum {@code cpr.ClassResult}
+   */
+  public enum ClassResult
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>CR_UNSPECIFIED = 0;</code>
+     */
+    CR_UNSPECIFIED(0, 0),
+    /**
+     * <code>UNATTENDED = 1;</code>
+     */
+    UNATTENDED(1, 1),
+    /**
+     * <code>PASSED = 2;</code>
+     */
+    PASSED(2, 2),
+    /**
+     * <code>FAILED = 3;</code>
+     */
+    FAILED(3, 3),
+    ;
+
+    /**
+     * <code>CR_UNSPECIFIED = 0;</code>
+     */
+    public static final int CR_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>UNATTENDED = 1;</code>
+     */
+    public static final int UNATTENDED_VALUE = 1;
+    /**
+     * <code>PASSED = 2;</code>
+     */
+    public static final int PASSED_VALUE = 2;
+    /**
+     * <code>FAILED = 3;</code>
+     */
+    public static final int FAILED_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    public static ClassResult valueOf(int value) {
+      switch (value) {
+        case 0: return CR_UNSPECIFIED;
+        case 1: return UNATTENDED;
+        case 2: return PASSED;
+        case 3: return FAILED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ClassResult>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ClassResult> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ClassResult>() {
+            public ClassResult findValueByNumber(int number) {
+              return ClassResult.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final ClassResult[] VALUES = values();
+
+    public static ClassResult valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ClassResult(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:cpr.ClassResult)
+  }
+
+  public interface GetTrainningRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cpr.GetTrainningRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .common.DateRangeType date_range = 1;</code>
+     * <code>optional int32 trainning_id = 1;</code>
      */
-    boolean hasDateRange();
+    boolean hasTrainningId();
     /**
-     * <code>optional .common.DateRangeType date_range = 1;</code>
+     * <code>optional int32 trainning_id = 1;</code>
      */
-    com.digitald4.common.proto.DD4UIProtos.DateRangeType getDateRange();
-
-    /**
-     * <code>optional int64 ref_date = 2;</code>
-     */
-    boolean hasRefDate();
-    /**
-     * <code>optional int64 ref_date = 2;</code>
-     */
-    long getRefDate();
-
-    /**
-     * <code>optional int32 tranning_id = 3;</code>
-     */
-    boolean hasTranningId();
-    /**
-     * <code>optional int32 tranning_id = 3;</code>
-     */
-    int getTranningId();
+    int getTrainningId();
   }
   /**
-   * Protobuf type {@code cpr.ListSessionsRequest}
+   * Protobuf type {@code cpr.GetTrainningRequest}
    */
-  public  static final class ListSessionsRequest extends
+  public  static final class GetTrainningRequest extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:cpr.ListSessionsRequest)
-      ListSessionsRequestOrBuilder {
-    // Use ListSessionsRequest.newBuilder() to construct.
-    private ListSessionsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:cpr.GetTrainningRequest)
+      GetTrainningRequestOrBuilder {
+    // Use GetTrainningRequest.newBuilder() to construct.
+    private GetTrainningRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private ListSessionsRequest() {
-      dateRange_ = 0;
-      refDate_ = 0L;
-      tranningId_ = 0;
+    private GetTrainningRequest() {
+      trainningId_ = 0;
     }
 
     @java.lang.Override
@@ -61,7 +263,7 @@ public final class CPRUIProtos {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ListSessionsRequest(
+    private GetTrainningRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -84,24 +286,8 @@ public final class CPRUIProtos {
               break;
             }
             case 8: {
-              int rawValue = input.readEnum();
-              com.digitald4.common.proto.DD4UIProtos.DateRangeType value = com.digitald4.common.proto.DD4UIProtos.DateRangeType.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(1, rawValue);
-              } else {
-                bitField0_ |= 0x00000001;
-                dateRange_ = rawValue;
-              }
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              refDate_ = input.readInt64();
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              tranningId_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              trainningId_ = input.readInt32();
               break;
             }
           }
@@ -119,61 +305,30 @@ public final class CPRUIProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_descriptor;
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetTrainningRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_fieldAccessorTable
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetTrainningRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.Builder.class);
+              com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest.Builder.class);
     }
 
     private int bitField0_;
-    public static final int DATE_RANGE_FIELD_NUMBER = 1;
-    private int dateRange_;
+    public static final int TRAINNING_ID_FIELD_NUMBER = 1;
+    private int trainningId_;
     /**
-     * <code>optional .common.DateRangeType date_range = 1;</code>
+     * <code>optional int32 trainning_id = 1;</code>
      */
-    public boolean hasDateRange() {
+    public boolean hasTrainningId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .common.DateRangeType date_range = 1;</code>
+     * <code>optional int32 trainning_id = 1;</code>
      */
-    public com.digitald4.common.proto.DD4UIProtos.DateRangeType getDateRange() {
-      com.digitald4.common.proto.DD4UIProtos.DateRangeType result = com.digitald4.common.proto.DD4UIProtos.DateRangeType.valueOf(dateRange_);
-      return result == null ? com.digitald4.common.proto.DD4UIProtos.DateRangeType.UNSPECIFIED : result;
-    }
-
-    public static final int REF_DATE_FIELD_NUMBER = 2;
-    private long refDate_;
-    /**
-     * <code>optional int64 ref_date = 2;</code>
-     */
-    public boolean hasRefDate() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional int64 ref_date = 2;</code>
-     */
-    public long getRefDate() {
-      return refDate_;
-    }
-
-    public static final int TRANNING_ID_FIELD_NUMBER = 3;
-    private int tranningId_;
-    /**
-     * <code>optional int32 tranning_id = 3;</code>
-     */
-    public boolean hasTranningId() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional int32 tranning_id = 3;</code>
-     */
-    public int getTranningId() {
-      return tranningId_;
+    public int getTrainningId() {
+      return trainningId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -189,13 +344,7 @@ public final class CPRUIProtos {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, dateRange_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt64(2, refDate_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(3, tranningId_);
+        output.writeInt32(1, trainningId_);
       }
       unknownFields.writeTo(output);
     }
@@ -207,15 +356,7 @@ public final class CPRUIProtos {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, dateRange_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, refDate_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, tranningId_);
+          .computeInt32Size(1, trainningId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -223,53 +364,53 @@ public final class CPRUIProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(byte[] data)
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(java.io.InputStream input)
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseDelimitedFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -280,7 +421,7 @@ public final class CPRUIProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest prototype) {
+    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -295,25 +436,25 @@ public final class CPRUIProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code cpr.ListSessionsRequest}
+     * Protobuf type {@code cpr.GetTrainningRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:cpr.ListSessionsRequest)
-        com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:cpr.GetTrainningRequest)
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_descriptor;
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetTrainningRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_fieldAccessorTable
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetTrainningRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.Builder.class);
+                com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest.Builder.class);
       }
 
-      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.newBuilder()
+      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -329,72 +470,54 @@ public final class CPRUIProtos {
       }
       public Builder clear() {
         super.clear();
-        dateRange_ = 0;
+        trainningId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        refDate_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        tranningId_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_descriptor;
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetTrainningRequest_descriptor;
       }
 
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest getDefaultInstanceForType() {
-        return com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.getDefaultInstance();
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest getDefaultInstanceForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest.getDefaultInstance();
       }
 
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest build() {
-        com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest result = buildPartial();
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest build() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest buildPartial() {
-        com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest result = new com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest(this);
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest buildPartial() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest result = new com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.dateRange_ = dateRange_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.refDate_ = refDate_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.tranningId_ = tranningId_;
+        result.trainningId_ = trainningId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest) {
-          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest)other);
+        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest) {
+          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest other) {
-        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.getDefaultInstance()) return this;
-        if (other.hasDateRange()) {
-          setDateRange(other.getDateRange());
-        }
-        if (other.hasRefDate()) {
-          setRefDate(other.getRefDate());
-        }
-        if (other.hasTranningId()) {
-          setTranningId(other.getTranningId());
+      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest other) {
+        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest.getDefaultInstance()) return this;
+        if (other.hasTrainningId()) {
+          setTrainningId(other.getTrainningId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -409,11 +532,11 @@ public final class CPRUIProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parsedMessage = null;
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -424,127 +547,59 @@ public final class CPRUIProtos {
       }
       private int bitField0_;
 
-      private int dateRange_ = 0;
+      private int trainningId_ ;
       /**
-       * <code>optional .common.DateRangeType date_range = 1;</code>
+       * <code>optional int32 trainning_id = 1;</code>
        */
-      public boolean hasDateRange() {
+      public boolean hasTrainningId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional .common.DateRangeType date_range = 1;</code>
+       * <code>optional int32 trainning_id = 1;</code>
        */
-      public com.digitald4.common.proto.DD4UIProtos.DateRangeType getDateRange() {
-        com.digitald4.common.proto.DD4UIProtos.DateRangeType result = com.digitald4.common.proto.DD4UIProtos.DateRangeType.valueOf(dateRange_);
-        return result == null ? com.digitald4.common.proto.DD4UIProtos.DateRangeType.UNSPECIFIED : result;
+      public int getTrainningId() {
+        return trainningId_;
       }
       /**
-       * <code>optional .common.DateRangeType date_range = 1;</code>
+       * <code>optional int32 trainning_id = 1;</code>
        */
-      public Builder setDateRange(com.digitald4.common.proto.DD4UIProtos.DateRangeType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
+      public Builder setTrainningId(int value) {
         bitField0_ |= 0x00000001;
-        dateRange_ = value.getNumber();
+        trainningId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .common.DateRangeType date_range = 1;</code>
+       * <code>optional int32 trainning_id = 1;</code>
        */
-      public Builder clearDateRange() {
+      public Builder clearTrainningId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        dateRange_ = 0;
+        trainningId_ = 0;
         onChanged();
         return this;
       }
 
-      private long refDate_ ;
-      /**
-       * <code>optional int64 ref_date = 2;</code>
-       */
-      public boolean hasRefDate() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional int64 ref_date = 2;</code>
-       */
-      public long getRefDate() {
-        return refDate_;
-      }
-      /**
-       * <code>optional int64 ref_date = 2;</code>
-       */
-      public Builder setRefDate(long value) {
-        bitField0_ |= 0x00000002;
-        refDate_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 ref_date = 2;</code>
-       */
-      public Builder clearRefDate() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        refDate_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private int tranningId_ ;
-      /**
-       * <code>optional int32 tranning_id = 3;</code>
-       */
-      public boolean hasTranningId() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional int32 tranning_id = 3;</code>
-       */
-      public int getTranningId() {
-        return tranningId_;
-      }
-      /**
-       * <code>optional int32 tranning_id = 3;</code>
-       */
-      public Builder setTranningId(int value) {
-        bitField0_ |= 0x00000004;
-        tranningId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 tranning_id = 3;</code>
-       */
-      public Builder clearTranningId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        tranningId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:cpr.ListSessionsRequest)
+      // @@protoc_insertion_point(builder_scope:cpr.GetTrainningRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:cpr.ListSessionsRequest)
-    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:cpr.GetTrainningRequest)
+    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest();
+      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest();
     }
 
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest getDefaultInstance() {
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<ListSessionsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ListSessionsRequest>() {
-      public ListSessionsRequest parsePartialFrom(
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GetTrainningRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetTrainningRequest>() {
+      public GetTrainningRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new ListSessionsRequest(input, extensionRegistry);
+          return new GetTrainningRequest(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -556,16 +611,328 @@ public final class CPRUIProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<ListSessionsRequest> parser() {
+    public static com.google.protobuf.Parser<GetTrainningRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ListSessionsRequest> getParserForType() {
+    public com.google.protobuf.Parser<GetTrainningRequest> getParserForType() {
       return PARSER;
     }
 
-    public com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest getDefaultInstanceForType() {
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListTrainningsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cpr.ListTrainningsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cpr.ListTrainningsRequest}
+   */
+  public  static final class ListTrainningsRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cpr.ListTrainningsRequest)
+      ListTrainningsRequestOrBuilder {
+    // Use ListTrainningsRequest.newBuilder() to construct.
+    private ListTrainningsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ListTrainningsRequest() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListTrainningsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListTrainningsRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListTrainningsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cpr.ListTrainningsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cpr.ListTrainningsRequest)
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListTrainningsRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListTrainningsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest.Builder.class);
+      }
+
+      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListTrainningsRequest_descriptor;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest getDefaultInstanceForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest.getDefaultInstance();
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest build() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest buildPartial() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest result = new com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest) {
+          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest other) {
+        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cpr.ListTrainningsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cpr.ListTrainningsRequest)
+    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest();
+    }
+
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ListTrainningsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListTrainningsRequest>() {
+      public ListTrainningsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new ListTrainningsRequest(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListTrainningsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListTrainningsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -611,6 +978,15 @@ public final class CPRUIProtos {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>optional int32 duration_mins = 4;</code>
+     */
+    boolean hasDurationMins();
+    /**
+     * <code>optional int32 duration_mins = 4;</code>
+     */
+    int getDurationMins();
   }
   /**
    * Protobuf type {@code cpr.TrainningUI}
@@ -627,6 +1003,7 @@ public final class CPRUIProtos {
       id_ = 0;
       name_ = "";
       description_ = "";
+      durationMins_ = 0;
     }
 
     @java.lang.Override
@@ -671,6 +1048,11 @@ public final class CPRUIProtos {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
               description_ = bs;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              durationMins_ = input.readInt32();
               break;
             }
           }
@@ -798,6 +1180,21 @@ public final class CPRUIProtos {
       }
     }
 
+    public static final int DURATION_MINS_FIELD_NUMBER = 4;
+    private int durationMins_;
+    /**
+     * <code>optional int32 duration_mins = 4;</code>
+     */
+    public boolean hasDurationMins() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 duration_mins = 4;</code>
+     */
+    public int getDurationMins() {
+      return durationMins_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -831,6 +1228,9 @@ public final class CPRUIProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, description_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, durationMins_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -848,6 +1248,10 @@ public final class CPRUIProtos {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, description_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, durationMins_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -967,6 +1371,8 @@ public final class CPRUIProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         description_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+        durationMins_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -1003,6 +1409,10 @@ public final class CPRUIProtos {
           to_bitField0_ |= 0x00000004;
         }
         result.description_ = description_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.durationMins_ = durationMins_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1031,6 +1441,9 @@ public final class CPRUIProtos {
           bitField0_ |= 0x00000004;
           description_ = other.description_;
           onChanged();
+        }
+        if (other.hasDurationMins()) {
+          setDurationMins(other.getDurationMins());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1253,6 +1666,38 @@ public final class CPRUIProtos {
         return this;
       }
 
+      private int durationMins_ ;
+      /**
+       * <code>optional int32 duration_mins = 4;</code>
+       */
+      public boolean hasDurationMins() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 duration_mins = 4;</code>
+       */
+      public int getDurationMins() {
+        return durationMins_;
+      }
+      /**
+       * <code>optional int32 duration_mins = 4;</code>
+       */
+      public Builder setDurationMins(int value) {
+        bitField0_ |= 0x00000008;
+        durationMins_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 duration_mins = 4;</code>
+       */
+      public Builder clearDurationMins() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        durationMins_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:cpr.TrainningUI)
     }
 
@@ -1300,6 +1745,979 @@ public final class CPRUIProtos {
 
   }
 
+  public interface GetSessionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cpr.GetSessionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 session_id = 1;</code>
+     */
+    boolean hasSessionId();
+    /**
+     * <code>optional int32 session_id = 1;</code>
+     */
+    int getSessionId();
+  }
+  /**
+   * Protobuf type {@code cpr.GetSessionRequest}
+   */
+  public  static final class GetSessionRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cpr.GetSessionRequest)
+      GetSessionRequestOrBuilder {
+    // Use GetSessionRequest.newBuilder() to construct.
+    private GetSessionRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GetSessionRequest() {
+      sessionId_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetSessionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              sessionId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetSessionRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetSessionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SESSION_ID_FIELD_NUMBER = 1;
+    private int sessionId_;
+    /**
+     * <code>optional int32 session_id = 1;</code>
+     */
+    public boolean hasSessionId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 session_id = 1;</code>
+     */
+    public int getSessionId() {
+      return sessionId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, sessionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, sessionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cpr.GetSessionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cpr.GetSessionRequest)
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetSessionRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetSessionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest.Builder.class);
+      }
+
+      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        sessionId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetSessionRequest_descriptor;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest getDefaultInstanceForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest.getDefaultInstance();
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest build() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest buildPartial() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest result = new com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.sessionId_ = sessionId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest) {
+          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest other) {
+        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest.getDefaultInstance()) return this;
+        if (other.hasSessionId()) {
+          setSessionId(other.getSessionId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int sessionId_ ;
+      /**
+       * <code>optional int32 session_id = 1;</code>
+       */
+      public boolean hasSessionId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 session_id = 1;</code>
+       */
+      public int getSessionId() {
+        return sessionId_;
+      }
+      /**
+       * <code>optional int32 session_id = 1;</code>
+       */
+      public Builder setSessionId(int value) {
+        bitField0_ |= 0x00000001;
+        sessionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 session_id = 1;</code>
+       */
+      public Builder clearSessionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sessionId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cpr.GetSessionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cpr.GetSessionRequest)
+    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest();
+    }
+
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GetSessionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetSessionRequest>() {
+      public GetSessionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new GetSessionRequest(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetSessionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetSessionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListSessionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cpr.ListSessionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .common.DateRangeType date_range = 1;</code>
+     */
+    boolean hasDateRange();
+    /**
+     * <code>required .common.DateRangeType date_range = 1;</code>
+     */
+    com.digitald4.common.proto.DD4UIProtos.DateRangeType getDateRange();
+
+    /**
+     * <code>required int64 ref_date = 2;</code>
+     */
+    boolean hasRefDate();
+    /**
+     * <code>required int64 ref_date = 2;</code>
+     */
+    long getRefDate();
+
+    /**
+     * <code>optional int32 trainning_id = 3;</code>
+     */
+    boolean hasTrainningId();
+    /**
+     * <code>optional int32 trainning_id = 3;</code>
+     */
+    int getTrainningId();
+  }
+  /**
+   * Protobuf type {@code cpr.ListSessionsRequest}
+   */
+  public  static final class ListSessionsRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cpr.ListSessionsRequest)
+      ListSessionsRequestOrBuilder {
+    // Use ListSessionsRequest.newBuilder() to construct.
+    private ListSessionsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ListSessionsRequest() {
+      dateRange_ = 0;
+      refDate_ = 0L;
+      trainningId_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListSessionsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.digitald4.common.proto.DD4UIProtos.DateRangeType value = com.digitald4.common.proto.DD4UIProtos.DateRangeType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                dateRange_ = rawValue;
+              }
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              refDate_ = input.readInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              trainningId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DATE_RANGE_FIELD_NUMBER = 1;
+    private int dateRange_;
+    /**
+     * <code>required .common.DateRangeType date_range = 1;</code>
+     */
+    public boolean hasDateRange() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .common.DateRangeType date_range = 1;</code>
+     */
+    public com.digitald4.common.proto.DD4UIProtos.DateRangeType getDateRange() {
+      com.digitald4.common.proto.DD4UIProtos.DateRangeType result = com.digitald4.common.proto.DD4UIProtos.DateRangeType.valueOf(dateRange_);
+      return result == null ? com.digitald4.common.proto.DD4UIProtos.DateRangeType.UNSPECIFIED : result;
+    }
+
+    public static final int REF_DATE_FIELD_NUMBER = 2;
+    private long refDate_;
+    /**
+     * <code>required int64 ref_date = 2;</code>
+     */
+    public boolean hasRefDate() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int64 ref_date = 2;</code>
+     */
+    public long getRefDate() {
+      return refDate_;
+    }
+
+    public static final int TRAINNING_ID_FIELD_NUMBER = 3;
+    private int trainningId_;
+    /**
+     * <code>optional int32 trainning_id = 3;</code>
+     */
+    public boolean hasTrainningId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 trainning_id = 3;</code>
+     */
+    public int getTrainningId() {
+      return trainningId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasDateRange()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRefDate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, dateRange_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, refDate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, trainningId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, dateRange_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, refDate_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, trainningId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cpr.ListSessionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cpr.ListSessionsRequest)
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.Builder.class);
+      }
+
+      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        dateRange_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        refDate_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        trainningId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ListSessionsRequest_descriptor;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest getDefaultInstanceForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.getDefaultInstance();
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest build() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest buildPartial() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest result = new com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.dateRange_ = dateRange_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.refDate_ = refDate_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.trainningId_ = trainningId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest) {
+          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest other) {
+        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest.getDefaultInstance()) return this;
+        if (other.hasDateRange()) {
+          setDateRange(other.getDateRange());
+        }
+        if (other.hasRefDate()) {
+          setRefDate(other.getRefDate());
+        }
+        if (other.hasTrainningId()) {
+          setTrainningId(other.getTrainningId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasDateRange()) {
+          return false;
+        }
+        if (!hasRefDate()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int dateRange_ = 0;
+      /**
+       * <code>required .common.DateRangeType date_range = 1;</code>
+       */
+      public boolean hasDateRange() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .common.DateRangeType date_range = 1;</code>
+       */
+      public com.digitald4.common.proto.DD4UIProtos.DateRangeType getDateRange() {
+        com.digitald4.common.proto.DD4UIProtos.DateRangeType result = com.digitald4.common.proto.DD4UIProtos.DateRangeType.valueOf(dateRange_);
+        return result == null ? com.digitald4.common.proto.DD4UIProtos.DateRangeType.UNSPECIFIED : result;
+      }
+      /**
+       * <code>required .common.DateRangeType date_range = 1;</code>
+       */
+      public Builder setDateRange(com.digitald4.common.proto.DD4UIProtos.DateRangeType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        dateRange_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .common.DateRangeType date_range = 1;</code>
+       */
+      public Builder clearDateRange() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dateRange_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long refDate_ ;
+      /**
+       * <code>required int64 ref_date = 2;</code>
+       */
+      public boolean hasRefDate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int64 ref_date = 2;</code>
+       */
+      public long getRefDate() {
+        return refDate_;
+      }
+      /**
+       * <code>required int64 ref_date = 2;</code>
+       */
+      public Builder setRefDate(long value) {
+        bitField0_ |= 0x00000002;
+        refDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 ref_date = 2;</code>
+       */
+      public Builder clearRefDate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        refDate_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int trainningId_ ;
+      /**
+       * <code>optional int32 trainning_id = 3;</code>
+       */
+      public boolean hasTrainningId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 trainning_id = 3;</code>
+       */
+      public int getTrainningId() {
+        return trainningId_;
+      }
+      /**
+       * <code>optional int32 trainning_id = 3;</code>
+       */
+      public Builder setTrainningId(int value) {
+        bitField0_ |= 0x00000004;
+        trainningId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 trainning_id = 3;</code>
+       */
+      public Builder clearTrainningId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        trainningId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cpr.ListSessionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cpr.ListSessionsRequest)
+    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest();
+    }
+
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ListSessionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListSessionsRequest>() {
+      public ListSessionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new ListSessionsRequest(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListSessionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListSessionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface TrainningSessionUIOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cpr.TrainningSessionUI)
       com.google.protobuf.MessageOrBuilder {
@@ -1323,22 +2741,22 @@ public final class CPRUIProtos {
     int getTrainningId();
 
     /**
-     * <code>optional int64 start_time_millis = 3;</code>
+     * <code>optional int64 start_time = 3;</code>
      */
-    boolean hasStartTimeMillis();
+    boolean hasStartTime();
     /**
-     * <code>optional int64 start_time_millis = 3;</code>
+     * <code>optional int64 start_time = 3;</code>
      */
-    long getStartTimeMillis();
+    long getStartTime();
 
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    boolean hasDurationMillis();
+    boolean hasDurationMins();
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    long getDurationMillis();
+    int getDurationMins();
 
     /**
      * <code>optional double cost = 5;</code>
@@ -1361,6 +2779,19 @@ public final class CPRUIProtos {
      * <code>optional .common.GPSAddress location = 6;</code>
      */
     com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder getLocationOrBuilder();
+
+    /**
+     * <code>optional .cpr.TrainningUI trainning = 7;</code>
+     */
+    boolean hasTrainning();
+    /**
+     * <code>optional .cpr.TrainningUI trainning = 7;</code>
+     */
+    com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI getTrainning();
+    /**
+     * <code>optional .cpr.TrainningUI trainning = 7;</code>
+     */
+    com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUIOrBuilder getTrainningOrBuilder();
   }
   /**
    * Protobuf type {@code cpr.TrainningSessionUI}
@@ -1376,8 +2807,8 @@ public final class CPRUIProtos {
     private TrainningSessionUI() {
       id_ = 0;
       trainningId_ = 0;
-      startTimeMillis_ = 0L;
-      durationMillis_ = 0L;
+      startTime_ = 0L;
+      durationMins_ = 0;
       cost_ = 0D;
     }
 
@@ -1420,12 +2851,12 @@ public final class CPRUIProtos {
             }
             case 24: {
               bitField0_ |= 0x00000004;
-              startTimeMillis_ = input.readInt64();
+              startTime_ = input.readInt64();
               break;
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              durationMillis_ = input.readInt64();
+              durationMins_ = input.readInt32();
               break;
             }
             case 41: {
@@ -1444,6 +2875,19 @@ public final class CPRUIProtos {
                 location_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000020;
+              break;
+            }
+            case 58: {
+              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = trainning_.toBuilder();
+              }
+              trainning_ = input.readMessage(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(trainning_);
+                trainning_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
               break;
             }
           }
@@ -1502,34 +2946,34 @@ public final class CPRUIProtos {
       return trainningId_;
     }
 
-    public static final int START_TIME_MILLIS_FIELD_NUMBER = 3;
-    private long startTimeMillis_;
+    public static final int START_TIME_FIELD_NUMBER = 3;
+    private long startTime_;
     /**
-     * <code>optional int64 start_time_millis = 3;</code>
+     * <code>optional int64 start_time = 3;</code>
      */
-    public boolean hasStartTimeMillis() {
+    public boolean hasStartTime() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional int64 start_time_millis = 3;</code>
+     * <code>optional int64 start_time = 3;</code>
      */
-    public long getStartTimeMillis() {
-      return startTimeMillis_;
+    public long getStartTime() {
+      return startTime_;
     }
 
-    public static final int DURATION_MILLIS_FIELD_NUMBER = 4;
-    private long durationMillis_;
+    public static final int DURATION_MINS_FIELD_NUMBER = 4;
+    private int durationMins_;
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    public boolean hasDurationMillis() {
+    public boolean hasDurationMins() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional int64 duration_millis = 4;</code>
+     * <code>optional int32 duration_mins = 4;</code>
      */
-    public long getDurationMillis() {
-      return durationMillis_;
+    public int getDurationMins() {
+      return durationMins_;
     }
 
     public static final int COST_FIELD_NUMBER = 5;
@@ -1568,12 +3012,39 @@ public final class CPRUIProtos {
       return location_ == null ? com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance() : location_;
     }
 
+    public static final int TRAINNING_FIELD_NUMBER = 7;
+    private com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI trainning_;
+    /**
+     * <code>optional .cpr.TrainningUI trainning = 7;</code>
+     */
+    public boolean hasTrainning() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .cpr.TrainningUI trainning = 7;</code>
+     */
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI getTrainning() {
+      return trainning_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.getDefaultInstance() : trainning_;
+    }
+    /**
+     * <code>optional .cpr.TrainningUI trainning = 7;</code>
+     */
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUIOrBuilder getTrainningOrBuilder() {
+      return trainning_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.getDefaultInstance() : trainning_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (hasTrainning()) {
+        if (!getTrainning().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1587,16 +3058,19 @@ public final class CPRUIProtos {
         output.writeInt32(2, trainningId_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt64(3, startTimeMillis_);
+        output.writeInt64(3, startTime_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt64(4, durationMillis_);
+        output.writeInt32(4, durationMins_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeDouble(5, cost_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeMessage(6, getLocation());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(7, getTrainning());
       }
       unknownFields.writeTo(output);
     }
@@ -1616,11 +3090,11 @@ public final class CPRUIProtos {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, startTimeMillis_);
+          .computeInt64Size(3, startTime_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, durationMillis_);
+          .computeInt32Size(4, durationMins_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1629,6 +3103,10 @@ public final class CPRUIProtos {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLocation());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getTrainning());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1739,6 +3217,7 @@ public final class CPRUIProtos {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getLocationFieldBuilder();
+          getTrainningFieldBuilder();
         }
       }
       public Builder clear() {
@@ -1747,9 +3226,9 @@ public final class CPRUIProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         trainningId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        startTimeMillis_ = 0L;
+        startTime_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
-        durationMillis_ = 0L;
+        durationMins_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
         cost_ = 0D;
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -1759,6 +3238,12 @@ public final class CPRUIProtos {
           locationBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
+        if (trainningBuilder_ == null) {
+          trainning_ = null;
+        } else {
+          trainningBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -1794,11 +3279,11 @@ public final class CPRUIProtos {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.startTimeMillis_ = startTimeMillis_;
+        result.startTime_ = startTime_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.durationMillis_ = durationMillis_;
+        result.durationMins_ = durationMins_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
@@ -1810,6 +3295,14 @@ public final class CPRUIProtos {
           result.location_ = location_;
         } else {
           result.location_ = locationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        if (trainningBuilder_ == null) {
+          result.trainning_ = trainning_;
+        } else {
+          result.trainning_ = trainningBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -1833,11 +3326,11 @@ public final class CPRUIProtos {
         if (other.hasTrainningId()) {
           setTrainningId(other.getTrainningId());
         }
-        if (other.hasStartTimeMillis()) {
-          setStartTimeMillis(other.getStartTimeMillis());
+        if (other.hasStartTime()) {
+          setStartTime(other.getStartTime());
         }
-        if (other.hasDurationMillis()) {
-          setDurationMillis(other.getDurationMillis());
+        if (other.hasDurationMins()) {
+          setDurationMins(other.getDurationMins());
         }
         if (other.hasCost()) {
           setCost(other.getCost());
@@ -1845,12 +3338,20 @@ public final class CPRUIProtos {
         if (other.hasLocation()) {
           mergeLocation(other.getLocation());
         }
+        if (other.hasTrainning()) {
+          mergeTrainning(other.getTrainning());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
+        if (hasTrainning()) {
+          if (!getTrainning().isInitialized()) {
+            return false;
+          }
+        }
         return true;
       }
 
@@ -1937,66 +3438,66 @@ public final class CPRUIProtos {
         return this;
       }
 
-      private long startTimeMillis_ ;
+      private long startTime_ ;
       /**
-       * <code>optional int64 start_time_millis = 3;</code>
+       * <code>optional int64 start_time = 3;</code>
        */
-      public boolean hasStartTimeMillis() {
+      public boolean hasStartTime() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional int64 start_time_millis = 3;</code>
+       * <code>optional int64 start_time = 3;</code>
        */
-      public long getStartTimeMillis() {
-        return startTimeMillis_;
+      public long getStartTime() {
+        return startTime_;
       }
       /**
-       * <code>optional int64 start_time_millis = 3;</code>
+       * <code>optional int64 start_time = 3;</code>
        */
-      public Builder setStartTimeMillis(long value) {
+      public Builder setStartTime(long value) {
         bitField0_ |= 0x00000004;
-        startTimeMillis_ = value;
+        startTime_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int64 start_time_millis = 3;</code>
+       * <code>optional int64 start_time = 3;</code>
        */
-      public Builder clearStartTimeMillis() {
+      public Builder clearStartTime() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        startTimeMillis_ = 0L;
+        startTime_ = 0L;
         onChanged();
         return this;
       }
 
-      private long durationMillis_ ;
+      private int durationMins_ ;
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public boolean hasDurationMillis() {
+      public boolean hasDurationMins() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public long getDurationMillis() {
-        return durationMillis_;
+      public int getDurationMins() {
+        return durationMins_;
       }
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public Builder setDurationMillis(long value) {
+      public Builder setDurationMins(int value) {
         bitField0_ |= 0x00000008;
-        durationMillis_ = value;
+        durationMins_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int64 duration_millis = 4;</code>
+       * <code>optional int32 duration_mins = 4;</code>
        */
-      public Builder clearDurationMillis() {
+      public Builder clearDurationMins() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        durationMillis_ = 0L;
+        durationMins_ = 0;
         onChanged();
         return this;
       }
@@ -2151,6 +3652,124 @@ public final class CPRUIProtos {
         return locationBuilder_;
       }
 
+      private com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI trainning_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUIOrBuilder> trainningBuilder_;
+      /**
+       * <code>optional .cpr.TrainningUI trainning = 7;</code>
+       */
+      public boolean hasTrainning() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .cpr.TrainningUI trainning = 7;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI getTrainning() {
+        if (trainningBuilder_ == null) {
+          return trainning_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.getDefaultInstance() : trainning_;
+        } else {
+          return trainningBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .cpr.TrainningUI trainning = 7;</code>
+       */
+      public Builder setTrainning(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI value) {
+        if (trainningBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          trainning_ = value;
+          onChanged();
+        } else {
+          trainningBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .cpr.TrainningUI trainning = 7;</code>
+       */
+      public Builder setTrainning(
+          com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.Builder builderForValue) {
+        if (trainningBuilder_ == null) {
+          trainning_ = builderForValue.build();
+          onChanged();
+        } else {
+          trainningBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .cpr.TrainningUI trainning = 7;</code>
+       */
+      public Builder mergeTrainning(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI value) {
+        if (trainningBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              trainning_ != null &&
+              trainning_ != com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.getDefaultInstance()) {
+            trainning_ =
+              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.newBuilder(trainning_).mergeFrom(value).buildPartial();
+          } else {
+            trainning_ = value;
+          }
+          onChanged();
+        } else {
+          trainningBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .cpr.TrainningUI trainning = 7;</code>
+       */
+      public Builder clearTrainning() {
+        if (trainningBuilder_ == null) {
+          trainning_ = null;
+          onChanged();
+        } else {
+          trainningBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .cpr.TrainningUI trainning = 7;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.Builder getTrainningBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getTrainningFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .cpr.TrainningUI trainning = 7;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUIOrBuilder getTrainningOrBuilder() {
+        if (trainningBuilder_ != null) {
+          return trainningBuilder_.getMessageOrBuilder();
+        } else {
+          return trainning_ == null ?
+              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.getDefaultInstance() : trainning_;
+        }
+      }
+      /**
+       * <code>optional .cpr.TrainningUI trainning = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUIOrBuilder> 
+          getTrainningFieldBuilder() {
+        if (trainningBuilder_ == null) {
+          trainningBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUIOrBuilder>(
+                  getTrainning(),
+                  getParentForChildren(),
+                  isClean());
+          trainning_ = null;
+        }
+        return trainningBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:cpr.TrainningSessionUI)
     }
 
@@ -2198,21 +3817,4137 @@ public final class CPRUIProtos {
 
   }
 
+  public interface GetReservationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cpr.GetReservationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string email = 1;</code>
+     */
+    boolean hasEmail();
+    /**
+     * <code>required string email = 1;</code>
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>required string email = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+
+    /**
+     * <code>required string confirmation_code = 2;</code>
+     */
+    boolean hasConfirmationCode();
+    /**
+     * <code>required string confirmation_code = 2;</code>
+     */
+    java.lang.String getConfirmationCode();
+    /**
+     * <code>required string confirmation_code = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getConfirmationCodeBytes();
+  }
+  /**
+   * Protobuf type {@code cpr.GetReservationRequest}
+   */
+  public  static final class GetReservationRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cpr.GetReservationRequest)
+      GetReservationRequestOrBuilder {
+    // Use GetReservationRequest.newBuilder() to construct.
+    private GetReservationRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GetReservationRequest() {
+      email_ = "";
+      confirmationCode_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetReservationRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              email_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              confirmationCode_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetReservationRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetReservationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EMAIL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object email_;
+    /**
+     * <code>required string email = 1;</code>
+     */
+    public boolean hasEmail() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string email = 1;</code>
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          email_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string email = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONFIRMATION_CODE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object confirmationCode_;
+    /**
+     * <code>required string confirmation_code = 2;</code>
+     */
+    public boolean hasConfirmationCode() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string confirmation_code = 2;</code>
+     */
+    public java.lang.String getConfirmationCode() {
+      java.lang.Object ref = confirmationCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          confirmationCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string confirmation_code = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getConfirmationCodeBytes() {
+      java.lang.Object ref = confirmationCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        confirmationCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasEmail()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasConfirmationCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, email_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, confirmationCode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, email_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, confirmationCode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cpr.GetReservationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cpr.GetReservationRequest)
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetReservationRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetReservationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest.Builder.class);
+      }
+
+      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        email_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        confirmationCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_GetReservationRequest_descriptor;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest getDefaultInstanceForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest.getDefaultInstance();
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest build() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest buildPartial() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest result = new com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.email_ = email_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.confirmationCode_ = confirmationCode_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest) {
+          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest other) {
+        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest.getDefaultInstance()) return this;
+        if (other.hasEmail()) {
+          bitField0_ |= 0x00000001;
+          email_ = other.email_;
+          onChanged();
+        }
+        if (other.hasConfirmationCode()) {
+          bitField0_ |= 0x00000002;
+          confirmationCode_ = other.confirmationCode_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasEmail()) {
+          return false;
+        }
+        if (!hasConfirmationCode()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public boolean hasEmail() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            email_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public Builder clearEmail() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        email_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object confirmationCode_ = "";
+      /**
+       * <code>required string confirmation_code = 2;</code>
+       */
+      public boolean hasConfirmationCode() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string confirmation_code = 2;</code>
+       */
+      public java.lang.String getConfirmationCode() {
+        java.lang.Object ref = confirmationCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            confirmationCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string confirmation_code = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getConfirmationCodeBytes() {
+        java.lang.Object ref = confirmationCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          confirmationCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string confirmation_code = 2;</code>
+       */
+      public Builder setConfirmationCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        confirmationCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string confirmation_code = 2;</code>
+       */
+      public Builder clearConfirmationCode() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        confirmationCode_ = getDefaultInstance().getConfirmationCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string confirmation_code = 2;</code>
+       */
+      public Builder setConfirmationCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        confirmationCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cpr.GetReservationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cpr.GetReservationRequest)
+    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest();
+    }
+
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GetReservationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetReservationRequest>() {
+      public GetReservationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new GetReservationRequest(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetReservationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetReservationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReservationUIOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cpr.ReservationUI)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    int getId();
+
+    /**
+     * <code>optional int32 session_id = 2;</code>
+     */
+    boolean hasSessionId();
+    /**
+     * <code>optional int32 session_id = 2;</code>
+     */
+    int getSessionId();
+
+    /**
+     * <code>optional string contact_email = 3;</code>
+     */
+    boolean hasContactEmail();
+    /**
+     * <code>optional string contact_email = 3;</code>
+     */
+    java.lang.String getContactEmail();
+    /**
+     * <code>optional string contact_email = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getContactEmailBytes();
+
+    /**
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    boolean hasConfirmationCode();
+    /**
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    java.lang.String getConfirmationCode();
+    /**
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getConfirmationCodeBytes();
+
+    /**
+     * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+     */
+    boolean hasPaymentStatus();
+    /**
+     * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+     */
+    com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus getPaymentStatus();
+
+    /**
+     * <code>optional string payment_confirmation_code = 6;</code>
+     */
+    boolean hasPaymentConfirmationCode();
+    /**
+     * <code>optional string payment_confirmation_code = 6;</code>
+     */
+    java.lang.String getPaymentConfirmationCode();
+    /**
+     * <code>optional string payment_confirmation_code = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getPaymentConfirmationCodeBytes();
+
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    java.util.List<com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI> 
+        getStudentList();
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI getStudent(int index);
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    int getStudentCount();
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    java.util.List<? extends com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder> 
+        getStudentOrBuilderList();
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder getStudentOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code cpr.ReservationUI}
+   */
+  public  static final class ReservationUI extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cpr.ReservationUI)
+      ReservationUIOrBuilder {
+    // Use ReservationUI.newBuilder() to construct.
+    private ReservationUI(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ReservationUI() {
+      id_ = 0;
+      sessionId_ = 0;
+      contactEmail_ = "";
+      confirmationCode_ = "";
+      paymentStatus_ = 0;
+      paymentConfirmationCode_ = "";
+      student_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReservationUI(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              sessionId_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              contactEmail_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              confirmationCode_ = bs;
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus value = com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000010;
+                paymentStatus_ = rawValue;
+              }
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              paymentConfirmationCode_ = bs;
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                student_ = new java.util.ArrayList<com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              student_.add(input.readMessage(com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          student_ = java.util.Collections.unmodifiableList(student_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.Builder.class);
+    }
+
+    public interface StudentUIOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:cpr.ReservationUI.StudentUI)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      boolean hasId();
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      int getId();
+
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      boolean hasName();
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      java.lang.String getName();
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      boolean hasEmail();
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      java.lang.String getEmail();
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      com.google.protobuf.ByteString
+          getEmailBytes();
+
+      /**
+       * <code>optional .cpr.ClassResult result = 4;</code>
+       */
+      boolean hasResult();
+      /**
+       * <code>optional .cpr.ClassResult result = 4;</code>
+       */
+      com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult getResult();
+    }
+    /**
+     * Protobuf type {@code cpr.ReservationUI.StudentUI}
+     */
+    public  static final class StudentUI extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:cpr.ReservationUI.StudentUI)
+        StudentUIOrBuilder {
+      // Use StudentUI.newBuilder() to construct.
+      private StudentUI(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private StudentUI() {
+        id_ = 0;
+        name_ = "";
+        email_ = "";
+        result_ = 0;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private StudentUI(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        this();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                id_ = input.readInt32();
+                break;
+              }
+              case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000002;
+                name_ = bs;
+                break;
+              }
+              case 26: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000004;
+                email_ = bs;
+                break;
+              }
+              case 32: {
+                int rawValue = input.readEnum();
+                com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult value = com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(4, rawValue);
+                } else {
+                  bitField0_ |= 0x00000008;
+                  result_ = rawValue;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw new RuntimeException(e.setUnfinishedMessage(this));
+        } catch (java.io.IOException e) {
+          throw new RuntimeException(
+              new com.google.protobuf.InvalidProtocolBufferException(
+                  e.getMessage()).setUnfinishedMessage(this));
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_StudentUI_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_StudentUI_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int ID_FIELD_NUMBER = 1;
+      private int id_;
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+
+      public static final int NAME_FIELD_NUMBER = 2;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int EMAIL_FIELD_NUMBER = 3;
+      private volatile java.lang.Object email_;
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      public boolean hasEmail() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            email_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string email = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int RESULT_FIELD_NUMBER = 4;
+      private int result_;
+      /**
+       * <code>optional .cpr.ClassResult result = 4;</code>
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .cpr.ClassResult result = 4;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult getResult() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult result = com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.valueOf(result_);
+        return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.CR_UNSPECIFIED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeInt32(1, id_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 3, email_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeEnum(4, result_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, id_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(3, email_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(4, result_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code cpr.ReservationUI.StudentUI}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:cpr.ReservationUI.StudentUI)
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_StudentUI_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_StudentUI_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder.class);
+        }
+
+        // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          id_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          name_ = "";
+          bitField0_ = (bitField0_ & ~0x00000002);
+          email_ = "";
+          bitField0_ = (bitField0_ & ~0x00000004);
+          result_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_StudentUI_descriptor;
+        }
+
+        public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI getDefaultInstanceForType() {
+          return com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.getDefaultInstance();
+        }
+
+        public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI build() {
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI buildPartial() {
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI result = new com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.id_ = id_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.name_ = name_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.email_ = email_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.result_ = result_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI) {
+            return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI other) {
+          if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.getDefaultInstance()) return this;
+          if (other.hasId()) {
+            setId(other.getId());
+          }
+          if (other.hasName()) {
+            bitField0_ |= 0x00000002;
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasEmail()) {
+            bitField0_ |= 0x00000004;
+            email_ = other.email_;
+            onChanged();
+          }
+          if (other.hasResult()) {
+            setResult(other.getResult());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int id_ ;
+        /**
+         * <code>optional int32 id = 1;</code>
+         */
+        public boolean hasId() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional int32 id = 1;</code>
+         */
+        public int getId() {
+          return id_;
+        }
+        /**
+         * <code>optional int32 id = 1;</code>
+         */
+        public Builder setId(int value) {
+          bitField0_ |= 0x00000001;
+          id_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 id = 1;</code>
+         */
+        public Builder clearId() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          id_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        public Builder clearName() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string name = 2;</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object email_ = "";
+        /**
+         * <code>optional string email = 3;</code>
+         */
+        public boolean hasEmail() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional string email = 3;</code>
+         */
+        public java.lang.String getEmail() {
+          java.lang.Object ref = email_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              email_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string email = 3;</code>
+         */
+        public com.google.protobuf.ByteString
+            getEmailBytes() {
+          java.lang.Object ref = email_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            email_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string email = 3;</code>
+         */
+        public Builder setEmail(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          email_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string email = 3;</code>
+         */
+        public Builder clearEmail() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          email_ = getDefaultInstance().getEmail();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string email = 3;</code>
+         */
+        public Builder setEmailBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          email_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int result_ = 0;
+        /**
+         * <code>optional .cpr.ClassResult result = 4;</code>
+         */
+        public boolean hasResult() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional .cpr.ClassResult result = 4;</code>
+         */
+        public com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult getResult() {
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult result = com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.valueOf(result_);
+          return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.CR_UNSPECIFIED : result;
+        }
+        /**
+         * <code>optional .cpr.ClassResult result = 4;</code>
+         */
+        public Builder setResult(com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000008;
+          result_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .cpr.ClassResult result = 4;</code>
+         */
+        public Builder clearResult() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          result_ = 0;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:cpr.ReservationUI.StudentUI)
+      }
+
+      // @@protoc_insertion_point(class_scope:cpr.ReservationUI.StudentUI)
+      private static final com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI();
+      }
+
+      public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<StudentUI>
+          PARSER = new com.google.protobuf.AbstractParser<StudentUI>() {
+        public StudentUI parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          try {
+            return new StudentUI(input, extensionRegistry);
+          } catch (RuntimeException e) {
+            if (e.getCause() instanceof
+                com.google.protobuf.InvalidProtocolBufferException) {
+              throw (com.google.protobuf.InvalidProtocolBufferException)
+                  e.getCause();
+            }
+            throw e;
+          }
+        }
+      };
+
+      public static com.google.protobuf.Parser<StudentUI> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<StudentUI> getParserForType() {
+        return PARSER;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 2;
+    private int sessionId_;
+    /**
+     * <code>optional int32 session_id = 2;</code>
+     */
+    public boolean hasSessionId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 session_id = 2;</code>
+     */
+    public int getSessionId() {
+      return sessionId_;
+    }
+
+    public static final int CONTACT_EMAIL_FIELD_NUMBER = 3;
+    private volatile java.lang.Object contactEmail_;
+    /**
+     * <code>optional string contact_email = 3;</code>
+     */
+    public boolean hasContactEmail() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string contact_email = 3;</code>
+     */
+    public java.lang.String getContactEmail() {
+      java.lang.Object ref = contactEmail_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          contactEmail_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string contact_email = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContactEmailBytes() {
+      java.lang.Object ref = contactEmail_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contactEmail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONFIRMATION_CODE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object confirmationCode_;
+    /**
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    public boolean hasConfirmationCode() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    public java.lang.String getConfirmationCode() {
+      java.lang.Object ref = confirmationCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          confirmationCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string confirmation_code = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getConfirmationCodeBytes() {
+      java.lang.Object ref = confirmationCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        confirmationCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYMENT_STATUS_FIELD_NUMBER = 5;
+    private int paymentStatus_;
+    /**
+     * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+     */
+    public boolean hasPaymentStatus() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+     */
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus getPaymentStatus() {
+      com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus result = com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.valueOf(paymentStatus_);
+      return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.PS_UNSPECIFIED : result;
+    }
+
+    public static final int PAYMENT_CONFIRMATION_CODE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object paymentConfirmationCode_;
+    /**
+     * <code>optional string payment_confirmation_code = 6;</code>
+     */
+    public boolean hasPaymentConfirmationCode() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string payment_confirmation_code = 6;</code>
+     */
+    public java.lang.String getPaymentConfirmationCode() {
+      java.lang.Object ref = paymentConfirmationCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          paymentConfirmationCode_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string payment_confirmation_code = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPaymentConfirmationCodeBytes() {
+      java.lang.Object ref = paymentConfirmationCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        paymentConfirmationCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STUDENT_FIELD_NUMBER = 7;
+    private java.util.List<com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI> student_;
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    public java.util.List<com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI> getStudentList() {
+      return student_;
+    }
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    public java.util.List<? extends com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder> 
+        getStudentOrBuilderList() {
+      return student_;
+    }
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    public int getStudentCount() {
+      return student_.size();
+    }
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI getStudent(int index) {
+      return student_.get(index);
+    }
+    /**
+     * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+     */
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder getStudentOrBuilder(
+        int index) {
+      return student_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, sessionId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, contactEmail_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, confirmationCode_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeEnum(5, paymentStatus_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, paymentConfirmationCode_);
+      }
+      for (int i = 0; i < student_.size(); i++) {
+        output.writeMessage(7, student_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, sessionId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, contactEmail_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, confirmationCode_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, paymentStatus_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, paymentConfirmationCode_);
+      }
+      for (int i = 0; i < student_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, student_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cpr.ReservationUI}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cpr.ReservationUI)
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUIOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.class, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.Builder.class);
+      }
+
+      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getStudentFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sessionId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contactEmail_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        confirmationCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        paymentStatus_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        paymentConfirmationCode_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (studentBuilder_ == null) {
+          student_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          studentBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_ReservationUI_descriptor;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI getDefaultInstanceForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.getDefaultInstance();
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI build() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI buildPartial() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI result = new com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.sessionId_ = sessionId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.contactEmail_ = contactEmail_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.confirmationCode_ = confirmationCode_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.paymentStatus_ = paymentStatus_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.paymentConfirmationCode_ = paymentConfirmationCode_;
+        if (studentBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            student_ = java.util.Collections.unmodifiableList(student_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.student_ = student_;
+        } else {
+          result.student_ = studentBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI) {
+          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI other) {
+        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasSessionId()) {
+          setSessionId(other.getSessionId());
+        }
+        if (other.hasContactEmail()) {
+          bitField0_ |= 0x00000004;
+          contactEmail_ = other.contactEmail_;
+          onChanged();
+        }
+        if (other.hasConfirmationCode()) {
+          bitField0_ |= 0x00000008;
+          confirmationCode_ = other.confirmationCode_;
+          onChanged();
+        }
+        if (other.hasPaymentStatus()) {
+          setPaymentStatus(other.getPaymentStatus());
+        }
+        if (other.hasPaymentConfirmationCode()) {
+          bitField0_ |= 0x00000020;
+          paymentConfirmationCode_ = other.paymentConfirmationCode_;
+          onChanged();
+        }
+        if (studentBuilder_ == null) {
+          if (!other.student_.isEmpty()) {
+            if (student_.isEmpty()) {
+              student_ = other.student_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureStudentIsMutable();
+              student_.addAll(other.student_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.student_.isEmpty()) {
+            if (studentBuilder_.isEmpty()) {
+              studentBuilder_.dispose();
+              studentBuilder_ = null;
+              student_ = other.student_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              studentBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getStudentFieldBuilder() : null;
+            } else {
+              studentBuilder_.addAllMessages(other.student_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sessionId_ ;
+      /**
+       * <code>optional int32 session_id = 2;</code>
+       */
+      public boolean hasSessionId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 session_id = 2;</code>
+       */
+      public int getSessionId() {
+        return sessionId_;
+      }
+      /**
+       * <code>optional int32 session_id = 2;</code>
+       */
+      public Builder setSessionId(int value) {
+        bitField0_ |= 0x00000002;
+        sessionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 session_id = 2;</code>
+       */
+      public Builder clearSessionId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sessionId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contactEmail_ = "";
+      /**
+       * <code>optional string contact_email = 3;</code>
+       */
+      public boolean hasContactEmail() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string contact_email = 3;</code>
+       */
+      public java.lang.String getContactEmail() {
+        java.lang.Object ref = contactEmail_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            contactEmail_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string contact_email = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContactEmailBytes() {
+        java.lang.Object ref = contactEmail_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contactEmail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string contact_email = 3;</code>
+       */
+      public Builder setContactEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        contactEmail_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string contact_email = 3;</code>
+       */
+      public Builder clearContactEmail() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        contactEmail_ = getDefaultInstance().getContactEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string contact_email = 3;</code>
+       */
+      public Builder setContactEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        contactEmail_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object confirmationCode_ = "";
+      /**
+       * <code>optional string confirmation_code = 4;</code>
+       */
+      public boolean hasConfirmationCode() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string confirmation_code = 4;</code>
+       */
+      public java.lang.String getConfirmationCode() {
+        java.lang.Object ref = confirmationCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            confirmationCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string confirmation_code = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getConfirmationCodeBytes() {
+        java.lang.Object ref = confirmationCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          confirmationCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string confirmation_code = 4;</code>
+       */
+      public Builder setConfirmationCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        confirmationCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string confirmation_code = 4;</code>
+       */
+      public Builder clearConfirmationCode() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        confirmationCode_ = getDefaultInstance().getConfirmationCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string confirmation_code = 4;</code>
+       */
+      public Builder setConfirmationCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        confirmationCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int paymentStatus_ = 0;
+      /**
+       * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+       */
+      public boolean hasPaymentStatus() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus getPaymentStatus() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus result = com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.valueOf(paymentStatus_);
+        return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.PS_UNSPECIFIED : result;
+      }
+      /**
+       * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+       */
+      public Builder setPaymentStatus(com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        paymentStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
+       */
+      public Builder clearPaymentStatus() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        paymentStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object paymentConfirmationCode_ = "";
+      /**
+       * <code>optional string payment_confirmation_code = 6;</code>
+       */
+      public boolean hasPaymentConfirmationCode() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string payment_confirmation_code = 6;</code>
+       */
+      public java.lang.String getPaymentConfirmationCode() {
+        java.lang.Object ref = paymentConfirmationCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            paymentConfirmationCode_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string payment_confirmation_code = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPaymentConfirmationCodeBytes() {
+        java.lang.Object ref = paymentConfirmationCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          paymentConfirmationCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string payment_confirmation_code = 6;</code>
+       */
+      public Builder setPaymentConfirmationCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        paymentConfirmationCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string payment_confirmation_code = 6;</code>
+       */
+      public Builder clearPaymentConfirmationCode() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        paymentConfirmationCode_ = getDefaultInstance().getPaymentConfirmationCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string payment_confirmation_code = 6;</code>
+       */
+      public Builder setPaymentConfirmationCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        paymentConfirmationCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI> student_ =
+        java.util.Collections.emptyList();
+      private void ensureStudentIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          student_ = new java.util.ArrayList<com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI>(student_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder> studentBuilder_;
+
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public java.util.List<com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI> getStudentList() {
+        if (studentBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(student_);
+        } else {
+          return studentBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public int getStudentCount() {
+        if (studentBuilder_ == null) {
+          return student_.size();
+        } else {
+          return studentBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI getStudent(int index) {
+        if (studentBuilder_ == null) {
+          return student_.get(index);
+        } else {
+          return studentBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public Builder setStudent(
+          int index, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI value) {
+        if (studentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStudentIsMutable();
+          student_.set(index, value);
+          onChanged();
+        } else {
+          studentBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public Builder setStudent(
+          int index, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder builderForValue) {
+        if (studentBuilder_ == null) {
+          ensureStudentIsMutable();
+          student_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          studentBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public Builder addStudent(com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI value) {
+        if (studentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStudentIsMutable();
+          student_.add(value);
+          onChanged();
+        } else {
+          studentBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public Builder addStudent(
+          int index, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI value) {
+        if (studentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStudentIsMutable();
+          student_.add(index, value);
+          onChanged();
+        } else {
+          studentBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public Builder addStudent(
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder builderForValue) {
+        if (studentBuilder_ == null) {
+          ensureStudentIsMutable();
+          student_.add(builderForValue.build());
+          onChanged();
+        } else {
+          studentBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public Builder addStudent(
+          int index, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder builderForValue) {
+        if (studentBuilder_ == null) {
+          ensureStudentIsMutable();
+          student_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          studentBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public Builder addAllStudent(
+          java.lang.Iterable<? extends com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI> values) {
+        if (studentBuilder_ == null) {
+          ensureStudentIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, student_);
+          onChanged();
+        } else {
+          studentBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public Builder clearStudent() {
+        if (studentBuilder_ == null) {
+          student_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          studentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public Builder removeStudent(int index) {
+        if (studentBuilder_ == null) {
+          ensureStudentIsMutable();
+          student_.remove(index);
+          onChanged();
+        } else {
+          studentBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder getStudentBuilder(
+          int index) {
+        return getStudentFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder getStudentOrBuilder(
+          int index) {
+        if (studentBuilder_ == null) {
+          return student_.get(index);  } else {
+          return studentBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public java.util.List<? extends com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder> 
+           getStudentOrBuilderList() {
+        if (studentBuilder_ != null) {
+          return studentBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(student_);
+        }
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder addStudentBuilder() {
+        return getStudentFieldBuilder().addBuilder(
+            com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder addStudentBuilder(
+          int index) {
+        return getStudentFieldBuilder().addBuilder(
+            index, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cpr.ReservationUI.StudentUI student = 7;</code>
+       */
+      public java.util.List<com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder> 
+           getStudentBuilderList() {
+        return getStudentFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder> 
+          getStudentFieldBuilder() {
+        if (studentBuilder_ == null) {
+          studentBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUIOrBuilder>(
+                  student_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          student_ = null;
+        }
+        return studentBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cpr.ReservationUI)
+    }
+
+    // @@protoc_insertion_point(class_scope:cpr.ReservationUI)
+    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI();
+    }
+
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ReservationUI>
+        PARSER = new com.google.protobuf.AbstractParser<ReservationUI>() {
+      public ReservationUI parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new ReservationUI(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReservationUI> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReservationUI> getParserForType() {
+      return PARSER;
+    }
+
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateReservationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cpr.CreateReservationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .cpr.ReservationUI reservation = 1;</code>
+     */
+    boolean hasReservation();
+    /**
+     * <code>required .cpr.ReservationUI reservation = 1;</code>
+     */
+    com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI getReservation();
+    /**
+     * <code>required .cpr.ReservationUI reservation = 1;</code>
+     */
+    com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUIOrBuilder getReservationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code cpr.CreateReservationRequest}
+   */
+  public  static final class CreateReservationRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cpr.CreateReservationRequest)
+      CreateReservationRequestOrBuilder {
+    // Use CreateReservationRequest.newBuilder() to construct.
+    private CreateReservationRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateReservationRequest() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateReservationRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = reservation_.toBuilder();
+              }
+              reservation_ = input.readMessage(com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(reservation_);
+                reservation_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_CreateReservationRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_CreateReservationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESERVATION_FIELD_NUMBER = 1;
+    private com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI reservation_;
+    /**
+     * <code>required .cpr.ReservationUI reservation = 1;</code>
+     */
+    public boolean hasReservation() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .cpr.ReservationUI reservation = 1;</code>
+     */
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI getReservation() {
+      return reservation_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.getDefaultInstance() : reservation_;
+    }
+    /**
+     * <code>required .cpr.ReservationUI reservation = 1;</code>
+     */
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUIOrBuilder getReservationOrBuilder() {
+      return reservation_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.getDefaultInstance() : reservation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasReservation()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getReservation());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getReservation());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cpr.CreateReservationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cpr.CreateReservationRequest)
+        com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_CreateReservationRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_CreateReservationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest.Builder.class);
+      }
+
+      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getReservationFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (reservationBuilder_ == null) {
+          reservation_ = null;
+        } else {
+          reservationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_CreateReservationRequest_descriptor;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest getDefaultInstanceForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest.getDefaultInstance();
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest build() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest buildPartial() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest result = new com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (reservationBuilder_ == null) {
+          result.reservation_ = reservation_;
+        } else {
+          result.reservation_ = reservationBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest) {
+          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest other) {
+        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest.getDefaultInstance()) return this;
+        if (other.hasReservation()) {
+          mergeReservation(other.getReservation());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasReservation()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI reservation_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUIOrBuilder> reservationBuilder_;
+      /**
+       * <code>required .cpr.ReservationUI reservation = 1;</code>
+       */
+      public boolean hasReservation() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .cpr.ReservationUI reservation = 1;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI getReservation() {
+        if (reservationBuilder_ == null) {
+          return reservation_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.getDefaultInstance() : reservation_;
+        } else {
+          return reservationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .cpr.ReservationUI reservation = 1;</code>
+       */
+      public Builder setReservation(com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI value) {
+        if (reservationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reservation_ = value;
+          onChanged();
+        } else {
+          reservationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .cpr.ReservationUI reservation = 1;</code>
+       */
+      public Builder setReservation(
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.Builder builderForValue) {
+        if (reservationBuilder_ == null) {
+          reservation_ = builderForValue.build();
+          onChanged();
+        } else {
+          reservationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .cpr.ReservationUI reservation = 1;</code>
+       */
+      public Builder mergeReservation(com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI value) {
+        if (reservationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              reservation_ != null &&
+              reservation_ != com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.getDefaultInstance()) {
+            reservation_ =
+              com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.newBuilder(reservation_).mergeFrom(value).buildPartial();
+          } else {
+            reservation_ = value;
+          }
+          onChanged();
+        } else {
+          reservationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .cpr.ReservationUI reservation = 1;</code>
+       */
+      public Builder clearReservation() {
+        if (reservationBuilder_ == null) {
+          reservation_ = null;
+          onChanged();
+        } else {
+          reservationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .cpr.ReservationUI reservation = 1;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.Builder getReservationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getReservationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .cpr.ReservationUI reservation = 1;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUIOrBuilder getReservationOrBuilder() {
+        if (reservationBuilder_ != null) {
+          return reservationBuilder_.getMessageOrBuilder();
+        } else {
+          return reservation_ == null ?
+              com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.getDefaultInstance() : reservation_;
+        }
+      }
+      /**
+       * <code>required .cpr.ReservationUI reservation = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUIOrBuilder> 
+          getReservationFieldBuilder() {
+        if (reservationBuilder_ == null) {
+          reservationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUIOrBuilder>(
+                  getReservation(),
+                  getParentForChildren(),
+                  isClean());
+          reservation_ = null;
+        }
+        return reservationBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cpr.CreateReservationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cpr.CreateReservationRequest)
+    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest();
+    }
+
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CreateReservationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateReservationRequest>() {
+      public CreateReservationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new CreateReservationRequest(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateReservationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateReservationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateReservationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cpr.UpdateReservationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 reservation_id = 1;</code>
+     */
+    boolean hasReservationId();
+    /**
+     * <code>required int32 reservation_id = 1;</code>
+     */
+    int getReservationId();
+
+    /**
+     * <code>required string property = 2;</code>
+     */
+    boolean hasProperty();
+    /**
+     * <code>required string property = 2;</code>
+     */
+    java.lang.String getProperty();
+    /**
+     * <code>required string property = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getPropertyBytes();
+
+    /**
+     * <code>required string value = 3;</code>
+     */
+    boolean hasValue();
+    /**
+     * <code>required string value = 3;</code>
+     */
+    java.lang.String getValue();
+    /**
+     * <code>required string value = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code cpr.UpdateReservationRequest}
+   */
+  public  static final class UpdateReservationRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cpr.UpdateReservationRequest)
+      UpdateReservationRequestOrBuilder {
+    // Use UpdateReservationRequest.newBuilder() to construct.
+    private UpdateReservationRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateReservationRequest() {
+      reservationId_ = 0;
+      property_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateReservationRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              reservationId_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              property_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              value_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_UpdateReservationRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_UpdateReservationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RESERVATION_ID_FIELD_NUMBER = 1;
+    private int reservationId_;
+    /**
+     * <code>required int32 reservation_id = 1;</code>
+     */
+    public boolean hasReservationId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 reservation_id = 1;</code>
+     */
+    public int getReservationId() {
+      return reservationId_;
+    }
+
+    public static final int PROPERTY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object property_;
+    /**
+     * <code>required string property = 2;</code>
+     */
+    public boolean hasProperty() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string property = 2;</code>
+     */
+    public java.lang.String getProperty() {
+      java.lang.Object ref = property_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          property_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string property = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPropertyBytes() {
+      java.lang.Object ref = property_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        property_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>required string value = 3;</code>
+     */
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string value = 3;</code>
+     */
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          value_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string value = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasReservationId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasProperty()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasValue()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, reservationId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, property_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, reservationId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, property_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cpr.UpdateReservationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cpr.UpdateReservationRequest)
+        com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_UpdateReservationRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_UpdateReservationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest.class, com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest.Builder.class);
+      }
+
+      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        reservationId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        property_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_UpdateReservationRequest_descriptor;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest getDefaultInstanceForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest.getDefaultInstance();
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest build() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest buildPartial() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest result = new com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.reservationId_ = reservationId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.property_ = property_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.value_ = value_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest) {
+          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest other) {
+        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest.getDefaultInstance()) return this;
+        if (other.hasReservationId()) {
+          setReservationId(other.getReservationId());
+        }
+        if (other.hasProperty()) {
+          bitField0_ |= 0x00000002;
+          property_ = other.property_;
+          onChanged();
+        }
+        if (other.hasValue()) {
+          bitField0_ |= 0x00000004;
+          value_ = other.value_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasReservationId()) {
+          return false;
+        }
+        if (!hasProperty()) {
+          return false;
+        }
+        if (!hasValue()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int reservationId_ ;
+      /**
+       * <code>required int32 reservation_id = 1;</code>
+       */
+      public boolean hasReservationId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 reservation_id = 1;</code>
+       */
+      public int getReservationId() {
+        return reservationId_;
+      }
+      /**
+       * <code>required int32 reservation_id = 1;</code>
+       */
+      public Builder setReservationId(int value) {
+        bitField0_ |= 0x00000001;
+        reservationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 reservation_id = 1;</code>
+       */
+      public Builder clearReservationId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        reservationId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object property_ = "";
+      /**
+       * <code>required string property = 2;</code>
+       */
+      public boolean hasProperty() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string property = 2;</code>
+       */
+      public java.lang.String getProperty() {
+        java.lang.Object ref = property_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            property_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string property = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPropertyBytes() {
+        java.lang.Object ref = property_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          property_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string property = 2;</code>
+       */
+      public Builder setProperty(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        property_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string property = 2;</code>
+       */
+      public Builder clearProperty() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        property_ = getDefaultInstance().getProperty();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string property = 2;</code>
+       */
+      public Builder setPropertyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        property_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>required string value = 3;</code>
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string value = 3;</code>
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string value = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string value = 3;</code>
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string value = 3;</code>
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string value = 3;</code>
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cpr.UpdateReservationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cpr.UpdateReservationRequest)
+    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest();
+    }
+
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<UpdateReservationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateReservationRequest>() {
+      public UpdateReservationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new UpdateReservationRequest(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateReservationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateReservationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.UpdateReservationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_cpr_ListSessionsRequest_descriptor;
+    internal_static_cpr_GetTrainningRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_cpr_ListSessionsRequest_fieldAccessorTable;
+      internal_static_cpr_GetTrainningRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_cpr_ListTrainningsRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cpr_ListTrainningsRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_cpr_TrainningUI_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cpr_TrainningUI_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_cpr_GetSessionRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cpr_GetSessionRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_cpr_ListSessionsRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cpr_ListSessionsRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_cpr_TrainningSessionUI_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cpr_TrainningSessionUI_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_cpr_GetReservationRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cpr_GetReservationRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_cpr_ReservationUI_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cpr_ReservationUI_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_cpr_ReservationUI_StudentUI_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cpr_ReservationUI_StudentUI_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_cpr_CreateReservationRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cpr_CreateReservationRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_cpr_UpdateReservationRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cpr_UpdateReservationRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2222,17 +7957,39 @@ public final class CPRUIProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014cpr_ui.proto\022\003cpr\032\017common_ui.proto\"g\n\023" +
-      "ListSessionsRequest\022)\n\ndate_range\030\001 \001(\0162" +
-      "\025.common.DateRangeType\022\020\n\010ref_date\030\002 \001(\003" +
-      "\022\023\n\013tranning_id\030\003 \001(\005\"<\n\013TrainningUI\022\n\n\002" +
-      "id\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\023\n\013description\030\003 " +
-      "\002(\t\"\236\001\n\022TrainningSessionUI\022\n\n\002id\030\001 \001(\005\022\024" +
-      "\n\014trainning_id\030\002 \001(\005\022\031\n\021start_time_milli" +
-      "s\030\003 \001(\003\022\027\n\017duration_millis\030\004 \001(\003\022\014\n\004cost" +
-      "\030\005 \001(\001\022$\n\010location\030\006 \001(\0132\022.common.GPSAdd" +
-      "ressB)\n\032com.digitald4.cpr.ui.protoB\013CPRU",
-      "IProtos"
+      "\n\014cpr_ui.proto\022\003cpr\032\017common_ui.proto\"+\n\023" +
+      "GetTrainningRequest\022\024\n\014trainning_id\030\001 \001(" +
+      "\005\"\027\n\025ListTrainningsRequest\"S\n\013TrainningU" +
+      "I\022\n\n\002id\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\023\n\013descripti" +
+      "on\030\003 \002(\t\022\025\n\rduration_mins\030\004 \001(\005\"\'\n\021GetSe" +
+      "ssionRequest\022\022\n\nsession_id\030\001 \001(\005\"h\n\023List" +
+      "SessionsRequest\022)\n\ndate_range\030\001 \002(\0162\025.co" +
+      "mmon.DateRangeType\022\020\n\010ref_date\030\002 \002(\003\022\024\n\014" +
+      "trainning_id\030\003 \001(\005\"\272\001\n\022TrainningSessionU" +
+      "I\022\n\n\002id\030\001 \001(\005\022\024\n\014trainning_id\030\002 \001(\005\022\022\n\ns",
+      "tart_time\030\003 \001(\003\022\025\n\rduration_mins\030\004 \001(\005\022\014" +
+      "\n\004cost\030\005 \001(\001\022$\n\010location\030\006 \001(\0132\022.common." +
+      "GPSAddress\022#\n\ttrainning\030\007 \001(\0132\020.cpr.Trai" +
+      "nningUI\"A\n\025GetReservationRequest\022\r\n\005emai" +
+      "l\030\001 \002(\t\022\031\n\021confirmation_code\030\002 \002(\t\"\267\002\n\rR" +
+      "eservationUI\022\n\n\002id\030\001 \001(\005\022\022\n\nsession_id\030\002" +
+      " \001(\005\022\025\n\rcontact_email\030\003 \001(\t\022\031\n\021confirmat" +
+      "ion_code\030\004 \001(\t\022*\n\016payment_status\030\005 \001(\0162\022" +
+      ".cpr.PaymentStatus\022!\n\031payment_confirmati" +
+      "on_code\030\006 \001(\t\022-\n\007student\030\007 \003(\0132\034.cpr.Res",
+      "ervationUI.StudentUI\032V\n\tStudentUI\022\n\n\002id\030" +
+      "\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022 \n\006re" +
+      "sult\030\004 \001(\0162\020.cpr.ClassResult\"C\n\030CreateRe" +
+      "servationRequest\022\'\n\013reservation\030\001 \002(\0132\022." +
+      "cpr.ReservationUI\"S\n\030UpdateReservationRe" +
+      "quest\022\026\n\016reservation_id\030\001 \002(\005\022\020\n\010propert" +
+      "y\030\002 \002(\t\022\r\n\005value\030\003 \002(\t*z\n\rPaymentStatus\022" +
+      "\022\n\016PS_UNSPECIFIED\020\000\022\014\n\010NOT_PAID\020\001\022\023\n\017PAY" +
+      "MENT_PENDING\020\002\022\022\n\016PARTIALLY_PAID\020\003\022\010\n\004PA" +
+      "ID\020\004\022\024\n\020PAYMENT_VERIFIED\020\005*I\n\013ClassResul",
+      "t\022\022\n\016CR_UNSPECIFIED\020\000\022\016\n\nUNATTENDED\020\001\022\n\n" +
+      "\006PASSED\020\002\022\n\n\006FAILED\020\003B)\n\032com.digitald4.c" +
+      "pr.ui.protoB\013CPRUIProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2247,24 +8004,72 @@ public final class CPRUIProtos {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.digitald4.common.proto.DD4UIProtos.getDescriptor(),
         }, assigner);
-    internal_static_cpr_ListSessionsRequest_descriptor =
+    internal_static_cpr_GetTrainningRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_cpr_ListSessionsRequest_fieldAccessorTable = new
+    internal_static_cpr_GetTrainningRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_cpr_ListSessionsRequest_descriptor,
-        new java.lang.String[] { "DateRange", "RefDate", "TranningId", });
-    internal_static_cpr_TrainningUI_descriptor =
+        internal_static_cpr_GetTrainningRequest_descriptor,
+        new java.lang.String[] { "TrainningId", });
+    internal_static_cpr_ListTrainningsRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_cpr_ListTrainningsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cpr_ListTrainningsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_cpr_TrainningUI_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_cpr_TrainningUI_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cpr_TrainningUI_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", });
+        new java.lang.String[] { "Id", "Name", "Description", "DurationMins", });
+    internal_static_cpr_GetSessionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_cpr_GetSessionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cpr_GetSessionRequest_descriptor,
+        new java.lang.String[] { "SessionId", });
+    internal_static_cpr_ListSessionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_cpr_ListSessionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cpr_ListSessionsRequest_descriptor,
+        new java.lang.String[] { "DateRange", "RefDate", "TrainningId", });
     internal_static_cpr_TrainningSessionUI_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_cpr_TrainningSessionUI_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cpr_TrainningSessionUI_descriptor,
-        new java.lang.String[] { "Id", "TrainningId", "StartTimeMillis", "DurationMillis", "Cost", "Location", });
+        new java.lang.String[] { "Id", "TrainningId", "StartTime", "DurationMins", "Cost", "Location", "Trainning", });
+    internal_static_cpr_GetReservationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_cpr_GetReservationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cpr_GetReservationRequest_descriptor,
+        new java.lang.String[] { "Email", "ConfirmationCode", });
+    internal_static_cpr_ReservationUI_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_cpr_ReservationUI_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cpr_ReservationUI_descriptor,
+        new java.lang.String[] { "Id", "SessionId", "ContactEmail", "ConfirmationCode", "PaymentStatus", "PaymentConfirmationCode", "Student", });
+    internal_static_cpr_ReservationUI_StudentUI_descriptor =
+      internal_static_cpr_ReservationUI_descriptor.getNestedTypes().get(0);
+    internal_static_cpr_ReservationUI_StudentUI_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cpr_ReservationUI_StudentUI_descriptor,
+        new java.lang.String[] { "Id", "Name", "Email", "Result", });
+    internal_static_cpr_CreateReservationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_cpr_CreateReservationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cpr_CreateReservationRequest_descriptor,
+        new java.lang.String[] { "Reservation", });
+    internal_static_cpr_UpdateReservationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_cpr_UpdateReservationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cpr_UpdateReservationRequest_descriptor,
+        new java.lang.String[] { "ReservationId", "Property", "Value", });
     com.digitald4.common.proto.DD4UIProtos.getDescriptor();
   }
 

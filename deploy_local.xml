@@ -96,14 +96,20 @@
   <!-- ==================================== -->	
 	<target name="clean" description="Deletes files that should not be committed">
 		<delete dir="webapps/${app.name}/WEB-INF/classes"/>
-			<delete>
-				<fileset dir="webapps/${app.name}/WEB-INF/lib">
-					<include name="*.jar" />
-				</fileset>
-				<fileset dir="webapps/${app.name}/WEB-INF/tld">
-					<include name="*.tld" />
-				</fileset>
-			</delete>
+		<delete>
+			<fileset dir="webapps/${app.name}/WEB-INF/lib">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="webapps/${app.name}/js/common">
+				<include name="*.js" />
+			</fileset>
+			<fileset dir="webapps/${app.name}/js/lib">
+				<include name="*" />
+			</fileset>
+			<fileset dir="webapps/${app.name}/js/protobuf">
+				<include name="*.js" />
+			</fileset>
+		</delete>
 		<delete file="webapps/${app.name}/WEB-INF/web.xml"/>
 	</target>
 	<!-- ==================================== -->
@@ -115,24 +121,49 @@
 		<!-- Compile the source files into the buid directory -->
 		<copy todir="webapps/${app.name}/WEB-INF/lib">
 			<fileset dir="../common/lib">
-				<include name="javax.persistence*.jar" />
 				<include name="joda-time*.jar" />
 				<include name="commons-dbcp*.jar" />
 				<include name="commons-pool*.jar" />
 				<include name="mysql-connector*.jar" />
 				<include name="itextpdf-5.5.1.jar" />
 				<include name="javax.mail.jar" />
+				<include name="protobuf-java-3.0.0-beta-2.jar" />
+				<include name="protobuf-java-format-1.2.jar" />
+			</fileset>
+		</copy>
+		<copy todir="webapps/${app.name}/js/common" flatten="true">
+			<fileset dir="../common/src/js">
+				<include name="**/*.js"/>
+			</fileset>
+		</copy>
+		<copy todir="webapps/${app.name}/js/lib" flatten="true">
+			<fileset dir="../common/lib/js">
+				<include name="node_modules/angular*/angular*.min.js"/>
+				<include name="message.js"/>
+			</fileset>
+		</copy>
+		<copy todir="webapps/${app.name}/js/lib/closure" flatten="false">
+			<fileset dir="../common/lib/js/node_modules/google-closure-library/closure/goog">
+			</fileset>
+		</copy>
+		<copy todir="webapps/${app.name}/js/protobuf" flatten="true">
+			<fileset dir="../common/src-gen/js">
+				<include name="*.js"/>
+			</fileset>
+			<fileset dir="src-gen/js">
+				<include name="*.js"/>
 			</fileset>
 		</copy>
 		<concat destfile="webapps/${app.name}/WEB-INF/web.xml">
 			<filelist dir="src/conf" files="web.xml,dev_web.xml"/>
 		</concat>
-		<javac destdir="webapps/${app.name}/WEB-INF/classes" 
-				includes="com/digitald4/${app.name}/servlet/*,com/digitald4/common/servlet/*,com/digitald4/common/tld/*,com/digitald4/${app.name}/tld/*
-						com/digitald4/common/jpa/DD4EntityManagerFactory.java" 
-						target="1.6" source="1.6" optimize="yes">
+		<javac destdir="webapps/${app.name}/WEB-INF/classes"
+				includes="com/digitald4/${app.name}/server/CPRJSONServiceServlet.java" 
+				target="1.7" source="1.7" optimize="yes" includeAntRuntime="false">
 			<src path="../common/src" />
+			<src path="../common/src-gen" />
 			<src path="src" />
+			<src path="src-gen" />
 			<classpath refid="tomcat.classpath"/>
 			<classpath refid="project.classpath"/>
 		</javac>

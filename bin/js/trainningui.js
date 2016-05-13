@@ -57,7 +57,8 @@ proto.cpr.TrainningUI.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getField(msg, 1),
     name: jspb.Message.getField(msg, 2),
-    description: jspb.Message.getField(msg, 3)
+    description: jspb.Message.getField(msg, 3),
+    durationMins: jspb.Message.getField(msg, 4)
   };
 
   if (includeInstance) {
@@ -134,6 +135,26 @@ proto.cpr.TrainningUI.prototype.setDescription = function(value) {
 
 proto.cpr.TrainningUI.prototype.clearDescription = function() {
   jspb.Message.setField(this, 3, undefined);
+};
+
+
+/**
+ * optional int32 duration_mins = 4;
+ * @return {number?}
+ */
+proto.cpr.TrainningUI.prototype.getDurationMins = function() {
+  return /** @type {number?} */ (jspb.Message.getField(this, 4));
+};
+
+
+/** @param {number?|undefined} value  */
+proto.cpr.TrainningUI.prototype.setDurationMins = function(value) {
+  jspb.Message.setField(this, 4, value);
+};
+
+
+proto.cpr.TrainningUI.prototype.clearDurationMins = function() {
+  jspb.Message.setField(this, 4, undefined);
 };
 
 
