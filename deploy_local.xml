@@ -100,6 +100,9 @@
 			<fileset dir="webapps/${app.name}/WEB-INF/lib">
 				<include name="*.jar" />
 			</fileset>
+			<fileset dir="webapps/${app.name}/css/lib">
+				<include name="*" />
+			</fileset>
 			<fileset dir="webapps/${app.name}/js/common">
 				<include name="*.js" />
 			</fileset>
@@ -139,13 +142,22 @@
 		<copy todir="webapps/${app.name}/js/lib" flatten="true">
 			<fileset dir="../common/lib/js">
 				<include name="node_modules/angular*/angular*.min.js"/>
+				<include name="bower_components/angular-ui-calendar/src/calendar.js"/>
+				<include name="bower_components/angular-ui-calendar/**/*.min.js"/>
+				<include name="bower_components/angular-ui-calendar/**/bootstrap.js"/>
 				<include name="message.js"/>
 			</fileset>
 		</copy>
-		<copy todir="webapps/${app.name}/js/lib/closure" flatten="false">
-			<fileset dir="../common/lib/js/node_modules/google-closure-library/closure/goog">
+		<copy todir="webapps/${app.name}/css/lib" flatten="true">
+			<fileset dir="../common/lib/js">
+				<include name="node_modules/angular*/angular*.css"/>
+				<include name="bower_components/angular-ui-calendar/**/*.css"/>
 			</fileset>
 		</copy>
+		<!-- copy todir="webapps/${app.name}/js/lib/closure" flatten="false">
+			<fileset dir="../common/lib/js/node_modules/google-closure-library/closure/goog">
+			</fileset>
+		</copy -->
 		<copy todir="webapps/${app.name}/js/protobuf" flatten="true">
 			<fileset dir="../common/src-gen/js">
 				<include name="*.js"/>

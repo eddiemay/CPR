@@ -2,37 +2,34 @@
 <html>
 	<head>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="js/lib-material/angular-material.css">
+		<link rel="stylesheet" href="css/lib/angular-csp.css">
+    <link rel="stylesheet" href="css/lib/angular-material.min.css">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/cpr.css">
 	</head>
-	<body data-ng-app="cpr">
-		<div data-ng-controller="CalCtrl">
-			<ul> Sessions
-				<li data-ng-repeat="session in sessions">
-					{{session.trainning.name}} {{session.trainning.description}} {{session.start_time | date:'MMM dd yyyy hh:mm'}}
-				</li>
-			</ul>
-			<ul> Proto Sessions
-				<li data-ng-repeat="session in protoSessions">
-					{{session.getTrainning().getName()}} {{session.getTrainning().getDescription()}} {{session.getStartTime() | date:'MMM dd yyyy hh:mm'}}
-				</li>
-			</ul>
+	<body>
+		<div data-ng-app="cpr" data-ng-controller="CalCtrl as calCtrl">
+			<div data-ui-calendar="calCtrl.uiConfig.calendar" class="span8 calendar" data-ng-model="calCtrl.eventSources"></div>
 		</div>
 		
-		<script src="js/lib/closure/base.js"></script>
-		<script src="js/lib/message.js"></script>
     <script src="js/lib/angular.min.js"></script>
     <script src="js/lib/angular-aria.min.js"></script>
     <script src="js/lib/angular-animate.min.js"></script>
     <script src="js/lib/angular-material.min.js"></script>
     <script src="js/lib/angular-messages.min.js"></script>
     <script src="js/lib/angular-route.min.js"></script>
+    
+    <!--  For Calendar -->
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/moment.min.js"></script>
+    <script src="js/lib/fullcalendar.min.js"></script>
+    <script src="js/lib/calendar.js"></script>
 
 		<!-- Digital D4 -->
 		<script src="js/bootstrap.js"></script>
 		<script src="js/protobuf/daterangetype.js"></script>
-		<script src="js/protobuf/gpsaddress.js"></script>
-		<script src="js/protobuf/trainningui.js"></script>
-		<script src="js/protobuf/trainningsessionui.js"></script>
 		<script src="js/common/httpconnector.js"></script>
 		<script src="js/service/trainningservice.js"></script>
 		<script src="js/service/reservationservice.js"></script>

@@ -7,3 +7,5 @@ webapps/cpr/js/common/
 webapps/cpr/js/lib/
 webapps/cpr/js/protobuf/
 webapps/cpr/WEB-INF/
+
+*.class

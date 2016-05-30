@@ -1,5 +1,5 @@
-com.digitald4.cpr.ReservationService = function(RestService) {
-	this.restService = RestService;
+com.digitald4.cpr.ReservationService = function(restService) {
+	this.restService = restService;
 };
 
 com.digitald4.cpr.ReservationService.prototype.restService;

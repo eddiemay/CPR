@@ -5,6 +5,10 @@ var com = com || {
   }
 };
 
+var goog = goog || {
+	provide: function(provides) {}
+};
+
 var proto = proto || {
-		common: {}
+	common: {}
 };

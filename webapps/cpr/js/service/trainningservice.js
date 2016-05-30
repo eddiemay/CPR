@@ -1,5 +1,5 @@
-com.digitald4.cpr.TrainningService = function(RestService) {
-	this.restService = RestService;
+com.digitald4.cpr.TrainningService = function(restService) {
+	this.restService = restService;
 };
 
 com.digitald4.cpr.TrainningService.prototype.restService;
