@@ -7,11 +7,13 @@ import com.digitald4.cpr.proto.CPRProtos.Reservation.Student;
 import com.digitald4.cpr.store.ReservationStore;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest;
+import com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI;
 
 public class ReservationService {
 	private final ReservationStore store;
+	private final TrainningSessionService trainningSessionService;
 	
 	public final Function<StudentUI, Student> studentConverter =
 			new Function<StudentUI, Student>() {
@@ -30,20 +32,27 @@ public class ReservationService {
 			new Function<ReservationUI, Reservation>() {
 		@Override
 		public ReservationUI execute(Reservation reservation) {
-			if (reservation == null) {
-				return null;
+			if (reservation != null) {
+				try {
+					ReservationUI.Builder builder = ReservationUI.newBuilder()
+							.setId(reservation.getId())
+							.setSession(trainningSessionService.getSession(
+									GetSessionRequest.newBuilder()
+									.setSessionId(reservation.getSessionId())
+									.build()))
+							.setContactEmail(reservation.getContactEmail())
+							.setConfirmationCode(reservation.getConfirmationCode())
+							.setPaymentStatus(reservation.getPaymentStatus())
+							.setPaymentConfirmationCode(reservation.getPaymentConfirmationCode());
+					for (Student student : reservation.getStudentList()) {
+						builder.addStudent(studentConverter.execute(student));
+					}
+					return builder.build();
+				} catch (DD4StorageException e) {
+					e.printStackTrace();
+				}
 			}
-			ReservationUI.Builder builder = ReservationUI.newBuilder()
-					.setId(reservation.getId())
-					.setSessionId(reservation.getSessionId())
-					.setContactEmail(reservation.getContactEmail())
-					.setConfirmationCode(reservation.getConfirmationCode())
-					.setPaymentStatus(reservation.getPaymentStatus())
-					.setPaymentConfirmationCode(reservation.getPaymentConfirmationCode());
-			for (Student student : reservation.getStudentList()) {
-				builder.addStudent(studentConverter.execute(student));
-			}
-			return builder.build();
+			return null;
 		}
 	};
 	
@@ -69,7 +78,7 @@ public class ReservationService {
 			}
 			Reservation.Builder builder = Reservation.newBuilder()
 					.setId(reservation.getId())
-					.setSessionId(reservation.getSessionId())
+					.setSessionId(reservation.getSession().getId())
 					.setContactEmail(reservation.getContactEmail())
 					.setConfirmationCode(reservation.getConfirmationCode())
 					.setPaymentStatus(reservation.getPaymentStatus())
@@ -81,8 +90,9 @@ public class ReservationService {
 		}
 	};
 	
-	public ReservationService(ReservationStore store) {
+	public ReservationService(ReservationStore store, TrainningSessionService trainningSessionService) {
 		this.store = store;
+		this.trainningSessionService = trainningSessionService;
 	}
 	
 	public ReservationUI createReservation(CreateReservationRequest request)

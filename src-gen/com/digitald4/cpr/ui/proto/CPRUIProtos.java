@@ -4475,13 +4475,17 @@ public final class CPRUIProtos {
     int getId();
 
     /**
-     * <code>optional int32 session_id = 2;</code>
+     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
      */
-    boolean hasSessionId();
+    boolean hasSession();
     /**
-     * <code>optional int32 session_id = 2;</code>
+     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
      */
-    int getSessionId();
+    com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI getSession();
+    /**
+     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+     */
+    com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder getSessionOrBuilder();
 
     /**
      * <code>optional string contact_email = 3;</code>
@@ -4571,7 +4575,6 @@ public final class CPRUIProtos {
     }
     private ReservationUI() {
       id_ = 0;
-      sessionId_ = 0;
       contactEmail_ = "";
       confirmationCode_ = "";
       paymentStatus_ = 0;
@@ -4611,9 +4614,17 @@ public final class CPRUIProtos {
               id_ = input.readInt32();
               break;
             }
-            case 16: {
+            case 18: {
+              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = session_.toBuilder();
+              }
+              session_ = input.readMessage(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(session_);
+                session_ = subBuilder.buildPartial();
+              }
               bitField0_ |= 0x00000002;
-              sessionId_ = input.readInt32();
               break;
             }
             case 26: {
@@ -5494,19 +5505,25 @@ public final class CPRUIProtos {
       return id_;
     }
 
-    public static final int SESSION_ID_FIELD_NUMBER = 2;
-    private int sessionId_;
+    public static final int SESSION_FIELD_NUMBER = 2;
+    private com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI session_;
     /**
-     * <code>optional int32 session_id = 2;</code>
+     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
      */
-    public boolean hasSessionId() {
+    public boolean hasSession() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional int32 session_id = 2;</code>
+     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
      */
-    public int getSessionId() {
-      return sessionId_;
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI getSession() {
+      return session_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance() : session_;
+    }
+    /**
+     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+     */
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder getSessionOrBuilder() {
+      return session_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance() : session_;
     }
 
     public static final int CONTACT_EMAIL_FIELD_NUMBER = 3;
@@ -5692,6 +5709,12 @@ public final class CPRUIProtos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (hasSession()) {
+        if (!getSession().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -5702,7 +5725,7 @@ public final class CPRUIProtos {
         output.writeInt32(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, sessionId_);
+        output.writeMessage(2, getSession());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, contactEmail_);
@@ -5733,7 +5756,7 @@ public final class CPRUIProtos {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, sessionId_);
+          .computeMessageSize(2, getSession());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, contactEmail_);
@@ -5860,6 +5883,7 @@ public final class CPRUIProtos {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getSessionFieldBuilder();
           getStudentFieldBuilder();
         }
       }
@@ -5867,7 +5891,11 @@ public final class CPRUIProtos {
         super.clear();
         id_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        sessionId_ = 0;
+        if (sessionBuilder_ == null) {
+          session_ = null;
+        } else {
+          sessionBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000002);
         contactEmail_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -5914,7 +5942,11 @@ public final class CPRUIProtos {
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.sessionId_ = sessionId_;
+        if (sessionBuilder_ == null) {
+          result.session_ = session_;
+        } else {
+          result.session_ = sessionBuilder_.build();
+        }
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
@@ -5959,8 +5991,8 @@ public final class CPRUIProtos {
         if (other.hasId()) {
           setId(other.getId());
         }
-        if (other.hasSessionId()) {
-          setSessionId(other.getSessionId());
+        if (other.hasSession()) {
+          mergeSession(other.getSession());
         }
         if (other.hasContactEmail()) {
           bitField0_ |= 0x00000004;
@@ -6012,6 +6044,11 @@ public final class CPRUIProtos {
       }
 
       public final boolean isInitialized() {
+        if (hasSession()) {
+          if (!getSession().isInitialized()) {
+            return false;
+          }
+        }
         return true;
       }
 
@@ -6066,36 +6103,122 @@ public final class CPRUIProtos {
         return this;
       }
 
-      private int sessionId_ ;
+      private com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI session_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder> sessionBuilder_;
       /**
-       * <code>optional int32 session_id = 2;</code>
+       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
        */
-      public boolean hasSessionId() {
+      public boolean hasSession() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional int32 session_id = 2;</code>
+       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
        */
-      public int getSessionId() {
-        return sessionId_;
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI getSession() {
+        if (sessionBuilder_ == null) {
+          return session_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance() : session_;
+        } else {
+          return sessionBuilder_.getMessage();
+        }
       }
       /**
-       * <code>optional int32 session_id = 2;</code>
+       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
        */
-      public Builder setSessionId(int value) {
+      public Builder setSession(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI value) {
+        if (sessionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          session_ = value;
+          onChanged();
+        } else {
+          sessionBuilder_.setMessage(value);
+        }
         bitField0_ |= 0x00000002;
-        sessionId_ = value;
-        onChanged();
         return this;
       }
       /**
-       * <code>optional int32 session_id = 2;</code>
+       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
        */
-      public Builder clearSessionId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        sessionId_ = 0;
-        onChanged();
+      public Builder setSession(
+          com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder builderForValue) {
+        if (sessionBuilder_ == null) {
+          session_ = builderForValue.build();
+          onChanged();
+        } else {
+          sessionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
         return this;
+      }
+      /**
+       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       */
+      public Builder mergeSession(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI value) {
+        if (sessionBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              session_ != null &&
+              session_ != com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance()) {
+            session_ =
+              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.newBuilder(session_).mergeFrom(value).buildPartial();
+          } else {
+            session_ = value;
+          }
+          onChanged();
+        } else {
+          sessionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       */
+      public Builder clearSession() {
+        if (sessionBuilder_ == null) {
+          session_ = null;
+          onChanged();
+        } else {
+          sessionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder getSessionBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSessionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       */
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder getSessionOrBuilder() {
+        if (sessionBuilder_ != null) {
+          return sessionBuilder_.getMessageOrBuilder();
+        } else {
+          return session_ == null ?
+              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance() : session_;
+        }
+      }
+      /**
+       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder> 
+          getSessionFieldBuilder() {
+        if (sessionBuilder_ == null) {
+          sessionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder>(
+                  getSession(),
+                  getParentForChildren(),
+                  isClean());
+          session_ = null;
+        }
+        return sessionBuilder_;
       }
 
       private java.lang.Object contactEmail_ = "";
@@ -6777,6 +6900,10 @@ public final class CPRUIProtos {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!getReservation().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -6975,6 +7102,9 @@ public final class CPRUIProtos {
 
       public final boolean isInitialized() {
         if (!hasReservation()) {
+          return false;
+        }
+        if (!getReservation().isInitialized()) {
           return false;
         }
         return true;
@@ -7971,25 +8101,26 @@ public final class CPRUIProtos {
       "\n\004cost\030\005 \001(\001\022$\n\010location\030\006 \001(\0132\022.common." +
       "GPSAddress\022#\n\ttrainning\030\007 \001(\0132\020.cpr.Trai" +
       "nningUI\"A\n\025GetReservationRequest\022\r\n\005emai" +
-      "l\030\001 \002(\t\022\031\n\021confirmation_code\030\002 \002(\t\"\267\002\n\rR" +
-      "eservationUI\022\n\n\002id\030\001 \001(\005\022\022\n\nsession_id\030\002" +
-      " \001(\005\022\025\n\rcontact_email\030\003 \001(\t\022\031\n\021confirmat" +
-      "ion_code\030\004 \001(\t\022*\n\016payment_status\030\005 \001(\0162\022" +
-      ".cpr.PaymentStatus\022!\n\031payment_confirmati" +
-      "on_code\030\006 \001(\t\022-\n\007student\030\007 \003(\0132\034.cpr.Res",
-      "ervationUI.StudentUI\032V\n\tStudentUI\022\n\n\002id\030" +
-      "\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022 \n\006re" +
-      "sult\030\004 \001(\0162\020.cpr.ClassResult\"C\n\030CreateRe" +
-      "servationRequest\022\'\n\013reservation\030\001 \002(\0132\022." +
-      "cpr.ReservationUI\"S\n\030UpdateReservationRe" +
-      "quest\022\026\n\016reservation_id\030\001 \002(\005\022\020\n\010propert" +
-      "y\030\002 \002(\t\022\r\n\005value\030\003 \002(\t*z\n\rPaymentStatus\022" +
-      "\022\n\016PS_UNSPECIFIED\020\000\022\014\n\010NOT_PAID\020\001\022\023\n\017PAY" +
-      "MENT_PENDING\020\002\022\022\n\016PARTIALLY_PAID\020\003\022\010\n\004PA" +
-      "ID\020\004\022\024\n\020PAYMENT_VERIFIED\020\005*I\n\013ClassResul",
-      "t\022\022\n\016CR_UNSPECIFIED\020\000\022\016\n\nUNATTENDED\020\001\022\n\n" +
-      "\006PASSED\020\002\022\n\n\006FAILED\020\003B)\n\032com.digitald4.c" +
-      "pr.ui.protoB\013CPRUIProtos"
+      "l\030\001 \002(\t\022\031\n\021confirmation_code\030\002 \002(\t\"\315\002\n\rR" +
+      "eservationUI\022\n\n\002id\030\001 \001(\005\022(\n\007session\030\002 \001(" +
+      "\0132\027.cpr.TrainningSessionUI\022\025\n\rcontact_em" +
+      "ail\030\003 \001(\t\022\031\n\021confirmation_code\030\004 \001(\t\022*\n\016" +
+      "payment_status\030\005 \001(\0162\022.cpr.PaymentStatus" +
+      "\022!\n\031payment_confirmation_code\030\006 \001(\t\022-\n\007s",
+      "tudent\030\007 \003(\0132\034.cpr.ReservationUI.Student" +
+      "UI\032V\n\tStudentUI\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(" +
+      "\t\022\r\n\005email\030\003 \001(\t\022 \n\006result\030\004 \001(\0162\020.cpr.C" +
+      "lassResult\"C\n\030CreateReservationRequest\022\'" +
+      "\n\013reservation\030\001 \002(\0132\022.cpr.ReservationUI\"" +
+      "S\n\030UpdateReservationRequest\022\026\n\016reservati" +
+      "on_id\030\001 \002(\005\022\020\n\010property\030\002 \002(\t\022\r\n\005value\030\003" +
+      " \002(\t*z\n\rPaymentStatus\022\022\n\016PS_UNSPECIFIED\020" +
+      "\000\022\014\n\010NOT_PAID\020\001\022\023\n\017PAYMENT_PENDING\020\002\022\022\n\016" +
+      "PARTIALLY_PAID\020\003\022\010\n\004PAID\020\004\022\024\n\020PAYMENT_VE",
+      "RIFIED\020\005*I\n\013ClassResult\022\022\n\016CR_UNSPECIFIE" +
+      "D\020\000\022\016\n\nUNATTENDED\020\001\022\n\n\006PASSED\020\002\022\n\n\006FAILE" +
+      "D\020\003B)\n\032com.digitald4.cpr.ui.protoB\013CPRUI" +
+      "Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8051,7 +8182,7 @@ public final class CPRUIProtos {
     internal_static_cpr_ReservationUI_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cpr_ReservationUI_descriptor,
-        new java.lang.String[] { "Id", "SessionId", "ContactEmail", "ConfirmationCode", "PaymentStatus", "PaymentConfirmationCode", "Student", });
+        new java.lang.String[] { "Id", "Session", "ContactEmail", "ConfirmationCode", "PaymentStatus", "PaymentConfirmationCode", "Student", });
     internal_static_cpr_ReservationUI_StudentUI_descriptor =
       internal_static_cpr_ReservationUI_descriptor.getNestedTypes().get(0);
     internal_static_cpr_ReservationUI_StudentUI_fieldAccessorTable = new

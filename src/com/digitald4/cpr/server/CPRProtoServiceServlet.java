@@ -53,7 +53,7 @@ public class CPRProtoServiceServlet extends ServiceServlet {
 		ReservationStore reservationStore = new ReservationStore(new ReservationDualReadDAO(
 				new DAOProtoSQLImpl<>(Reservation.getDefaultInstance(), dbConnector),
 				new DAOProtoSQLImpl<>(Student.getDefaultInstance(), dbConnector)));
-		reservationService = new ReservationService(reservationStore);
+		reservationService = new ReservationService(reservationStore, trainningSessionService);
 	}
 
 	protected void process(HttpServletRequest request, HttpServletResponse response)
