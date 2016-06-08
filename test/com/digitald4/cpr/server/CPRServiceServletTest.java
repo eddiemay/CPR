@@ -12,7 +12,7 @@ import com.digitald4.cpr.proto.CPRProtos.Trainning;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI;
+import com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI;
 import com.googlecode.protobuf.format.JsonFormat;
@@ -71,7 +71,7 @@ public class CPRServiceServletTest {
 						.setContactEmail("contact@example.com")
 						.addStudent(StudentUI.newBuilder().setName("Ed May").setEmail("edmay@gmail.com"))
 						.addStudent(StudentUI.newBuilder().setName("Bob Brown").setEmail("bob@gmail.com"))
-						.setSession(TrainningSessionUI.newBuilder()
+						.setSession(SessionUI.newBuilder()
 								.setId(101)
 								.setTrainning(TrainningUI.newBuilder()
 										.setId(100)

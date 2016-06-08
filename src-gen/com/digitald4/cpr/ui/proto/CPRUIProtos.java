@@ -2718,8 +2718,8 @@ public final class CPRUIProtos {
 
   }
 
-  public interface TrainningSessionUIOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:cpr.TrainningSessionUI)
+  public interface SessionUIOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cpr.SessionUI)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2794,17 +2794,17 @@ public final class CPRUIProtos {
     com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUIOrBuilder getTrainningOrBuilder();
   }
   /**
-   * Protobuf type {@code cpr.TrainningSessionUI}
+   * Protobuf type {@code cpr.SessionUI}
    */
-  public  static final class TrainningSessionUI extends
+  public  static final class SessionUI extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:cpr.TrainningSessionUI)
-      TrainningSessionUIOrBuilder {
-    // Use TrainningSessionUI.newBuilder() to construct.
-    private TrainningSessionUI(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:cpr.SessionUI)
+      SessionUIOrBuilder {
+    // Use SessionUI.newBuilder() to construct.
+    private SessionUI(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private TrainningSessionUI() {
+    private SessionUI() {
       id_ = 0;
       trainningId_ = 0;
       startTime_ = 0L;
@@ -2817,7 +2817,7 @@ public final class CPRUIProtos {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TrainningSessionUI(
+    private SessionUI(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
       this();
@@ -2905,14 +2905,14 @@ public final class CPRUIProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_TrainningSessionUI_descriptor;
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_SessionUI_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_TrainningSessionUI_fieldAccessorTable
+      return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_SessionUI_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.class, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder.class);
+              com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.class, com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.Builder.class);
     }
 
     private int bitField0_;
@@ -3114,53 +3114,53 @@ public final class CPRUIProtos {
     }
 
     private static final long serialVersionUID = 0L;
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseFrom(byte[] data)
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseFrom(java.io.InputStream input)
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseDelimitedFrom(java.io.InputStream input)
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseDelimitedFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parseFrom(
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3171,7 +3171,7 @@ public final class CPRUIProtos {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI prototype) {
+    public static Builder newBuilder(com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -3186,25 +3186,25 @@ public final class CPRUIProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code cpr.TrainningSessionUI}
+     * Protobuf type {@code cpr.SessionUI}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:cpr.TrainningSessionUI)
-        com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder {
+        // @@protoc_insertion_point(builder_implements:cpr.SessionUI)
+        com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUIOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_TrainningSessionUI_descriptor;
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_SessionUI_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_TrainningSessionUI_fieldAccessorTable
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_SessionUI_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.class, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder.class);
+                com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.class, com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.Builder.class);
       }
 
-      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.newBuilder()
+      // Construct using com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3249,23 +3249,23 @@ public final class CPRUIProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_TrainningSessionUI_descriptor;
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.internal_static_cpr_SessionUI_descriptor;
       }
 
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI getDefaultInstanceForType() {
-        return com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance();
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI getDefaultInstanceForType() {
+        return com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.getDefaultInstance();
       }
 
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI build() {
-        com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI result = buildPartial();
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI build() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI buildPartial() {
-        com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI result = new com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI(this);
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI buildPartial() {
+        com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI result = new com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3310,16 +3310,16 @@ public final class CPRUIProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI) {
-          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI)other);
+        if (other instanceof com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI) {
+          return mergeFrom((com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI other) {
-        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI other) {
+        if (other == com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.getDefaultInstance()) return this;
         if (other.hasId()) {
           setId(other.getId());
         }
@@ -3359,11 +3359,11 @@ public final class CPRUIProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI parsedMessage = null;
+        com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI) e.getUnfinishedMessage();
+          parsedMessage = (com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -3770,27 +3770,27 @@ public final class CPRUIProtos {
         return trainningBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:cpr.TrainningSessionUI)
+      // @@protoc_insertion_point(builder_scope:cpr.SessionUI)
     }
 
-    // @@protoc_insertion_point(class_scope:cpr.TrainningSessionUI)
-    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:cpr.SessionUI)
+    private static final com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI();
+      DEFAULT_INSTANCE = new com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI();
     }
 
-    public static com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI getDefaultInstance() {
+    public static com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<TrainningSessionUI>
-        PARSER = new com.google.protobuf.AbstractParser<TrainningSessionUI>() {
-      public TrainningSessionUI parsePartialFrom(
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SessionUI>
+        PARSER = new com.google.protobuf.AbstractParser<SessionUI>() {
+      public SessionUI parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         try {
-          return new TrainningSessionUI(input, extensionRegistry);
+          return new SessionUI(input, extensionRegistry);
         } catch (RuntimeException e) {
           if (e.getCause() instanceof
               com.google.protobuf.InvalidProtocolBufferException) {
@@ -3802,16 +3802,16 @@ public final class CPRUIProtos {
       }
     };
 
-    public static com.google.protobuf.Parser<TrainningSessionUI> parser() {
+    public static com.google.protobuf.Parser<SessionUI> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<TrainningSessionUI> getParserForType() {
+    public com.google.protobuf.Parser<SessionUI> getParserForType() {
       return PARSER;
     }
 
-    public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI getDefaultInstanceForType() {
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4475,17 +4475,17 @@ public final class CPRUIProtos {
     int getId();
 
     /**
-     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+     * <code>optional .cpr.SessionUI session = 2;</code>
      */
     boolean hasSession();
     /**
-     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+     * <code>optional .cpr.SessionUI session = 2;</code>
      */
-    com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI getSession();
+    com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI getSession();
     /**
-     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+     * <code>optional .cpr.SessionUI session = 2;</code>
      */
-    com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder getSessionOrBuilder();
+    com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUIOrBuilder getSessionOrBuilder();
 
     /**
      * <code>optional string contact_email = 3;</code>
@@ -4615,11 +4615,11 @@ public final class CPRUIProtos {
               break;
             }
             case 18: {
-              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder subBuilder = null;
+              com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = session_.toBuilder();
               }
-              session_ = input.readMessage(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.parser(), extensionRegistry);
+              session_ = input.readMessage(com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(session_);
                 session_ = subBuilder.buildPartial();
@@ -5506,24 +5506,24 @@ public final class CPRUIProtos {
     }
 
     public static final int SESSION_FIELD_NUMBER = 2;
-    private com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI session_;
+    private com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI session_;
     /**
-     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+     * <code>optional .cpr.SessionUI session = 2;</code>
      */
     public boolean hasSession() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+     * <code>optional .cpr.SessionUI session = 2;</code>
      */
-    public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI getSession() {
-      return session_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance() : session_;
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI getSession() {
+      return session_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.getDefaultInstance() : session_;
     }
     /**
-     * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+     * <code>optional .cpr.SessionUI session = 2;</code>
      */
-    public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder getSessionOrBuilder() {
-      return session_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance() : session_;
+    public com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUIOrBuilder getSessionOrBuilder() {
+      return session_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.getDefaultInstance() : session_;
     }
 
     public static final int CONTACT_EMAIL_FIELD_NUMBER = 3;
@@ -6103,29 +6103,29 @@ public final class CPRUIProtos {
         return this;
       }
 
-      private com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI session_ = null;
+      private com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI session_ = null;
       private com.google.protobuf.SingleFieldBuilder<
-          com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder> sessionBuilder_;
+          com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI, com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUIOrBuilder> sessionBuilder_;
       /**
-       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       * <code>optional .cpr.SessionUI session = 2;</code>
        */
       public boolean hasSession() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       * <code>optional .cpr.SessionUI session = 2;</code>
        */
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI getSession() {
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI getSession() {
         if (sessionBuilder_ == null) {
-          return session_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance() : session_;
+          return session_ == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.getDefaultInstance() : session_;
         } else {
           return sessionBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       * <code>optional .cpr.SessionUI session = 2;</code>
        */
-      public Builder setSession(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI value) {
+      public Builder setSession(com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI value) {
         if (sessionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6139,10 +6139,10 @@ public final class CPRUIProtos {
         return this;
       }
       /**
-       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       * <code>optional .cpr.SessionUI session = 2;</code>
        */
       public Builder setSession(
-          com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder builderForValue) {
+          com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.Builder builderForValue) {
         if (sessionBuilder_ == null) {
           session_ = builderForValue.build();
           onChanged();
@@ -6153,15 +6153,15 @@ public final class CPRUIProtos {
         return this;
       }
       /**
-       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       * <code>optional .cpr.SessionUI session = 2;</code>
        */
-      public Builder mergeSession(com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI value) {
+      public Builder mergeSession(com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI value) {
         if (sessionBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
               session_ != null &&
-              session_ != com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance()) {
+              session_ != com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.getDefaultInstance()) {
             session_ =
-              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.newBuilder(session_).mergeFrom(value).buildPartial();
+              com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.newBuilder(session_).mergeFrom(value).buildPartial();
           } else {
             session_ = value;
           }
@@ -6173,7 +6173,7 @@ public final class CPRUIProtos {
         return this;
       }
       /**
-       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       * <code>optional .cpr.SessionUI session = 2;</code>
        */
       public Builder clearSession() {
         if (sessionBuilder_ == null) {
@@ -6186,33 +6186,33 @@ public final class CPRUIProtos {
         return this;
       }
       /**
-       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       * <code>optional .cpr.SessionUI session = 2;</code>
        */
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder getSessionBuilder() {
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.Builder getSessionBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getSessionFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       * <code>optional .cpr.SessionUI session = 2;</code>
        */
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder getSessionOrBuilder() {
+      public com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUIOrBuilder getSessionOrBuilder() {
         if (sessionBuilder_ != null) {
           return sessionBuilder_.getMessageOrBuilder();
         } else {
           return session_ == null ?
-              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.getDefaultInstance() : session_;
+              com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.getDefaultInstance() : session_;
         }
       }
       /**
-       * <code>optional .cpr.TrainningSessionUI session = 2;</code>
+       * <code>optional .cpr.SessionUI session = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder> 
+          com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI, com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUIOrBuilder> 
           getSessionFieldBuilder() {
         if (sessionBuilder_ == null) {
           sessionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUIOrBuilder>(
+              com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI, com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI.Builder, com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUIOrBuilder>(
                   getSession(),
                   getParentForChildren(),
                   isClean());
@@ -8049,10 +8049,10 @@ public final class CPRUIProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cpr_ListSessionsRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_cpr_TrainningSessionUI_descriptor;
+    internal_static_cpr_SessionUI_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_cpr_TrainningSessionUI_fieldAccessorTable;
+      internal_static_cpr_SessionUI_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_cpr_GetReservationRequest_descriptor;
   private static
@@ -8095,32 +8095,31 @@ public final class CPRUIProtos {
       "ssionRequest\022\022\n\nsession_id\030\001 \001(\005\"h\n\023List" +
       "SessionsRequest\022)\n\ndate_range\030\001 \002(\0162\025.co" +
       "mmon.DateRangeType\022\020\n\010ref_date\030\002 \002(\003\022\024\n\014" +
-      "trainning_id\030\003 \001(\005\"\272\001\n\022TrainningSessionU" +
-      "I\022\n\n\002id\030\001 \001(\005\022\024\n\014trainning_id\030\002 \001(\005\022\022\n\ns",
-      "tart_time\030\003 \001(\003\022\025\n\rduration_mins\030\004 \001(\005\022\014" +
-      "\n\004cost\030\005 \001(\001\022$\n\010location\030\006 \001(\0132\022.common." +
-      "GPSAddress\022#\n\ttrainning\030\007 \001(\0132\020.cpr.Trai" +
-      "nningUI\"A\n\025GetReservationRequest\022\r\n\005emai" +
-      "l\030\001 \002(\t\022\031\n\021confirmation_code\030\002 \002(\t\"\315\002\n\rR" +
-      "eservationUI\022\n\n\002id\030\001 \001(\005\022(\n\007session\030\002 \001(" +
-      "\0132\027.cpr.TrainningSessionUI\022\025\n\rcontact_em" +
-      "ail\030\003 \001(\t\022\031\n\021confirmation_code\030\004 \001(\t\022*\n\016" +
-      "payment_status\030\005 \001(\0162\022.cpr.PaymentStatus" +
-      "\022!\n\031payment_confirmation_code\030\006 \001(\t\022-\n\007s",
-      "tudent\030\007 \003(\0132\034.cpr.ReservationUI.Student" +
-      "UI\032V\n\tStudentUI\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(" +
-      "\t\022\r\n\005email\030\003 \001(\t\022 \n\006result\030\004 \001(\0162\020.cpr.C" +
-      "lassResult\"C\n\030CreateReservationRequest\022\'" +
-      "\n\013reservation\030\001 \002(\0132\022.cpr.ReservationUI\"" +
-      "S\n\030UpdateReservationRequest\022\026\n\016reservati" +
-      "on_id\030\001 \002(\005\022\020\n\010property\030\002 \002(\t\022\r\n\005value\030\003" +
-      " \002(\t*z\n\rPaymentStatus\022\022\n\016PS_UNSPECIFIED\020" +
-      "\000\022\014\n\010NOT_PAID\020\001\022\023\n\017PAYMENT_PENDING\020\002\022\022\n\016" +
-      "PARTIALLY_PAID\020\003\022\010\n\004PAID\020\004\022\024\n\020PAYMENT_VE",
-      "RIFIED\020\005*I\n\013ClassResult\022\022\n\016CR_UNSPECIFIE" +
-      "D\020\000\022\016\n\nUNATTENDED\020\001\022\n\n\006PASSED\020\002\022\n\n\006FAILE" +
-      "D\020\003B)\n\032com.digitald4.cpr.ui.protoB\013CPRUI" +
-      "Protos"
+      "trainning_id\030\003 \001(\005\"\261\001\n\tSessionUI\022\n\n\002id\030\001" +
+      " \001(\005\022\024\n\014trainning_id\030\002 \001(\005\022\022\n\nstart_time",
+      "\030\003 \001(\003\022\025\n\rduration_mins\030\004 \001(\005\022\014\n\004cost\030\005 " +
+      "\001(\001\022$\n\010location\030\006 \001(\0132\022.common.GPSAddres" +
+      "s\022#\n\ttrainning\030\007 \001(\0132\020.cpr.TrainningUI\"A" +
+      "\n\025GetReservationRequest\022\r\n\005email\030\001 \002(\t\022\031" +
+      "\n\021confirmation_code\030\002 \002(\t\"\304\002\n\rReservatio" +
+      "nUI\022\n\n\002id\030\001 \001(\005\022\037\n\007session\030\002 \001(\0132\016.cpr.S" +
+      "essionUI\022\025\n\rcontact_email\030\003 \001(\t\022\031\n\021confi" +
+      "rmation_code\030\004 \001(\t\022*\n\016payment_status\030\005 \001" +
+      "(\0162\022.cpr.PaymentStatus\022!\n\031payment_confir" +
+      "mation_code\030\006 \001(\t\022-\n\007student\030\007 \003(\0132\034.cpr",
+      ".ReservationUI.StudentUI\032V\n\tStudentUI\022\n\n" +
+      "\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022 " +
+      "\n\006result\030\004 \001(\0162\020.cpr.ClassResult\"C\n\030Crea" +
+      "teReservationRequest\022\'\n\013reservation\030\001 \002(" +
+      "\0132\022.cpr.ReservationUI\"S\n\030UpdateReservati" +
+      "onRequest\022\026\n\016reservation_id\030\001 \002(\005\022\020\n\010pro" +
+      "perty\030\002 \002(\t\022\r\n\005value\030\003 \002(\t*z\n\rPaymentSta" +
+      "tus\022\022\n\016PS_UNSPECIFIED\020\000\022\014\n\010NOT_PAID\020\001\022\023\n" +
+      "\017PAYMENT_PENDING\020\002\022\022\n\016PARTIALLY_PAID\020\003\022\010" +
+      "\n\004PAID\020\004\022\024\n\020PAYMENT_VERIFIED\020\005*I\n\013ClassR",
+      "esult\022\022\n\016CR_UNSPECIFIED\020\000\022\016\n\nUNATTENDED\020" +
+      "\001\022\n\n\006PASSED\020\002\022\n\n\006FAILED\020\003B)\n\032com.digital" +
+      "d4.cpr.ui.protoB\013CPRUIProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8165,11 +8164,11 @@ public final class CPRUIProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cpr_ListSessionsRequest_descriptor,
         new java.lang.String[] { "DateRange", "RefDate", "TrainningId", });
-    internal_static_cpr_TrainningSessionUI_descriptor =
+    internal_static_cpr_SessionUI_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_cpr_TrainningSessionUI_fieldAccessorTable = new
+    internal_static_cpr_SessionUI_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_cpr_TrainningSessionUI_descriptor,
+        internal_static_cpr_SessionUI_descriptor,
         new java.lang.String[] { "Id", "TrainningId", "StartTime", "DurationMins", "Cost", "Location", "Trainning", });
     internal_static_cpr_GetReservationRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);

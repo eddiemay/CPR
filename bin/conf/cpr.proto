@@ -17,7 +17,7 @@ message Trainning {
   optional common.GPSAddress location = 6;
 }
 
-message TrainningSession {
+message Session {
 	optional int32 id = 1;
 	optional int32 trainning_id = 2;
 	optional int64 start_time = 3;

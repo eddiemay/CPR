@@ -40,7 +40,7 @@ CREATE TABLE Trainning(
 	LONGITUDE DOUBLE
 );
 
-CREATE TABLE TrainningSession(
+CREATE TABLE Session(
 	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   TRAINNING_ID INT,
   START_TIME DATETIME,
@@ -51,7 +51,7 @@ CREATE TABLE TrainningSession(
 	LATITUDE DOUBLE,
 	LONGITUDE DOUBLE
 );
-CREATE INDEX TrainningSession_TrainningId ON TrainningSession (TRAINNING_ID);
+CREATE INDEX Session_TrainningId ON TrainningSession (TRAINNING_ID);
 
 CREATE TABLE Reservation(
 	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -72,6 +72,6 @@ CREATE TABLE Student(
 );
 CREATE INDEX Student_ReservationId ON Student (RESERVATION_ID);
 
-CREATE OR REPLACE VIEW View_Reservation AS SELECT Reservation.*, Student.Id as Student_Id, Student.Name, Student.Email, Student.Result FROM Reservation INNER JOIN Student ON Reservation.id = Student.reservation_id;
+CREATE OR REPLACE VIEW View_Reservation AS SELECT Reservation.*, Student.Id as Student_Id, Student.Name, Student.Email, Student.Result FROM Reservation, Student WHERE Reservation.id = Student.reservation_id;
 
 GRANT INSERT, SELECT, UPDATE, DELETE ON cpr.* TO 'dd4_user'@'localhost';

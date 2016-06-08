@@ -7,24 +7,23 @@ import org.joda.time.DateTime;
 import com.digitald4.common.distributed.Function;
 import com.digitald4.common.distributed.MultiCoreThreader;
 import com.digitald4.common.exception.DD4StorageException;
-import com.digitald4.cpr.proto.CPRProtos.TrainningSession;
-import com.digitald4.cpr.store.TrainningSessionStore;
+import com.digitald4.cpr.proto.CPRProtos.Session;
+import com.digitald4.cpr.store.SessionStore;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI;
+import com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI;
 
-public class TrainningSessionService {
+public class SessionService {
 	private final MultiCoreThreader threader = new MultiCoreThreader();
-	private final TrainningSessionStore store;
+	private final SessionStore store;
 	private final TrainningService trainningService;
 	
-	public final Function<TrainningSessionUI, TrainningSession> converter =
-			new Function<TrainningSessionUI, TrainningSession>() {
+	public final Function<SessionUI, Session> converter = new Function<SessionUI, Session>() {
 		@Override
-		public TrainningSessionUI execute(TrainningSession session) {
+		public SessionUI execute(Session session) {
 			try {
-				return TrainningSessionUI.newBuilder()
+				return SessionUI.newBuilder()
 						.setId(session.getId())
 						.setTrainningId(session.getTrainningId())
 						.setStartTime(session.getStartTime())
@@ -43,16 +42,16 @@ public class TrainningSessionService {
 		}
 	};
 	
-	public TrainningSessionService(TrainningSessionStore store, TrainningService trainningService) {
+	public SessionService(SessionStore store, TrainningService trainningService) {
 		this.store = store;
 		this.trainningService = trainningService;
 	}
 	
-	public TrainningSessionUI getSession(GetSessionRequest request) throws DD4StorageException {
+	public SessionUI getSession(GetSessionRequest request) throws DD4StorageException {
 		return converter.execute(store.read(request.getSessionId()));
 	}
 	
-	public List<TrainningSessionUI> listSessions(ListSessionsRequest request)
+	public List<SessionUI> listSessions(ListSessionsRequest request)
 			throws DD4StorageException {
 		return threader.parDo(
 				store.findSessions(request.getTrainningId(), request.getDateRange(),

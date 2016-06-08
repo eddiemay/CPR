@@ -31,7 +31,7 @@ message ListSessionsRequest {
 	optional int32 trainning_id = 3;
 }
 
-message TrainningSessionUI {
+message SessionUI {
 	optional int32 id = 1;
 	optional int32 trainning_id = 2;
 	optional int64 start_time = 3;
@@ -64,7 +64,7 @@ enum ClassResult {
 
 message ReservationUI {
 	optional int32 id = 1;
-	optional TrainningSessionUI session = 2;
+	optional SessionUI session = 2;
 	optional string contact_email = 3;
 	optional string confirmation_code = 4;
 	optional PaymentStatus payment_status = 5;

@@ -13,7 +13,7 @@ import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI;
 
 public class ReservationService {
 	private final ReservationStore store;
-	private final TrainningSessionService trainningSessionService;
+	private final SessionService sessionService;
 	
 	public final Function<StudentUI, Student> studentConverter =
 			new Function<StudentUI, Student>() {
@@ -36,7 +36,7 @@ public class ReservationService {
 				try {
 					ReservationUI.Builder builder = ReservationUI.newBuilder()
 							.setId(reservation.getId())
-							.setSession(trainningSessionService.getSession(
+							.setSession(sessionService.getSession(
 									GetSessionRequest.newBuilder()
 									.setSessionId(reservation.getSessionId())
 									.build()))
@@ -90,9 +90,9 @@ public class ReservationService {
 		}
 	};
 	
-	public ReservationService(ReservationStore store, TrainningSessionService trainningSessionService) {
+	public ReservationService(ReservationStore store, SessionService sessionService) {
 		this.store = store;
-		this.trainningSessionService = trainningSessionService;
+		this.sessionService = sessionService;
 	}
 	
 	public ReservationUI createReservation(CreateReservationRequest request)

@@ -5,21 +5,21 @@ import com.digitald4.common.dao.QueryParam;
 import com.digitald4.common.exception.DD4StorageException;
 import com.digitald4.common.proto.DD4UIProtos.DateRangeType;
 import com.digitald4.common.store.impl.GenericDAOStore;
-import com.digitald4.cpr.proto.CPRProtos.TrainningSession;
+import com.digitald4.cpr.proto.CPRProtos.Session;
 
 import org.joda.time.DateTime;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrainningSessionStore extends GenericDAOStore<TrainningSession> {
+public class SessionStore extends GenericDAOStore<Session> {
 	
-	public TrainningSessionStore(DAO<TrainningSession> dao) {
+	public SessionStore(DAO<Session> dao) {
 		super(dao);
 	}
 	
-	public List<TrainningSession> findSessions(int trainningId, DateRangeType rangeType,
-			DateTime refDate) throws DD4StorageException {
+	public List<Session> findSessions(int trainningId, DateRangeType rangeType, DateTime refDate)
+			throws DD4StorageException {
 		refDate = refDate.minusMillis(refDate.getMillisOfDay());
 		DateTime startDate = null, endDate = null;
 		switch (rangeType) {

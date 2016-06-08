@@ -20,9 +20,9 @@ import com.digitald4.cpr.dao.ReservationDualReadDAO;
 import com.digitald4.cpr.proto.CPRProtos.Reservation;
 import com.digitald4.cpr.proto.CPRProtos.Reservation.Student;
 import com.digitald4.cpr.proto.CPRProtos.Trainning;
-import com.digitald4.cpr.proto.CPRProtos.TrainningSession;
+import com.digitald4.cpr.proto.CPRProtos.Session;
 import com.digitald4.cpr.store.ReservationStore;
-import com.digitald4.cpr.store.TrainningSessionStore;
+import com.digitald4.cpr.store.SessionStore;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest;
@@ -36,7 +36,7 @@ import com.googlecode.protobuf.format.JsonFormat;
 public class CPRProtoServiceServlet extends ServiceServlet {
 	public enum ACTIONS {TRAINNING, TRAINNINGS, SESSION, SESSIONS, CREATE_RESERVATION, RESERVATION};
 	private TrainningService trainningService;
-	private TrainningSessionService trainningSessionService;
+	private SessionService sessionService;
 	private ReservationService reservationService;
 
 	public void init() throws ServletException {
@@ -47,14 +47,14 @@ public class CPRProtoServiceServlet extends ServiceServlet {
 				new DAOProtoSQLImpl<>(Trainning.getDefaultInstance(), dbConnector));
 		trainningService = new TrainningService(trainningStore);
 		
-		TrainningSessionStore trainningSessionStore = new TrainningSessionStore(
-				new DAOProtoSQLImpl<>(TrainningSession.getDefaultInstance(), dbConnector));
-		trainningSessionService = new TrainningSessionService(trainningSessionStore, trainningService);
+		SessionStore sessionStore = new SessionStore(
+				new DAOProtoSQLImpl<>(Session.getDefaultInstance(), dbConnector));
+		sessionService = new SessionService(sessionStore, trainningService);
 		
 		ReservationStore reservationStore = new ReservationStore(new ReservationDualReadDAO(
 				new DAOProtoSQLImpl<>(Reservation.getDefaultInstance(), dbConnector),
 				new DAOProtoSQLImpl<>(Student.getDefaultInstance(), dbConnector)), new Random());
-		reservationService = new ReservationService(reservationStore, trainningSessionService);
+		reservationService = new ReservationService(reservationStore, sessionService);
 	}
 
 	protected void process(HttpServletRequest request, HttpServletResponse response)
@@ -73,10 +73,10 @@ public class CPRProtoServiceServlet extends ServiceServlet {
 					case TRAINNINGS: json.put("data", convertToJSON(trainningService.listTrainnings(
 							transformRequest(ListTrainningsRequest.getDefaultInstance(), request))));
 					break;
-					case SESSION: response.getWriter().println(trainningSessionService.getSession(
+					case SESSION: response.getWriter().println(sessionService.getSession(
 							transformRequest(GetSessionRequest.getDefaultInstance(), request)));
 					break;
-					case SESSIONS: json.put("data", convertToJSON(trainningSessionService.listSessions(
+					case SESSIONS: json.put("data", convertToJSON(sessionService.listSessions(
 							transformRequest(ListSessionsRequest.getDefaultInstance(), request))));
 					break;
 					case CREATE_RESERVATION:
