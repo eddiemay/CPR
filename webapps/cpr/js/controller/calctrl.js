@@ -89,6 +89,11 @@ com.digitald4.cpr.CalCtrl.prototype.closeReservationDialog = function() {
 	this.reservationDialogVisible = false;
 };
 
+var student = {};
+var reservation = {
+		student: []
+};
+
 com.digitald4.cpr.CalCtrl.prototype.showReservationDialog = function(ev) {
   this.mdDialog.show({
     controller: DialogController,
@@ -97,24 +102,19 @@ com.digitald4.cpr.CalCtrl.prototype.showReservationDialog = function(ev) {
     targetEvent: ev,
     clickOutsideToClose:true,
     locals: {session: this.selectedSession}
-  }).then(function(reservation) {
+  }).then(function(reservation_) {
+  	reservation = {student: []};
   }, function() {
+  	if (reservation.confirmation_code) {
+  		reservation = {student: []};
+    }
   });
-};
-
-var student = {};
-var reservation = {
-		student: []
 };
 
 function DialogController($scope, $mdDialog, session, reservationService) {
 	reservation.session = session;
 	$scope.reservation = reservation;
 	$scope.student = student;
-	
-  $scope.hide = function() {
-    $mdDialog.hide();
-  };
   
   $scope.cancel = function() {
     $mdDialog.cancel();
@@ -142,9 +142,12 @@ function DialogController($scope, $mdDialog, session, reservationService) {
   $scope.submit = function() {
   	reservationService.createReservation(reservation, function(reservation_) {
   		$scope.reservation = reservation = reservation_;
-  		// $mdDialog.hide(reservation);
   	}, function(error) {
   		
   	});
+  };
+  
+  $scope.close = function() {
+  	$mdDialog.hide(reservation);
   };
 }

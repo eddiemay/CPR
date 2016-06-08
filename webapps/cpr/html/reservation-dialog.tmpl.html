@@ -55,7 +55,8 @@
   	</div>
   </md-dialog-content>
   <md-dialog-actions>
-    <md-button class="md-primary md-raised" ng-click="cancel()">Cancel</md-button>
-    <md-button class="md-primary md-raised" ng-click="submit()">Submit</md-button>
+    <md-button class="md-primary md-raised" ng-show="!reservation.confirmation_code" ng-click="cancel()">Cancel</md-button>
+    <md-button class="md-primary md-raised" ng-show="!reservation.confirmation_code" ng-click="submit()">Submit</md-button>
+    <md-button class="md-primary md-raised" ng-show="reservation.confirmation_code" ng-click="close()">Submit</md-button>
   </md-dialog-actions>
 </md-dialog>
