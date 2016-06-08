@@ -1,6 +1,7 @@
 package com.digitald4.cpr.server;
 
 import java.util.List;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -52,7 +53,7 @@ public class CPRJSONServiceServlet extends ServiceServlet {
 		
 		ReservationStore reservationStore = new ReservationStore(new ReservationDualReadDAO(
 				new DAOProtoSQLImpl<>(Reservation.getDefaultInstance(), dbConnector),
-				new DAOProtoSQLImpl<>(Student.getDefaultInstance(), dbConnector)));
+				new DAOProtoSQLImpl<>(Student.getDefaultInstance(), dbConnector)), new Random());
 		reservationService = new ReservationService(reservationStore, trainningSessionService);
 	}
 
@@ -78,7 +79,8 @@ public class CPRJSONServiceServlet extends ServiceServlet {
 					break;
 					case CREATE_RESERVATION:
 						json.put("data", convertToJSON(reservationService.createReservation(
-								transformRequest(CreateReservationRequest.getDefaultInstance(), request))));
+								transformRequest(CreateReservationRequest.getDefaultInstance(),
+										"{reservation: " + request.getParameter("reservation") + "}"))));
 					break;
 					case RESERVATION: json.put("data", convertToJSON(reservationService.getReservation(
 							transformRequest(GetReservationRequest.getDefaultInstance(), request))));

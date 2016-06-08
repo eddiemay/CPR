@@ -1,6 +1,7 @@
 package com.digitald4.cpr.server;
 
 import java.util.List;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -52,7 +53,7 @@ public class CPRProtoServiceServlet extends ServiceServlet {
 		
 		ReservationStore reservationStore = new ReservationStore(new ReservationDualReadDAO(
 				new DAOProtoSQLImpl<>(Reservation.getDefaultInstance(), dbConnector),
-				new DAOProtoSQLImpl<>(Student.getDefaultInstance(), dbConnector)));
+				new DAOProtoSQLImpl<>(Student.getDefaultInstance(), dbConnector)), new Random());
 		reservationService = new ReservationService(reservationStore, trainningSessionService);
 	}
 

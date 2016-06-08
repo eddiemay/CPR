@@ -1,7 +1,9 @@
 <md-dialog aria-label="Sign Up">
-  <md-dialog-content>
+  <md-dialog-content ng-show="!reservation.confirmation_code">
   	<div class="md-dialog-content">
-    	<h2>Session: {{session.trainning.name}} {{session.start_time | date:'medium'}}</h2>
+  		<md-content>
+    		<h2 class="md-title">Session: {{reservation.session.trainning.name}} {{reservation.session.start_time | date:'medium'}}</h2>
+    	</md-content>
     	<div layout="column" ng-cloak class="md-inline-form">
 			  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
 			    <div>
@@ -22,7 +24,7 @@
 		    <md-content>
 			    <h2 class="md-title">Participants</h2>
 			    <md-list class="participantsList">
-			      <md-list-item class="md-2-line participant" ng-repeat="student in students"
+			      <md-list-item class="md-2-line participant" ng-repeat="student in reservation.student"
 			      		layout="row" layout-wrap ng-click="select(student)">
 			        <div class="md-item-text md-whiteframe-z1" flex>
 			          <h3>{{student.name}}</h3>
@@ -33,6 +35,24 @@
 			  </md-content>
 			</div>
     </div>
+  </md-dialog-content>
+  <md-dialog-content ng-show="reservation.confirmation_code">
+  	<p ng-show="reservation.student.length == 1"> Thank you {{reservation.student[0].name}} for signing up for {{reservation.session.trainning.name}}.
+		  	The class will be held on {{reservation.session.start_time | date:'mediumDate'}}
+		  	at {{reservation.session.start_time | date:'shortTime'}}.
+  	</p>
+  	<div ng-show="reservation.student.length > 1">
+  		<p> Thank you for signing up for {{reservation.session.trainning.name}}.
+		  		The class will be held on {{reservation.session.start_time | date:'mediumDate'}}
+		  		at {{reservation.session.start_time | date:'shortTime'}}.
+		  </p>
+		  <h3>The following students are registered</h3>
+		  <ul>
+		  	<li ng-repeat="student in reservation.student">
+		  		{{student.name}} - {{student.email}}
+		  	</li>
+		  </ul>
+  	</div>
   </md-dialog-content>
   <md-dialog-actions>
     <md-button class="md-primary md-raised" ng-click="cancel()">Cancel</md-button>

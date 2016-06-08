@@ -9,7 +9,14 @@ import java.util.Map;
 
 import com.digitald4.common.proto.DD4UIProtos.DateRangeType;
 import com.digitald4.cpr.proto.CPRProtos.Trainning;
+import com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest;
+import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI;
+import com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningSessionUI;
+import com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI;
+import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI;
+import com.googlecode.protobuf.format.JsonFormat;
+import com.googlecode.protobuf.format.JsonFormat.ParseException;
 
 import org.joda.time.DateTime;
 import org.json.JSONObject;
@@ -22,7 +29,7 @@ public class CPRServiceServletTest {
   HttpServletRequest httpRequest = mock(HttpServletRequest.class);
 
 	@Test
-	public void testTransform() {
+	public void testTransform() throws ParseException {
 		when(httpRequest.getRequestURI()).thenReturn("http://localhost:8080/sessions");
 		Map<String, String[]> paramMap = new HashMap<>();
 		paramMap.put("date_range", new String[]{"" + DateRangeType.WEEK.getNumber()});
@@ -55,6 +62,31 @@ public class CPRServiceServletTest {
 		assertEquals(DateRangeType.DAY, request.getDateRange());
 		assertEquals(DateTime.parse("2016-05-01").getMillis(), request.getRefDate());
 		assertEquals(1, request.getTrainningId());
+	}
+	
+	@Test
+	public void testTransformJSON() throws ParseException {
+		CreateReservationRequest request = CreateReservationRequest.newBuilder()
+				.setReservation(ReservationUI.newBuilder()
+						.setContactEmail("contact@example.com")
+						.addStudent(StudentUI.newBuilder().setName("Ed May").setEmail("edmay@gmail.com"))
+						.addStudent(StudentUI.newBuilder().setName("Bob Brown").setEmail("bob@gmail.com"))
+						.setSession(TrainningSessionUI.newBuilder()
+								.setId(101)
+								.setTrainning(TrainningUI.newBuilder()
+										.setId(100)
+										.setName("CPR 101")
+										.setDescription("Description"))))
+				.build();
+		String json = JsonFormat.printToString(request);
+		System.out.println(json);
+		CreateReservationRequest createRequest = CPRJSONServiceServlet
+				.transformRequest(CreateReservationRequest.getDefaultInstance(), json);
+		
+		assertEquals("contact@example.com", createRequest.getReservation().getContactEmail());
+		assertEquals(101, createRequest.getReservation().getSession().getId());
+		assertEquals(2, createRequest.getReservation().getStudentCount());
+		assertEquals("edmay@gmail.com", createRequest.getReservation().getStudent(0).getEmail());
 	}
 	
 	@Test

@@ -12,6 +12,6 @@ com.digitald4.cpr.ReservationService.prototype.getReservations = function(email,
 
 com.digitald4.cpr.ReservationService.prototype.createReservation = function(reservation,
 		successCallback, errorCallback) {
-	this.restService.performRequest('sessions', {reservation: reservation},
+	this.restService.performRequest('create_reservation', {reservation: reservation},
 			successCallback, errorCallback);
 };

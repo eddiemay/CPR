@@ -3,6 +3,7 @@
 *.class
 
 bin/
+webapps/cpr/css/lib/
 webapps/cpr/js/common/
 webapps/cpr/js/lib/
 webapps/cpr/js/protobuf/
