@@ -30,7 +30,7 @@ public class SessionService {
 						.setDurationMins(session.getDurationMins())
 						.setCost(session.getCost())
 						.setLocation(session.getLocation())
-						.setTrainning(trainningService.getTrainning(
+						.setTrainning(trainningService.get(
 								GetTrainningRequest.newBuilder()
 										.setTrainningId(session.getTrainningId())
 										.build()))
@@ -47,11 +47,11 @@ public class SessionService {
 		this.trainningService = trainningService;
 	}
 	
-	public SessionUI getSession(GetSessionRequest request) throws DD4StorageException {
-		return converter.execute(store.read(request.getSessionId()));
+	public SessionUI get(GetSessionRequest request) throws DD4StorageException {
+		return converter.execute(store.get(request.getSessionId()));
 	}
 	
-	public List<SessionUI> listSessions(ListSessionsRequest request)
+	public List<SessionUI> list(ListSessionsRequest request)
 			throws DD4StorageException {
 		return threader.parDo(
 				store.findSessions(request.getTrainningId(), request.getDateRange(),

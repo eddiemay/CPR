@@ -36,7 +36,7 @@ public class ReservationService {
 				try {
 					ReservationUI.Builder builder = ReservationUI.newBuilder()
 							.setId(reservation.getId())
-							.setSession(sessionService.getSession(
+							.setSession(sessionService.get(
 									GetSessionRequest.newBuilder()
 									.setSessionId(reservation.getSessionId())
 									.build()))
@@ -95,12 +95,12 @@ public class ReservationService {
 		this.sessionService = sessionService;
 	}
 	
-	public ReservationUI createReservation(CreateReservationRequest request)
+	public ReservationUI create(CreateReservationRequest request)
 			throws DD4StorageException {
 		return converter.execute(store.create(reverseConverter.execute(request.getReservation())));
 	}
 	
-	public ReservationUI getReservation(GetReservationRequest request) throws DD4StorageException {
+	public ReservationUI get(GetReservationRequest request) throws DD4StorageException {
 		return converter.execute(store.getBy(request.getEmail(), request.getConfirmationCode()));
 	}
 }

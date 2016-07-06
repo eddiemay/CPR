@@ -65,24 +65,24 @@ public class CPRJSONServiceServlet extends ServiceServlet {
 				String action = request.getRequestURL().toString();
 				action = action.substring(action.lastIndexOf("/") + 1).toUpperCase();
 				switch (ACTIONS.valueOf(action)) {
-					case TRAINNING: json.put("data", convertToJSON(trainningService.getTrainning(
+					case TRAINNING: json.put("data", convertToJSON(trainningService.get(
 							transformRequest(GetTrainningRequest.getDefaultInstance(), request))));
 					break;
-					case TRAINNINGS: json.put("data", convertToJSON(trainningService.listTrainnings(
+					case TRAINNINGS: json.put("data", convertToJSON(trainningService.list(
 							transformRequest(ListTrainningsRequest.getDefaultInstance(), request))));
 					break;
-					case SESSION: json.put("data", convertToJSON(sessionService.getSession(
+					case SESSION: json.put("data", convertToJSON(sessionService.get(
 							transformRequest(GetSessionRequest.getDefaultInstance(), request))));
 					break;
-					case SESSIONS: json.put("data", convertToJSON(sessionService.listSessions(
+					case SESSIONS: json.put("data", convertToJSON(sessionService.list(
 							transformRequest(ListSessionsRequest.getDefaultInstance(), request))));
 					break;
 					case CREATE_RESERVATION:
-						json.put("data", convertToJSON(reservationService.createReservation(
+						json.put("data", convertToJSON(reservationService.create(
 								transformRequest(CreateReservationRequest.getDefaultInstance(),
 										"{reservation: " + request.getParameter("reservation") + "}"))));
 					break;
-					case RESERVATION: json.put("data", convertToJSON(reservationService.getReservation(
+					case RESERVATION: json.put("data", convertToJSON(reservationService.get(
 							transformRequest(GetReservationRequest.getDefaultInstance(), request))));
 					break;
 				}

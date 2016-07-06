@@ -57,6 +57,6 @@ public class SessionStore extends GenericDAOStore<Session> {
 			params.add(new QueryParam("start_time", ">=", startDate.getMillis()));
 			params.add(new QueryParam("start_time", "<", endDate.getMillis()));
 		}
-		return query(params);
+		return get(params);
 	}
 }

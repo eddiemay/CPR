@@ -32,8 +32,8 @@ public class ReservationDualReadDAO implements DAO<Reservation> {
 	}
 
 	@Override
-	public Reservation read(int id) throws DD4StorageException {
-		return addStudents(reservationDAO.read(id));
+	public Reservation get(int id) throws DD4StorageException {
+		return addStudents(reservationDAO.get(id));
 	}
 
 	@Override
@@ -48,18 +48,18 @@ public class ReservationDualReadDAO implements DAO<Reservation> {
 	}
 
 	@Override
-	public List<Reservation> query(QueryParam... params) throws DD4StorageException {
+	public List<Reservation> get(QueryParam... params) throws DD4StorageException {
 		List<Reservation> results = new ArrayList<>();
-		for (Reservation reservation : reservationDAO.query(params)) {
+		for (Reservation reservation : reservationDAO.get(params)) {
 			results.add(addStudents(reservation));
 		}
 		return results;
 	}
 
 	@Override
-	public List<Reservation> query(List<QueryParam> params) throws DD4StorageException {
+	public List<Reservation> get(List<QueryParam> params) throws DD4StorageException {
 		List<Reservation> results = new ArrayList<>();
-		for (Reservation reservation : reservationDAO.query(params)) {
+		for (Reservation reservation : reservationDAO.get(params)) {
 			results.add(addStudents(reservation));
 		}
 		return results;
@@ -79,7 +79,7 @@ public class ReservationDualReadDAO implements DAO<Reservation> {
 			return null;
 		}
 		Reservation.Builder builder = reservation.toBuilder();
-		for (Student student : studentDAO.query(new QueryParam("reservation_id", "=", reservation.getId()))) {
+		for (Student student : studentDAO.get(new QueryParam("reservation_id", "=", reservation.getId()))) {
 			builder.addStudent(student);
 		}
 		return builder.build();

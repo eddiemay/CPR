@@ -19,7 +19,7 @@ public class ReservationStore extends GenericDAOStore<Reservation> {
 	}
 	
 	public Reservation getBy(String email, String confirmationCode) throws DD4StorageException {
-		List<Reservation> results = query(new QueryParam("email", "=", email),
+		List<Reservation> results = get(new QueryParam("email", "=", email),
 				new QueryParam("confirmation_code", "=", confirmationCode));
 		return results.size() > 0 ? results.get(0) : null;
 	}

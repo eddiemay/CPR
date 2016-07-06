@@ -32,11 +32,11 @@ public class TrainningService {
 		this.store = store;
 	}
 	
-	public TrainningUI getTrainning(GetTrainningRequest request) throws DD4StorageException {
-		return converter.execute(store.read(request.getTrainningId()));
+	public TrainningUI get(GetTrainningRequest request) throws DD4StorageException {
+		return converter.execute(store.get(request.getTrainningId()));
 	}
 	
-	public List<TrainningUI> listTrainnings(ListTrainningsRequest request)
+	public List<TrainningUI> list(ListTrainningsRequest request)
 			throws DD4StorageException {
 		return threader.parDo(store.getAll(), converter);
 	}
