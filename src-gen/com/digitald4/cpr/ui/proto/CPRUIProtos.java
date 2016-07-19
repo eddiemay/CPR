@@ -2146,13 +2146,13 @@ public final class CPRUIProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .common.DateRangeType date_range = 1;</code>
+     * <code>required .common.DateRange date_range = 1;</code>
      */
     boolean hasDateRange();
     /**
-     * <code>required .common.DateRangeType date_range = 1;</code>
+     * <code>required .common.DateRange date_range = 1;</code>
      */
-    com.digitald4.common.proto.DD4UIProtos.DateRangeType getDateRange();
+    com.digitald4.common.proto.DD4UIProtos.DateRange getDateRange();
 
     /**
      * <code>required int64 ref_date = 2;</code>
@@ -2218,7 +2218,7 @@ public final class CPRUIProtos {
             }
             case 8: {
               int rawValue = input.readEnum();
-              com.digitald4.common.proto.DD4UIProtos.DateRangeType value = com.digitald4.common.proto.DD4UIProtos.DateRangeType.valueOf(rawValue);
+              com.digitald4.common.proto.DD4UIProtos.DateRange value = com.digitald4.common.proto.DD4UIProtos.DateRange.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
               } else {
@@ -2266,17 +2266,17 @@ public final class CPRUIProtos {
     public static final int DATE_RANGE_FIELD_NUMBER = 1;
     private int dateRange_;
     /**
-     * <code>required .common.DateRangeType date_range = 1;</code>
+     * <code>required .common.DateRange date_range = 1;</code>
      */
     public boolean hasDateRange() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .common.DateRangeType date_range = 1;</code>
+     * <code>required .common.DateRange date_range = 1;</code>
      */
-    public com.digitald4.common.proto.DD4UIProtos.DateRangeType getDateRange() {
-      com.digitald4.common.proto.DD4UIProtos.DateRangeType result = com.digitald4.common.proto.DD4UIProtos.DateRangeType.valueOf(dateRange_);
-      return result == null ? com.digitald4.common.proto.DD4UIProtos.DateRangeType.UNSPECIFIED : result;
+    public com.digitald4.common.proto.DD4UIProtos.DateRange getDateRange() {
+      com.digitald4.common.proto.DD4UIProtos.DateRange result = com.digitald4.common.proto.DD4UIProtos.DateRange.valueOf(dateRange_);
+      return result == null ? com.digitald4.common.proto.DD4UIProtos.DateRange.UNSPECIFIED : result;
     }
 
     public static final int REF_DATE_FIELD_NUMBER = 2;
@@ -2573,22 +2573,22 @@ public final class CPRUIProtos {
 
       private int dateRange_ = 0;
       /**
-       * <code>required .common.DateRangeType date_range = 1;</code>
+       * <code>required .common.DateRange date_range = 1;</code>
        */
       public boolean hasDateRange() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .common.DateRangeType date_range = 1;</code>
+       * <code>required .common.DateRange date_range = 1;</code>
        */
-      public com.digitald4.common.proto.DD4UIProtos.DateRangeType getDateRange() {
-        com.digitald4.common.proto.DD4UIProtos.DateRangeType result = com.digitald4.common.proto.DD4UIProtos.DateRangeType.valueOf(dateRange_);
-        return result == null ? com.digitald4.common.proto.DD4UIProtos.DateRangeType.UNSPECIFIED : result;
+      public com.digitald4.common.proto.DD4UIProtos.DateRange getDateRange() {
+        com.digitald4.common.proto.DD4UIProtos.DateRange result = com.digitald4.common.proto.DD4UIProtos.DateRange.valueOf(dateRange_);
+        return result == null ? com.digitald4.common.proto.DD4UIProtos.DateRange.UNSPECIFIED : result;
       }
       /**
-       * <code>required .common.DateRangeType date_range = 1;</code>
+       * <code>required .common.DateRange date_range = 1;</code>
        */
-      public Builder setDateRange(com.digitald4.common.proto.DD4UIProtos.DateRangeType value) {
+      public Builder setDateRange(com.digitald4.common.proto.DD4UIProtos.DateRange value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2598,7 +2598,7 @@ public final class CPRUIProtos {
         return this;
       }
       /**
-       * <code>required .common.DateRangeType date_range = 1;</code>
+       * <code>required .common.DateRange date_range = 1;</code>
        */
       public Builder clearDateRange() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -8092,34 +8092,34 @@ public final class CPRUIProtos {
       "\005\"\027\n\025ListTrainningsRequest\"S\n\013TrainningU" +
       "I\022\n\n\002id\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\023\n\013descripti" +
       "on\030\003 \002(\t\022\025\n\rduration_mins\030\004 \001(\005\"\'\n\021GetSe" +
-      "ssionRequest\022\022\n\nsession_id\030\001 \001(\005\"h\n\023List" +
-      "SessionsRequest\022)\n\ndate_range\030\001 \002(\0162\025.co" +
-      "mmon.DateRangeType\022\020\n\010ref_date\030\002 \002(\003\022\024\n\014" +
-      "trainning_id\030\003 \001(\005\"\261\001\n\tSessionUI\022\n\n\002id\030\001" +
-      " \001(\005\022\024\n\014trainning_id\030\002 \001(\005\022\022\n\nstart_time",
-      "\030\003 \001(\003\022\025\n\rduration_mins\030\004 \001(\005\022\014\n\004cost\030\005 " +
-      "\001(\001\022$\n\010location\030\006 \001(\0132\022.common.GPSAddres" +
-      "s\022#\n\ttrainning\030\007 \001(\0132\020.cpr.TrainningUI\"A" +
-      "\n\025GetReservationRequest\022\r\n\005email\030\001 \002(\t\022\031" +
-      "\n\021confirmation_code\030\002 \002(\t\"\304\002\n\rReservatio" +
-      "nUI\022\n\n\002id\030\001 \001(\005\022\037\n\007session\030\002 \001(\0132\016.cpr.S" +
-      "essionUI\022\025\n\rcontact_email\030\003 \001(\t\022\031\n\021confi" +
-      "rmation_code\030\004 \001(\t\022*\n\016payment_status\030\005 \001" +
-      "(\0162\022.cpr.PaymentStatus\022!\n\031payment_confir" +
-      "mation_code\030\006 \001(\t\022-\n\007student\030\007 \003(\0132\034.cpr",
-      ".ReservationUI.StudentUI\032V\n\tStudentUI\022\n\n" +
-      "\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022 " +
-      "\n\006result\030\004 \001(\0162\020.cpr.ClassResult\"C\n\030Crea" +
-      "teReservationRequest\022\'\n\013reservation\030\001 \002(" +
-      "\0132\022.cpr.ReservationUI\"S\n\030UpdateReservati" +
-      "onRequest\022\026\n\016reservation_id\030\001 \002(\005\022\020\n\010pro" +
-      "perty\030\002 \002(\t\022\r\n\005value\030\003 \002(\t*z\n\rPaymentSta" +
-      "tus\022\022\n\016PS_UNSPECIFIED\020\000\022\014\n\010NOT_PAID\020\001\022\023\n" +
-      "\017PAYMENT_PENDING\020\002\022\022\n\016PARTIALLY_PAID\020\003\022\010" +
-      "\n\004PAID\020\004\022\024\n\020PAYMENT_VERIFIED\020\005*I\n\013ClassR",
-      "esult\022\022\n\016CR_UNSPECIFIED\020\000\022\016\n\nUNATTENDED\020" +
-      "\001\022\n\n\006PASSED\020\002\022\n\n\006FAILED\020\003B)\n\032com.digital" +
-      "d4.cpr.ui.protoB\013CPRUIProtos"
+      "ssionRequest\022\022\n\nsession_id\030\001 \001(\005\"d\n\023List" +
+      "SessionsRequest\022%\n\ndate_range\030\001 \002(\0162\021.co" +
+      "mmon.DateRange\022\020\n\010ref_date\030\002 \002(\003\022\024\n\014trai" +
+      "nning_id\030\003 \001(\005\"\261\001\n\tSessionUI\022\n\n\002id\030\001 \001(\005" +
+      "\022\024\n\014trainning_id\030\002 \001(\005\022\022\n\nstart_time\030\003 \001",
+      "(\003\022\025\n\rduration_mins\030\004 \001(\005\022\014\n\004cost\030\005 \001(\001\022" +
+      "$\n\010location\030\006 \001(\0132\022.common.GPSAddress\022#\n" +
+      "\ttrainning\030\007 \001(\0132\020.cpr.TrainningUI\"A\n\025Ge" +
+      "tReservationRequest\022\r\n\005email\030\001 \002(\t\022\031\n\021co" +
+      "nfirmation_code\030\002 \002(\t\"\304\002\n\rReservationUI\022" +
+      "\n\n\002id\030\001 \001(\005\022\037\n\007session\030\002 \001(\0132\016.cpr.Sessi" +
+      "onUI\022\025\n\rcontact_email\030\003 \001(\t\022\031\n\021confirmat" +
+      "ion_code\030\004 \001(\t\022*\n\016payment_status\030\005 \001(\0162\022" +
+      ".cpr.PaymentStatus\022!\n\031payment_confirmati" +
+      "on_code\030\006 \001(\t\022-\n\007student\030\007 \003(\0132\034.cpr.Res",
+      "ervationUI.StudentUI\032V\n\tStudentUI\022\n\n\002id\030" +
+      "\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022 \n\006re" +
+      "sult\030\004 \001(\0162\020.cpr.ClassResult\"C\n\030CreateRe" +
+      "servationRequest\022\'\n\013reservation\030\001 \002(\0132\022." +
+      "cpr.ReservationUI\"S\n\030UpdateReservationRe" +
+      "quest\022\026\n\016reservation_id\030\001 \002(\005\022\020\n\010propert" +
+      "y\030\002 \002(\t\022\r\n\005value\030\003 \002(\t*z\n\rPaymentStatus\022" +
+      "\022\n\016PS_UNSPECIFIED\020\000\022\014\n\010NOT_PAID\020\001\022\023\n\017PAY" +
+      "MENT_PENDING\020\002\022\022\n\016PARTIALLY_PAID\020\003\022\010\n\004PA" +
+      "ID\020\004\022\024\n\020PAYMENT_VERIFIED\020\005*I\n\013ClassResul",
+      "t\022\022\n\016CR_UNSPECIFIED\020\000\022\016\n\nUNATTENDED\020\001\022\n\n" +
+      "\006PASSED\020\002\022\n\n\006FAILED\020\003B)\n\032com.digitald4.c" +
+      "pr.ui.protoB\013CPRUIProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

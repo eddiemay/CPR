@@ -26,7 +26,7 @@ message GetSessionRequest {
 }
 
 message ListSessionsRequest {
-	required common.DateRangeType date_range = 1;
+	required common.DateRange date_range = 1;
 	required int64 ref_date = 2;
 	optional int32 trainning_id = 3;
 }

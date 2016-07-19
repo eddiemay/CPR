@@ -1,9 +1,3 @@
-var com = {
-  digitald4: {
-	  cpr: {}
-  }
-};
-
 com.digitald4.cpr.router = function($routeProvider) {
 	$routeProvider
 		.when('/', {

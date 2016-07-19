@@ -7,7 +7,7 @@ import static org.mockito.Mockito.when;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.digitald4.common.proto.DD4UIProtos.DateRangeType;
+import com.digitald4.common.proto.DD4UIProtos.DateRange;
 import com.digitald4.cpr.proto.CPRProtos.Trainning;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest;
@@ -32,13 +32,13 @@ public class CPRServiceServletTest {
 	public void testTransform() throws ParseException {
 		when(httpRequest.getRequestURI()).thenReturn("http://localhost:8080/sessions");
 		Map<String, String[]> paramMap = new HashMap<>();
-		paramMap.put("date_range", new String[]{"" + DateRangeType.WEEK.getNumber()});
+		paramMap.put("date_range", new String[]{"" + DateRange.WEEK.getNumber()});
 		paramMap.put("ref_date", new String[]{"1000"});
 		when(httpRequest.getParameterMap()).thenReturn(paramMap);
 		ListSessionsRequest request = CPRJSONServiceServlet.transformRequest(
 				ListSessionsRequest.getDefaultInstance(), httpRequest);
 		
-		assertEquals(DateRangeType.WEEK, request.getDateRange());
+		assertEquals(DateRange.WEEK, request.getDateRange());
 		assertEquals(1000, request.getRefDate());
 
 		Map<String, String[]> paramMap2 = new HashMap<>();
@@ -48,7 +48,7 @@ public class CPRServiceServletTest {
 		request = CPRJSONServiceServlet.transformRequest(
 				ListSessionsRequest.getDefaultInstance(), httpRequest);
 		
-		assertEquals(DateRangeType.MONTH, request.getDateRange());
+		assertEquals(DateRange.MONTH, request.getDateRange());
 		assertEquals(DateTime.parse("2016-04-15").getMillis(), request.getRefDate());
 
 		Map<String, String[]> paramMap3 = new HashMap<>();
@@ -59,7 +59,7 @@ public class CPRServiceServletTest {
 		request = CPRJSONServiceServlet.transformRequest(
 				ListSessionsRequest.getDefaultInstance(), httpRequest);
 		
-		assertEquals(DateRangeType.DAY, request.getDateRange());
+		assertEquals(DateRange.DAY, request.getDateRange());
 		assertEquals(DateTime.parse("2016-05-01").getMillis(), request.getRefDate());
 		assertEquals(1, request.getTrainningId());
 	}

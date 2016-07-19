@@ -3,7 +3,7 @@ package com.digitald4.cpr.store;
 import com.digitald4.common.dao.DAO;
 import com.digitald4.common.dao.QueryParam;
 import com.digitald4.common.exception.DD4StorageException;
-import com.digitald4.common.proto.DD4UIProtos.DateRangeType;
+import com.digitald4.common.proto.DD4UIProtos.DateRange;
 import com.digitald4.common.store.impl.GenericDAOStore;
 import com.digitald4.cpr.proto.CPRProtos.Session;
 
@@ -18,7 +18,7 @@ public class SessionStore extends GenericDAOStore<Session> {
 		super(dao);
 	}
 	
-	public List<Session> findSessions(int trainningId, DateRangeType rangeType, DateTime refDate)
+	public List<Session> findSessions(int trainningId, DateRange rangeType, DateTime refDate)
 			throws DD4StorageException {
 		refDate = refDate.minusMillis(refDate.getMillisOfDay());
 		DateTime startDate = null, endDate = null;
