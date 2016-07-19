@@ -9,6 +9,7 @@ import com.digitald4.common.distributed.Function;
 import com.digitald4.common.exception.DD4StorageException;
 import com.digitald4.cpr.proto.CPRProtos.Reservation;
 import com.digitald4.cpr.proto.CPRProtos.Reservation.Student;
+import com.google.protobuf.Descriptors.Descriptor;
 
 public class ReservationDualReadDAO implements DAO<Reservation> {
 
@@ -18,6 +19,11 @@ public class ReservationDualReadDAO implements DAO<Reservation> {
 	public ReservationDualReadDAO(DAO<Reservation> reservationDAO, DAO<Student> studentDAO) {
 		this.reservationDAO = reservationDAO;
 		this.studentDAO = studentDAO;
+	}
+
+	@Override
+	public Descriptor getDescriptor() {
+		return reservationDAO.getDescriptor();
 	}
 	
 	@Override
