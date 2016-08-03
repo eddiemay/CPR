@@ -64,7 +64,7 @@ com.digitald4.cpr.CalCtrl.prototype.events = [
 ];
 
 com.digitald4.cpr.CalCtrl.prototype.refresh = function(startDate) {
-	this.trainningService.getSessions(this.selectedTrainningId, proto.common.DateRangeType.MONTH,
+	this.trainningService.getSessions(this.selectedTrainningId, proto.common.DateRange.MONTH,
 			startDate.toJSON(), this.setSessions.bind(this),
 			function(error) {
 				notify(error);

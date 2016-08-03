@@ -20,7 +20,6 @@ public class ReservationService {
 		@Override
 		public StudentUI execute(Student student) {
 			return StudentUI.newBuilder()
-					.setId(student.getId())
 					.setName(student.getName())
 					.setEmail(student.getEmail())
 					.setResult(student.getResult())
@@ -61,7 +60,6 @@ public class ReservationService {
 		@Override
 		public Student execute(StudentUI student) {
 			return Student.newBuilder()
-					.setId(student.getId())
 					.setName(student.getName())
 					.setEmail(student.getEmail())
 					.setResult(student.getResult())

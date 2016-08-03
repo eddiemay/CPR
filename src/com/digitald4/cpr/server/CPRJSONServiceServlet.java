@@ -16,9 +16,7 @@ import com.digitald4.common.dao.sql.DAOProtoSQLImpl;
 import com.digitald4.common.jdbc.DBConnector;
 import com.digitald4.common.server.ServiceServlet;
 import com.digitald4.common.store.impl.GenericDAOStore;
-import com.digitald4.cpr.dao.ReservationDualReadDAO;
 import com.digitald4.cpr.proto.CPRProtos.Reservation;
-import com.digitald4.cpr.proto.CPRProtos.Reservation.Student;
 import com.digitald4.cpr.proto.CPRProtos.Trainning;
 import com.digitald4.cpr.proto.CPRProtos.Session;
 import com.digitald4.cpr.store.ReservationStore;
@@ -44,16 +42,15 @@ public class CPRJSONServiceServlet extends ServiceServlet {
 		DBConnector dbConnector = getDBConnector();
 		
 		GenericDAOStore<Trainning> trainningStore = new GenericDAOStore<>(
-				new DAOProtoSQLImpl<>(Trainning.getDefaultInstance(), dbConnector));
+				new DAOProtoSQLImpl<>(Trainning.class, dbConnector));
 		trainningService = new TrainningService(trainningStore);
 		
 		SessionStore sessionStore = new SessionStore(
-				new DAOProtoSQLImpl<>(Session.getDefaultInstance(), dbConnector));
+				new DAOProtoSQLImpl<>(Session.class, dbConnector));
 		sessionService = new SessionService(sessionStore, trainningService);
 		
-		ReservationStore reservationStore = new ReservationStore(new ReservationDualReadDAO(
-				new DAOProtoSQLImpl<>(Reservation.getDefaultInstance(), dbConnector),
-				new DAOProtoSQLImpl<>(Student.getDefaultInstance(), dbConnector)), new Random());
+		ReservationStore reservationStore = new ReservationStore(
+				new DAOProtoSQLImpl<>(Reservation.class, dbConnector), new Random());
 		reservationService = new ReservationService(reservationStore, sessionService);
 	}
 

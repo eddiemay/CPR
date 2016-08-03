@@ -1,9 +1,9 @@
 package com.digitald4.cpr.store;
 
 import com.digitald4.common.dao.DAO;
-import com.digitald4.common.dao.QueryParam;
 import com.digitald4.common.exception.DD4StorageException;
 import com.digitald4.common.proto.DD4UIProtos.DateRange;
+import com.digitald4.common.proto.DD4UIProtos.ListRequest.QueryParam;
 import com.digitald4.common.store.impl.GenericDAOStore;
 import com.digitald4.cpr.proto.CPRProtos.Session;
 
@@ -34,6 +34,14 @@ public class SessionStore extends GenericDAOStore<Session> {
 				// Set End Date to the first day of the next week
 				endDate = startDate.plusDays(7);
 				break;
+			case CAL_MONTH:
+				// Set start to first day of month
+				startDate = refDate.minusDays(refDate.getDayOfMonth() - 1);
+				// Set End Date to the first day of the next month
+				endDate = startDate.plusMonths(1);
+				startDate = startDate.minusDays(startDate.getDayOfWeek());
+				endDate = endDate.plusDays(6 - endDate.getDayOfWeek());
+				break;
 			case MONTH:
 				// Set start to first day of month
 				startDate = refDate.minusDays(refDate.getDayOfMonth() - 1);
@@ -51,11 +59,14 @@ public class SessionStore extends GenericDAOStore<Session> {
 		}
 		List<QueryParam> params = new ArrayList<>();
 		if (trainningId > 0) {
-			params.add(new QueryParam("trainning_id", "=", trainningId));
+			params.add(QueryParam.newBuilder().setColumn("trainning_id")
+					.setOperan("=").setValue(String.valueOf(trainningId)).build());
 		}
 		if (startDate != null) {
-			params.add(new QueryParam("start_time", ">=", startDate.getMillis()));
-			params.add(new QueryParam("start_time", "<", endDate.getMillis()));
+			params.add(QueryParam.newBuilder().setColumn("start_time")
+					.setOperan(">=").setValue(String.valueOf(startDate.getMillis())).build());
+			params.add(QueryParam.newBuilder().setColumn("start_time")
+					.setOperan("<").setValue(String.valueOf(endDate.getMillis())).build());
 		}
 		return get(params);
 	}

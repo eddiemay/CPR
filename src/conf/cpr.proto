@@ -36,11 +36,9 @@ message Reservation {
 	optional string payment_confirmation_code = 6;
 
 	message Student {
-		optional int32 id = 1;
-		optional int32 reservation_id = 2;
-		optional string name = 3;
-		optional string email = 4;
-		optional cpr.ClassResult result = 5;
+		optional string name = 1;
+		optional string email = 2;
+		optional cpr.ClassResult result = 3;
 	}
 	repeated Student student = 7;
 }
