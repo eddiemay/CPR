@@ -4,7 +4,7 @@ import com.digitald4.common.distributed.Function;
 import com.digitald4.common.exception.DD4StorageException;
 import com.digitald4.cpr.proto.CPRProtos.Reservation;
 import com.digitald4.cpr.proto.CPRProtos.Reservation.Student;
-import com.digitald4.cpr.store.ReservationStore;
+import com.digitald4.cpr.storage.ReservationStore;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest;

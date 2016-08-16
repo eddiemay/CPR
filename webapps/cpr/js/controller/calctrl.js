@@ -97,7 +97,7 @@ var reservation = {
 com.digitald4.cpr.CalCtrl.prototype.showReservationDialog = function(ev) {
   this.mdDialog.show({
     controller: DialogController,
-    templateUrl: 'html/reservation-dialog.tmpl.html',
+    templateUrl: 'js/html/reservation-dialog.html',
     parent: angular.element(document.body),
     targetEvent: ev,
     clickOutsideToClose:true,

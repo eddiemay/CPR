@@ -5,7 +5,7 @@ import java.util.List;
 import com.digitald4.common.distributed.Function;
 import com.digitald4.common.distributed.MultiCoreThreader;
 import com.digitald4.common.exception.DD4StorageException;
-import com.digitald4.common.store.impl.GenericDAOStore;
+import com.digitald4.common.storage.GenericDAOStore;
 import com.digitald4.cpr.proto.CPRProtos.Trainning;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest;

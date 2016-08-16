@@ -8,7 +8,7 @@ import com.digitald4.common.distributed.Function;
 import com.digitald4.common.distributed.MultiCoreThreader;
 import com.digitald4.common.exception.DD4StorageException;
 import com.digitald4.cpr.proto.CPRProtos.Session;
-import com.digitald4.cpr.store.SessionStore;
+import com.digitald4.cpr.storage.SessionStore;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest;
 import com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest;
