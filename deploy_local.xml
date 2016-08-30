@@ -109,7 +109,7 @@
 			<fileset dir="webapps/${app.name}/js/lib">
 				<include name="*" />
 			</fileset>
-			<fileset dir="webapps/${app.name}/js/protobuf">
+			<fileset dir="webapps/${app.name}/js/gen">
 				<include name="*.js" />
 			</fileset>
 		</delete>

@@ -68,17 +68,17 @@ public final class CPRProtos {
     double getCost();
 
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
     boolean hasLocation();
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
-    com.digitald4.common.proto.DD4UIProtos.GPSAddress getLocation();
+    com.digitald4.cpr.proto.CPRUIProtos.GPSAddress getLocation();
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
-    com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder getLocationOrBuilder();
+    com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder getLocationOrBuilder();
   }
   /**
    * Protobuf type {@code cpr.Trainning}
@@ -154,11 +154,11 @@ public final class CPRProtos {
               break;
             }
             case 50: {
-              com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder subBuilder = null;
+              com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder subBuilder = null;
               if (((bitField0_ & 0x00000020) == 0x00000020)) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(com.digitald4.common.proto.DD4UIProtos.GPSAddress.parser(), extensionRegistry);
+              location_ = input.readMessage(com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -322,24 +322,24 @@ public final class CPRProtos {
     }
 
     public static final int LOCATION_FIELD_NUMBER = 6;
-    private com.digitald4.common.proto.DD4UIProtos.GPSAddress location_;
+    private com.digitald4.cpr.proto.CPRUIProtos.GPSAddress location_;
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
     public boolean hasLocation() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
-    public com.digitald4.common.proto.DD4UIProtos.GPSAddress getLocation() {
-      return location_ == null ? com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance() : location_;
+    public com.digitald4.cpr.proto.CPRUIProtos.GPSAddress getLocation() {
+      return location_ == null ? com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance() : location_;
     }
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
-    public com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder getLocationOrBuilder() {
-      return location_ == null ? com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance() : location_;
+    public com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance() : location_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -897,29 +897,29 @@ public final class CPRProtos {
         return this;
       }
 
-      private com.digitald4.common.proto.DD4UIProtos.GPSAddress location_ = null;
+      private com.digitald4.cpr.proto.CPRUIProtos.GPSAddress location_ = null;
       private com.google.protobuf.SingleFieldBuilder<
-          com.digitald4.common.proto.DD4UIProtos.GPSAddress, com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder, com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder> locationBuilder_;
+          com.digitald4.cpr.proto.CPRUIProtos.GPSAddress, com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder, com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder> locationBuilder_;
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
       public boolean hasLocation() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public com.digitald4.common.proto.DD4UIProtos.GPSAddress getLocation() {
+      public com.digitald4.cpr.proto.CPRUIProtos.GPSAddress getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance() : location_;
+          return location_ == null ? com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public Builder setLocation(com.digitald4.common.proto.DD4UIProtos.GPSAddress value) {
+      public Builder setLocation(com.digitald4.cpr.proto.CPRUIProtos.GPSAddress value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -933,10 +933,10 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
       public Builder setLocation(
-          com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder builderForValue) {
+          com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -947,15 +947,15 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public Builder mergeLocation(com.digitald4.common.proto.DD4UIProtos.GPSAddress value) {
+      public Builder mergeLocation(com.digitald4.cpr.proto.CPRUIProtos.GPSAddress value) {
         if (locationBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020) &&
               location_ != null &&
-              location_ != com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance()) {
+              location_ != com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance()) {
             location_ =
-              com.digitald4.common.proto.DD4UIProtos.GPSAddress.newBuilder(location_).mergeFrom(value).buildPartial();
+              com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -967,7 +967,7 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -980,33 +980,33 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder getLocationBuilder() {
+      public com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder getLocationBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
         return getLocationFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder getLocationOrBuilder() {
+      public com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance() : location_;
+              com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance() : location_;
         }
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.digitald4.common.proto.DD4UIProtos.GPSAddress, com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder, com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder> 
+          com.digitald4.cpr.proto.CPRUIProtos.GPSAddress, com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder, com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.digitald4.common.proto.DD4UIProtos.GPSAddress, com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder, com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder>(
+              com.digitald4.cpr.proto.CPRUIProtos.GPSAddress, com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder, com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());
@@ -1112,17 +1112,17 @@ public final class CPRProtos {
     double getCost();
 
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
     boolean hasLocation();
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
-    com.digitald4.common.proto.DD4UIProtos.GPSAddress getLocation();
+    com.digitald4.cpr.proto.CPRUIProtos.GPSAddress getLocation();
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
-    com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder getLocationOrBuilder();
+    com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder getLocationOrBuilder();
   }
   /**
    * Protobuf type {@code cpr.Session}
@@ -1196,11 +1196,11 @@ public final class CPRProtos {
               break;
             }
             case 50: {
-              com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder subBuilder = null;
+              com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder subBuilder = null;
               if (((bitField0_ & 0x00000020) == 0x00000020)) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(com.digitald4.common.proto.DD4UIProtos.GPSAddress.parser(), extensionRegistry);
+              location_ = input.readMessage(com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -1310,24 +1310,24 @@ public final class CPRProtos {
     }
 
     public static final int LOCATION_FIELD_NUMBER = 6;
-    private com.digitald4.common.proto.DD4UIProtos.GPSAddress location_;
+    private com.digitald4.cpr.proto.CPRUIProtos.GPSAddress location_;
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
     public boolean hasLocation() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
-    public com.digitald4.common.proto.DD4UIProtos.GPSAddress getLocation() {
-      return location_ == null ? com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance() : location_;
+    public com.digitald4.cpr.proto.CPRUIProtos.GPSAddress getLocation() {
+      return location_ == null ? com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance() : location_;
     }
     /**
-     * <code>optional .common.GPSAddress location = 6;</code>
+     * <code>optional .cpr.GPSAddress location = 6;</code>
      */
-    public com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder getLocationOrBuilder() {
-      return location_ == null ? com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance() : location_;
+    public com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance() : location_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1795,29 +1795,29 @@ public final class CPRProtos {
         return this;
       }
 
-      private com.digitald4.common.proto.DD4UIProtos.GPSAddress location_ = null;
+      private com.digitald4.cpr.proto.CPRUIProtos.GPSAddress location_ = null;
       private com.google.protobuf.SingleFieldBuilder<
-          com.digitald4.common.proto.DD4UIProtos.GPSAddress, com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder, com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder> locationBuilder_;
+          com.digitald4.cpr.proto.CPRUIProtos.GPSAddress, com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder, com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder> locationBuilder_;
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
       public boolean hasLocation() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public com.digitald4.common.proto.DD4UIProtos.GPSAddress getLocation() {
+      public com.digitald4.cpr.proto.CPRUIProtos.GPSAddress getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance() : location_;
+          return location_ == null ? com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public Builder setLocation(com.digitald4.common.proto.DD4UIProtos.GPSAddress value) {
+      public Builder setLocation(com.digitald4.cpr.proto.CPRUIProtos.GPSAddress value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1831,10 +1831,10 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
       public Builder setLocation(
-          com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder builderForValue) {
+          com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -1845,15 +1845,15 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public Builder mergeLocation(com.digitald4.common.proto.DD4UIProtos.GPSAddress value) {
+      public Builder mergeLocation(com.digitald4.cpr.proto.CPRUIProtos.GPSAddress value) {
         if (locationBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020) &&
               location_ != null &&
-              location_ != com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance()) {
+              location_ != com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance()) {
             location_ =
-              com.digitald4.common.proto.DD4UIProtos.GPSAddress.newBuilder(location_).mergeFrom(value).buildPartial();
+              com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -1865,7 +1865,7 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -1878,33 +1878,33 @@ public final class CPRProtos {
         return this;
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder getLocationBuilder() {
+      public com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder getLocationBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
         return getLocationFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
-      public com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder getLocationOrBuilder() {
+      public com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              com.digitald4.common.proto.DD4UIProtos.GPSAddress.getDefaultInstance() : location_;
+              com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.getDefaultInstance() : location_;
         }
       }
       /**
-       * <code>optional .common.GPSAddress location = 6;</code>
+       * <code>optional .cpr.GPSAddress location = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.digitald4.common.proto.DD4UIProtos.GPSAddress, com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder, com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder> 
+          com.digitald4.cpr.proto.CPRUIProtos.GPSAddress, com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder, com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.digitald4.common.proto.DD4UIProtos.GPSAddress, com.digitald4.common.proto.DD4UIProtos.GPSAddress.Builder, com.digitald4.common.proto.DD4UIProtos.GPSAddressOrBuilder>(
+              com.digitald4.cpr.proto.CPRUIProtos.GPSAddress, com.digitald4.cpr.proto.CPRUIProtos.GPSAddress.Builder, com.digitald4.cpr.proto.CPRUIProtos.GPSAddressOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());
@@ -2017,7 +2017,7 @@ public final class CPRProtos {
     /**
      * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
      */
-    com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus getPaymentStatus();
+    com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus getPaymentStatus();
 
     /**
      * <code>optional string payment_confirmation_code = 6;</code>
@@ -2129,7 +2129,7 @@ public final class CPRProtos {
             }
             case 40: {
               int rawValue = input.readEnum();
-              com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus value = com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.valueOf(rawValue);
+              com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus value = com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(5, rawValue);
               } else {
@@ -2219,7 +2219,7 @@ public final class CPRProtos {
       /**
        * <code>optional .cpr.ClassResult result = 3;</code>
        */
-      com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult getResult();
+      com.digitald4.cpr.proto.CPRUIProtos.ClassResult getResult();
     }
     /**
      * Protobuf type {@code cpr.Reservation.Student}
@@ -2279,7 +2279,7 @@ public final class CPRProtos {
               }
               case 24: {
                 int rawValue = input.readEnum();
-                com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult value = com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.valueOf(rawValue);
+                com.digitald4.cpr.proto.CPRUIProtos.ClassResult value = com.digitald4.cpr.proto.CPRUIProtos.ClassResult.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(3, rawValue);
                 } else {
@@ -2409,9 +2409,9 @@ public final class CPRProtos {
       /**
        * <code>optional .cpr.ClassResult result = 3;</code>
        */
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult getResult() {
-        com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult result = com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.valueOf(result_);
-        return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.CR_UNSPECIFIED : result;
+      public com.digitald4.cpr.proto.CPRUIProtos.ClassResult getResult() {
+        com.digitald4.cpr.proto.CPRUIProtos.ClassResult result = com.digitald4.cpr.proto.CPRUIProtos.ClassResult.valueOf(result_);
+        return result == null ? com.digitald4.cpr.proto.CPRUIProtos.ClassResult.CR_UNSPECIFIED : result;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -2826,14 +2826,14 @@ public final class CPRProtos {
         /**
          * <code>optional .cpr.ClassResult result = 3;</code>
          */
-        public com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult getResult() {
-          com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult result = com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.valueOf(result_);
-          return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult.CR_UNSPECIFIED : result;
+        public com.digitald4.cpr.proto.CPRUIProtos.ClassResult getResult() {
+          com.digitald4.cpr.proto.CPRUIProtos.ClassResult result = com.digitald4.cpr.proto.CPRUIProtos.ClassResult.valueOf(result_);
+          return result == null ? com.digitald4.cpr.proto.CPRUIProtos.ClassResult.CR_UNSPECIFIED : result;
         }
         /**
          * <code>optional .cpr.ClassResult result = 3;</code>
          */
-        public Builder setResult(com.digitald4.cpr.ui.proto.CPRUIProtos.ClassResult value) {
+        public Builder setResult(com.digitald4.cpr.proto.CPRUIProtos.ClassResult value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -3025,9 +3025,9 @@ public final class CPRProtos {
     /**
      * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
      */
-    public com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus getPaymentStatus() {
-      com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus result = com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.valueOf(paymentStatus_);
-      return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.PS_UNSPECIFIED : result;
+    public com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus getPaymentStatus() {
+      com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus result = com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus.valueOf(paymentStatus_);
+      return result == null ? com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus.PS_UNSPECIFIED : result;
     }
 
     public static final int PAYMENT_CONFIRMATION_CODE_FIELD_NUMBER = 6;
@@ -3681,14 +3681,14 @@ public final class CPRProtos {
       /**
        * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
        */
-      public com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus getPaymentStatus() {
-        com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus result = com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.valueOf(paymentStatus_);
-        return result == null ? com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus.PS_UNSPECIFIED : result;
+      public com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus getPaymentStatus() {
+        com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus result = com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus.valueOf(paymentStatus_);
+        return result == null ? com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus.PS_UNSPECIFIED : result;
       }
       /**
        * <code>optional .cpr.PaymentStatus payment_status = 5;</code>
        */
-      public Builder setPaymentStatus(com.digitald4.cpr.ui.proto.CPRUIProtos.PaymentStatus value) {
+      public Builder setPaymentStatus(com.digitald4.cpr.proto.CPRUIProtos.PaymentStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4099,23 +4099,22 @@ public final class CPRProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\tcpr.proto\022\003cpr\032\017common_ui.proto\032\014cpr_u" +
-      "i.proto\"\205\001\n\tTrainning\022\n\n\002id\030\001 \001(\005\022\014\n\004nam" +
-      "e\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\025\n\rduration" +
-      "_mins\030\004 \001(\005\022\014\n\004cost\030\005 \001(\001\022$\n\010location\030\006 " +
-      "\001(\0132\022.common.GPSAddress\"\212\001\n\007Session\022\n\n\002i" +
-      "d\030\001 \001(\005\022\024\n\014trainning_id\030\002 \001(\005\022\022\n\nstart_t" +
-      "ime\030\003 \001(\003\022\025\n\rduration_mins\030\004 \001(\005\022\014\n\004cost" +
-      "\030\005 \001(\001\022$\n\010location\030\006 \001(\0132\022.common.GPSAdd" +
-      "ress\"\243\002\n\013Reservation\022\n\n\002id\030\001 \001(\005\022\022\n\nsess" +
-      "ion_id\030\002 \001(\005\022\025\n\rcontact_email\030\003 \001(\t\022\031\n\021c",
-      "onfirmation_code\030\004 \001(\t\022*\n\016payment_status" +
-      "\030\005 \001(\0162\022.cpr.PaymentStatus\022!\n\031payment_co" +
-      "nfirmation_code\030\006 \001(\t\022)\n\007student\030\007 \003(\0132\030" +
-      ".cpr.Reservation.Student\032H\n\007Student\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\022 \n\006result\030\003 \001(\016" +
-      "2\020.cpr.ClassResultB$\n\027com.digitald4.cpr." +
-      "protoB\tCPRProtos"
+      "\n\tcpr.proto\022\003cpr\032\014cpr_ui.proto\"\202\001\n\tTrain" +
+      "ning\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\023\n\013descri" +
+      "ption\030\003 \001(\t\022\025\n\rduration_mins\030\004 \001(\005\022\014\n\004co" +
+      "st\030\005 \001(\001\022!\n\010location\030\006 \001(\0132\017.cpr.GPSAddr" +
+      "ess\"\207\001\n\007Session\022\n\n\002id\030\001 \001(\005\022\024\n\014trainning" +
+      "_id\030\002 \001(\005\022\022\n\nstart_time\030\003 \001(\003\022\025\n\rduratio" +
+      "n_mins\030\004 \001(\005\022\014\n\004cost\030\005 \001(\001\022!\n\010location\030\006" +
+      " \001(\0132\017.cpr.GPSAddress\"\243\002\n\013Reservation\022\n\n" +
+      "\002id\030\001 \001(\005\022\022\n\nsession_id\030\002 \001(\005\022\025\n\rcontact" +
+      "_email\030\003 \001(\t\022\031\n\021confirmation_code\030\004 \001(\t\022",
+      "*\n\016payment_status\030\005 \001(\0162\022.cpr.PaymentSta" +
+      "tus\022!\n\031payment_confirmation_code\030\006 \001(\t\022)" +
+      "\n\007student\030\007 \003(\0132\030.cpr.Reservation.Studen" +
+      "t\032H\n\007Student\022\014\n\004name\030\001 \001(\t\022\r\n\005email\030\002 \001(" +
+      "\t\022 \n\006result\030\003 \001(\0162\020.cpr.ClassResultB$\n\027c" +
+      "om.digitald4.cpr.protoB\tCPRProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4128,8 +4127,7 @@ public final class CPRProtos {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.digitald4.common.proto.DD4UIProtos.getDescriptor(),
-          com.digitald4.cpr.ui.proto.CPRUIProtos.getDescriptor(),
+          com.digitald4.cpr.proto.CPRUIProtos.getDescriptor(),
         }, assigner);
     internal_static_cpr_Trainning_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4155,8 +4153,7 @@ public final class CPRProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cpr_Reservation_Student_descriptor,
         new java.lang.String[] { "Name", "Email", "Result", });
-    com.digitald4.common.proto.DD4UIProtos.getDescriptor();
-    com.digitald4.cpr.ui.proto.CPRUIProtos.getDescriptor();
+    com.digitald4.cpr.proto.CPRUIProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

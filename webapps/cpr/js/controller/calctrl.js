@@ -17,7 +17,7 @@ com.digitald4.cpr.CalCtrl = function($scope, $compile, $mdDialog, trainningServi
  };
  
  var viewRender = function(view, element) {
-	 this.refresh(view.intervalStart);
+	 this.refresh(view.start, view.end);
  }.bind(this);
 	
 	this.uiConfig = {
@@ -63,9 +63,9 @@ com.digitald4.cpr.CalCtrl.prototype.events = [
 		  duration_mins: 60})
 ];
 
-com.digitald4.cpr.CalCtrl.prototype.refresh = function(startDate) {
-	this.trainningService.getSessions(this.selectedTrainningId, proto.common.DateRange.MONTH,
-			startDate.toJSON(), this.setSessions.bind(this),
+com.digitald4.cpr.CalCtrl.prototype.refresh = function(startDate, endDate) {
+	this.trainningService.getSessions(this.selectedTrainningId, startDate.valueOf(),
+	    endDate.valueOf(), this.setSessions.bind(this),
 			function(error) {
 				notify(error);
 	});

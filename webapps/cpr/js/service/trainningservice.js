@@ -9,10 +9,9 @@ com.digitald4.cpr.TrainningService.prototype.getTrainnings = function(successCal
 	this.restService.performRequest('trainnings', {}, successCallback, errorCallback);
 };
 
-com.digitald4.cpr.TrainningService.prototype.getSessions = function(trainningId, dateRangeType,
-		refDate, successCallback, errorCallback) {
-	this.restService.performRequest('sessions', {trainning_id: trainningId, date_range: dateRangeType,
-			ref_date: refDate}, successCallback, errorCallback);
+com.digitald4.cpr.TrainningService.prototype.getSessions = function(trainningId, startDate, endDate,
+		successCallback, errorCallback) {
+	this.restService.performRequest('sessions', {trainning_id: trainningId, start_date: startDate,
+			end_date: endDate}, successCallback, errorCallback);
 };
 
-// Car Insurance Policy 971610883

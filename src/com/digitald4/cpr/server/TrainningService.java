@@ -5,14 +5,14 @@ import java.util.List;
 import com.digitald4.common.distributed.Function;
 import com.digitald4.common.distributed.MultiCoreThreader;
 import com.digitald4.common.exception.DD4StorageException;
-import com.digitald4.common.storage.GenericDAOStore;
+import com.digitald4.common.storage.DAOStore;
 import com.digitald4.cpr.proto.CPRProtos.Trainning;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI;
+import com.digitald4.cpr.proto.CPRUIProtos.GetTrainningRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.ListTrainningsRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.TrainningUI;
 
 public class TrainningService {
-	private final GenericDAOStore<Trainning> store;
+	private final DAOStore<Trainning> store;
 	private final MultiCoreThreader threader = new MultiCoreThreader();
 	
 	public final Function<TrainningUI, Trainning> converter =
@@ -28,7 +28,7 @@ public class TrainningService {
 		}
 	};
 	
-	public TrainningService(GenericDAOStore<Trainning> store) {
+	public TrainningService(DAOStore<Trainning> store) {
 		this.store = store;
 	}
 	

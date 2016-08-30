@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package cpr;
 
-import "common_ui.proto";
+// import "common_ui.proto";
 import "cpr_ui.proto";
 
 option java_package = "com.digitald4.cpr.proto";
@@ -14,7 +14,7 @@ message Trainning {
   optional string description = 3;
   optional int32 duration_mins = 4;
   optional double cost = 5;
-  optional common.GPSAddress location = 6;
+  optional cpr.GPSAddress location = 6;
 }
 
 message Session {
@@ -23,7 +23,7 @@ message Session {
 	optional int64 start_time = 3;
 	optional int32 duration_mins = 4;
 	optional double cost = 5;
-	optional common.GPSAddress location = 6;
+	optional cpr.GPSAddress location = 6;
 }
 
 message Reservation {

@@ -5,11 +5,11 @@ import com.digitald4.common.exception.DD4StorageException;
 import com.digitald4.cpr.proto.CPRProtos.Reservation;
 import com.digitald4.cpr.proto.CPRProtos.Reservation.Student;
 import com.digitald4.cpr.storage.ReservationStore;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI;
+import com.digitald4.cpr.proto.CPRUIProtos.CreateReservationRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.GetReservationRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.GetSessionRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.ReservationUI;
+import com.digitald4.cpr.proto.CPRUIProtos.ReservationUI.StudentUI;
 
 public class ReservationService {
 	private final ReservationStore store;

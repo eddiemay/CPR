@@ -20,13 +20,12 @@ import com.digitald4.cpr.proto.CPRProtos.Reservation;
 import com.digitald4.cpr.proto.CPRProtos.Trainning;
 import com.digitald4.cpr.proto.CPRProtos.Session;
 import com.digitald4.cpr.storage.ReservationStore;
-import com.digitald4.cpr.storage.SessionStore;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.GetReservationRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.GetSessionRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.GetTrainningRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.ListTrainningsRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.CreateReservationRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.GetReservationRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.GetSessionRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.GetTrainningRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.ListSessionsRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.ListTrainningsRequest;
 import com.google.protobuf.Message;
 import com.googlecode.protobuf.format.JsonFormat;
 
@@ -44,8 +43,8 @@ public class CPRJSONServiceServlet extends ServiceServlet {
 		GenericDAOStore<Trainning> trainningStore = new GenericDAOStore<>(
 				new DAOProtoSQLImpl<>(Trainning.class, dbConnector));
 		trainningService = new TrainningService(trainningStore);
-		
-		SessionStore sessionStore = new SessionStore(
+
+		GenericDAOStore sessionStore = new GenericDAOStore<>(
 				new DAOProtoSQLImpl<>(Session.class, dbConnector));
 		sessionService = new SessionService(sessionStore, trainningService);
 		

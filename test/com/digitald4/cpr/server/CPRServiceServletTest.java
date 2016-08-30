@@ -9,12 +9,12 @@ import java.util.Map;
 
 import com.digitald4.common.proto.DD4UIProtos.DateRange;
 import com.digitald4.cpr.proto.CPRProtos.Trainning;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.CreateReservationRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.ListSessionsRequest;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.SessionUI;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.TrainningUI;
-import com.digitald4.cpr.ui.proto.CPRUIProtos.ReservationUI.StudentUI;
+import com.digitald4.cpr.proto.CPRUIProtos.CreateReservationRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.ListSessionsRequest;
+import com.digitald4.cpr.proto.CPRUIProtos.ReservationUI;
+import com.digitald4.cpr.proto.CPRUIProtos.SessionUI;
+import com.digitald4.cpr.proto.CPRUIProtos.TrainningUI;
+import com.digitald4.cpr.proto.CPRUIProtos.ReservationUI.StudentUI;
 import com.googlecode.protobuf.format.JsonFormat;
 import com.googlecode.protobuf.format.JsonFormat.ParseException;
 
