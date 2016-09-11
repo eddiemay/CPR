@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 
 import com.digitald4.common.storage.DAOStore;
 
-import com.digitald4.common.distributed.Function;
 import com.digitald4.common.proto.DD4UIProtos.ListRequest.QueryParam;
 import com.digitald4.common.exception.DD4StorageException;
 import com.digitald4.cpr.proto.CPRProtos.Session;
@@ -14,6 +13,8 @@ import com.digitald4.cpr.proto.CPRUIProtos.GetSessionRequest;
 import com.digitald4.cpr.proto.CPRUIProtos.GetTrainningRequest;
 import com.digitald4.cpr.proto.CPRUIProtos.ListSessionsRequest;
 import com.digitald4.cpr.proto.CPRUIProtos.SessionUI;
+
+import java.util.function.Function;
 
 public class SessionService {
 	private final DAOStore<Session> store;

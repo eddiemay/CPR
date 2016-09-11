@@ -1,6 +1,5 @@
 package com.digitald4.cpr.server;
 
-import com.digitald4.common.distributed.Function;
 import com.digitald4.common.exception.DD4StorageException;
 import com.digitald4.cpr.proto.CPRProtos.Reservation;
 import com.digitald4.cpr.proto.CPRProtos.Reservation.Student;
@@ -10,6 +9,8 @@ import com.digitald4.cpr.proto.CPRUIProtos.GetReservationRequest;
 import com.digitald4.cpr.proto.CPRUIProtos.GetSessionRequest;
 import com.digitald4.cpr.proto.CPRUIProtos.ReservationUI;
 import com.digitald4.cpr.proto.CPRUIProtos.ReservationUI.StudentUI;
+
+import java.util.function.Function;
 
 public class ReservationService {
 	private final ReservationStore store;

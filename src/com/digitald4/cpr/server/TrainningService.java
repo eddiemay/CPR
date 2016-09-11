@@ -3,13 +3,14 @@ package com.digitald4.cpr.server;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.digitald4.common.distributed.Function;
 import com.digitald4.common.exception.DD4StorageException;
 import com.digitald4.common.storage.DAOStore;
 import com.digitald4.cpr.proto.CPRProtos.Trainning;
 import com.digitald4.cpr.proto.CPRUIProtos.GetTrainningRequest;
 import com.digitald4.cpr.proto.CPRUIProtos.ListTrainningsRequest;
 import com.digitald4.cpr.proto.CPRUIProtos.TrainningUI;
+
+import java.util.function.Function;
 
 public class TrainningService {
 	private final DAOStore<Trainning> store;
