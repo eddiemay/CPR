@@ -170,7 +170,7 @@
 		</concat>
 		<javac destdir="webapps/${app.name}/WEB-INF/classes"
 				includes="com/digitald4/${app.name}/server/CPRJSONServiceServlet.java" 
-				target="1.7" source="1.7" optimize="yes" includeAntRuntime="false">
+				target="1.8" source="1.8" optimize="yes" includeAntRuntime="false">
 			<src path="../common/src" />
 			<src path="../common/src-gen" />
 			<src path="src" />

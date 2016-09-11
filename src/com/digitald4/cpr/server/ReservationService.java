@@ -15,10 +15,10 @@ public class ReservationService {
 	private final ReservationStore store;
 	private final SessionService sessionService;
 	
-	public final Function<StudentUI, Student> studentConverter =
-			new Function<StudentUI, Student>() {
+	public final Function<Student, StudentUI> studentConverter =
+			new Function<Student, StudentUI>() {
 		@Override
-		public StudentUI execute(Student student) {
+		public StudentUI apply(Student student) {
 			return StudentUI.newBuilder()
 					.setName(student.getName())
 					.setEmail(student.getEmail())
@@ -27,10 +27,10 @@ public class ReservationService {
 		}
 	};
 	
-	public final Function<ReservationUI, Reservation> converter =
-			new Function<ReservationUI, Reservation>() {
+	public final Function<Reservation, ReservationUI> converter =
+			new Function<Reservation, ReservationUI>() {
 		@Override
-		public ReservationUI execute(Reservation reservation) {
+		public ReservationUI apply(Reservation reservation) {
 			if (reservation != null) {
 				try {
 					ReservationUI.Builder builder = ReservationUI.newBuilder()
@@ -44,7 +44,7 @@ public class ReservationService {
 							.setPaymentStatus(reservation.getPaymentStatus())
 							.setPaymentConfirmationCode(reservation.getPaymentConfirmationCode());
 					for (Student student : reservation.getStudentList()) {
-						builder.addStudent(studentConverter.execute(student));
+						builder.addStudent(studentConverter.apply(student));
 					}
 					return builder.build();
 				} catch (DD4StorageException e) {
@@ -55,10 +55,10 @@ public class ReservationService {
 		}
 	};
 	
-	public final Function<Student, StudentUI> reverseStudentConverter =
-			new Function<Student, StudentUI>() {
+	public final Function<StudentUI, Student> reverseStudentConverter =
+			new Function<StudentUI, Student>() {
 		@Override
-		public Student execute(StudentUI student) {
+		public Student apply(StudentUI student) {
 			return Student.newBuilder()
 					.setName(student.getName())
 					.setEmail(student.getEmail())
@@ -67,10 +67,10 @@ public class ReservationService {
 		}
 	};
 	
-	public final Function<Reservation, ReservationUI> reverseConverter =
-			new Function<Reservation, ReservationUI>() {
+	public final Function<ReservationUI, Reservation> reverseConverter =
+			new Function<ReservationUI, Reservation>() {
 		@Override
-		public Reservation execute(ReservationUI reservation) {
+		public Reservation apply(ReservationUI reservation) {
 			if (reservation == null) {
 				return null;
 			}
@@ -82,7 +82,7 @@ public class ReservationService {
 					.setPaymentStatus(reservation.getPaymentStatus())
 					.setPaymentConfirmationCode(reservation.getPaymentConfirmationCode());
 			for (StudentUI student : reservation.getStudentList()) {
-				builder.addStudent(reverseStudentConverter.execute(student));
+				builder.addStudent(reverseStudentConverter.apply(student));
 			}
 			return builder.build();
 		}
@@ -95,10 +95,10 @@ public class ReservationService {
 	
 	public ReservationUI create(CreateReservationRequest request)
 			throws DD4StorageException {
-		return converter.execute(store.create(reverseConverter.execute(request.getReservation())));
+		return converter.apply(store.create(reverseConverter.apply(request.getReservation())));
 	}
 	
 	public ReservationUI get(GetReservationRequest request) throws DD4StorageException {
-		return converter.execute(store.getBy(request.getEmail(), request.getConfirmationCode()));
+		return converter.apply(store.getBy(request.getEmail(), request.getConfirmationCode()));
 	}
 }

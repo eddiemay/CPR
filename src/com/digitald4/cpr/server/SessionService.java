@@ -2,15 +2,13 @@ package com.digitald4.cpr.server;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.digitald4.common.storage.DAOStore;
-import org.joda.time.DateTime;
 
 import com.digitald4.common.distributed.Function;
-import com.digitald4.common.distributed.MultiCoreThreader;
 import com.digitald4.common.proto.DD4UIProtos.ListRequest.QueryParam;
 import com.digitald4.common.exception.DD4StorageException;
-import com.digitald4.common.storage.DAOStore;
 import com.digitald4.cpr.proto.CPRProtos.Session;
 import com.digitald4.cpr.proto.CPRUIProtos.GetSessionRequest;
 import com.digitald4.cpr.proto.CPRUIProtos.GetTrainningRequest;
@@ -18,13 +16,12 @@ import com.digitald4.cpr.proto.CPRUIProtos.ListSessionsRequest;
 import com.digitald4.cpr.proto.CPRUIProtos.SessionUI;
 
 public class SessionService {
-	private final MultiCoreThreader threader = new MultiCoreThreader();
 	private final DAOStore<Session> store;
 	private final TrainningService trainningService;
 	
-	public final Function<SessionUI, Session> converter = new Function<SessionUI, Session>() {
+	public final Function<Session, SessionUI> converter = new Function<Session, SessionUI>() {
 		@Override
-		public SessionUI execute(Session session) {
+		public SessionUI apply(Session session) {
 			try {
 				return SessionUI.newBuilder()
 						.setId(session.getId())
@@ -51,7 +48,7 @@ public class SessionService {
 	}
 	
 	public SessionUI get(GetSessionRequest request) throws DD4StorageException {
-		return converter.execute(store.get(request.getSessionId()));
+		return converter.apply(store.get(request.getSessionId()));
 	}
 	
 	public List<SessionUI> list(ListSessionsRequest request)
@@ -66,6 +63,6 @@ public class SessionService {
 				.setOperan(">=").setValue(String.valueOf(request.getStartDate())).build());
 		params.add(QueryParam.newBuilder().setColumn("start_time")
 				.setOperan("<").setValue(String.valueOf(request.getEndDate())).build());
-		return threader.parDo(store.get(params), converter);
+		return store.get(params).stream().map(converter).collect(Collectors.toList());
 	}
 }
